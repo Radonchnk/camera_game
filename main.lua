@@ -2,19 +2,28 @@
 
 -- I love global variables
 --              (c) Artem
-key = 0 
 
 player_pos_x=64
 player_pos_y=64
 
 movement_speed=1
 
+
 function _init()
     log("Game has started")
+    poke(0x5f2d, 1)
 end 
 
 function _update()
-    key = stat(97)
+    local key = stat(31)
+    
+    if key ~= "" then
+        log("Key pressed: " .. key)
+    end
+    
+    if key == "c" then
+        cls()
+    end
 
     if (btn(0)) then
         player_pos_x-=movement_speed    --left
@@ -35,10 +44,5 @@ function _update()
 end
 
 function _draw()
-    log(key)
-    if (key == 99) then -- 99 is ASCII for c
-        cls()
-        log(cleared)
-    end
     pset(player_pos_x, player_pos_y, 12)
 end 

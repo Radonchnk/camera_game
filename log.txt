@@ -1,827 +1,18 @@
-Game is started
-Game is started
-Game is started
-Game is started
-Game has started
-Game has started
-Game has started
-Game has started
-Game has started
-Game has started
-Game has started
-Game has started
-Game has started
-Game has started
-Game has started
-Game has started
-Game has started
-Game has started
-Game has started
-Game has started
-Game has started
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
-left
-right
-up
-down
 Game has started
 right
 right
 right
 right
-right
-right
-right
-right
-right
-right
-right
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-right
-right
-right
-right
-right
-right
-right
-right
-right
-right
-right
-right
-right
-right
-right
-right
-right
-right
-right
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
 up
-left
+right
+up
+right
+up
+right
+up
+right
+up
+right
 up
 left
 up
@@ -832,74 +23,150 @@ up
 left
 left
 left
-up
 left
-up
 left
-up
 left
-up
 left
-up
 left
-up
 left
+left
+left
+left
+left
+left
+left
+left
+left
+left
+left
+left
+left
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+right
+down
+right
+right
+right
+right
+right
+right
+right
+right
+up
+right
 up
 up
 up
-up
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+right
+down
+right
+down
+right
+right
+right
+right
+right
 right
 up
 right
 up
 right
+up
+right
+up
+left
+right
+up
+left
+up
+left
+up
+left
+left
+left
+left
+down
+left
+down
+left
+down
+left
+down
+down
+down
+down
+up
+up
+up
+up
+up
+up
+up
+up
+up
+up
 right
 right
 right
 right
-down
 right
-down
 right
-down
+left
 right
+left
+right
+left
+up
+left
+left
+left
 down
 down
 down
 down
+left
 down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
+left
 down
 left
 left
 left
 left
 left
-left
-left
 up
 up
 up
@@ -917,101 +184,295 @@ up
 up
 up
 up
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
+up
+up
+up
+up
 Game has started
-right
-right
-right
-right
-right
-right
-right
-right
-right
-down
-right
-down
-down
-down
-down
-down
-down
-down
-up
-up
-up
-up
-left
-left
-left
-left
-left
-up
-down
-up
-down
-up
-down
-up
-down
-up
-down
-up
-down
-up
-down
-right
-up
-down
-right
-up
-down
-right
-up
-down
-right
-down
-right
-right
-right
-right
-down
-right
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Game has started
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: a
+Key pressed: d
+Key pressed: s
+Key pressed: f
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: s
+Key pressed: d
+Key pressed: a
+Key pressed: f
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: s
+Key pressed: d
+Key pressed: a
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: a
+Key pressed: a
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: d
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: d
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: d
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: d
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: d
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: d
+Key pressed: e
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: e
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: e
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: e
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: e
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: e
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: e
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: e
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
+Key pressed: 
 Game has started
 right
 right
@@ -1032,6 +493,49 @@ right
 right
 right
 right
+up
+right
+up
+right
+up
+up
+up
+left
+up
+left
+up
+left
+up
+left
+up
+left
+up
+left
+up
+left
+up
+left
+up
+left
+up
+left
+up
+left
+up
+left
+up
+left
+up
+left
+right
+up
+right
+up
+right
+up
+right
+right
+right
 right
 right
 right
@@ -1058,114 +562,41 @@ down
 down
 down
 down
-right
 down
-right
-down
-right
-right
-right
-right
-right
-down
-down
-down
-up
-up
-up
-up
-up
-left
-up
-left
-up
-left
-left
-left
-right
-up
-right
-up
-down
-right
-up
-down
-right
-up
-down
-left
-up
-down
-left
-left
-left
-right
-up
-right
-up
-right
-up
-down
-left
-right
-up
-left
-left
-left
-left
-right
-up
-right
-up
-down
-right
-up
-down
-left
-right
-up
-down
-left
-left
-left
-right
-up
-right
-up
-left
-right
-up
-left
-left
-left
-left
-right
-up
-right
-up
-right
-up
-down
-left
-right
-up
-left
-left
-left
-right
-up
-down
-right
-up
-down
-right
-up
-down
-left
-up
-down
-left
-left
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: w
+Key pressed: d
+Key pressed: s
+Key pressed: a
+Key pressed: d
 Game has started
 right
 right
@@ -1179,2139 +610,742 @@ right
 down
 right
 down
+right
+down
+right
 down
+right
 down
+right
 down
+right
 down
-up
+right
+down
+right
+down
+right
+down
+right
+down
+right
 down
+right
+down
+right
+down
+right
+right
+right
 up
-left
+right
 up
-left
 up
-left
 up
-left
 up
-left
-left
 up
-left
 up
-left
 up
-left
+Key pressed: s
+down
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
-down
+Key pressed: d
 right
-up
-down
+Key pressed: d
 right
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-up
-down
-up
-down
-up
-down
-up
-down
-up
-down
-up
-down
-left
-down
-left
-down
-left
-left
-left
+Key pressed: d
 right
-down
+Key pressed: d
 right
-down
+Key pressed: d
 right
-down
+Key pressed: d
 right
-down
-down
-down
+Key pressed: d
 right
+Key pressed: d
 right
+Key pressed: d
 right
-down
+Key pressed: d
 right
-up
-down
+Key pressed: d
 right
-up
-down
-left
-down
-left
-left
+Key pressed: d
 right
-left
+Key pressed: d
 right
-left
+Key pressed: d
 right
-left
+Key pressed: d
 right
-left
+Key pressed: d
 right
-left
+Key pressed: d
 right
-left
+Key pressed: d
 right
-up
-left
+Key pressed: d
 right
-up
+Key pressed: s
+down
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
+Key pressed: s
 down
-right
-up
+Key pressed: s
 down
-right
+Key pressed: s
 down
-right
+Key pressed: s
 down
-right
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
-up
+Key pressed: s
 down
-up
+Key pressed: s
 down
-up
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
-up
-up
-up
-up
-Game has started
-right
-right
-right
-right
-right
+Key pressed: s
 down
-right
+Key pressed: s
 down
-right
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
-up
+Key pressed: s
 down
-up
+Key pressed: s
 down
-up
+Key pressed: s
 down
-up
+Key pressed: s
+down
+Key pressed: s
+down
+Key pressed: s
+down
+Key pressed: s
+down
+Key pressed: s
+down
+Key pressed: s
 down
+Key pressed: s
+down
+Key pressed: s
+down
+Key pressed: a
 left
-up
+Key pressed: s
+down
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: s
+down
+Key pressed: a
 left
-up
+Key pressed: s
+down
+Key pressed: a
 left
-up
+Key pressed: s
+down
+Key pressed: a
 left
-up
+Key pressed: s
+down
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-down
-right
-up
-down
-right
-up
-down
-right
-up
-down
-right
-up
-down
-right
-up
-down
-down
-down
-down
-up
-down
-up
-down
-down
-down
-left
-down
-left
-down
-left
-down
-left
-left
-left
-right
-right
-up
-down
-right
-up
-down
-right
-up
-down
-right
-up
-down
-left
-left
-left
-left
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-up
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-up
-up
-up
-up
-up
-up
-up
-up
-up
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-left
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-right
-right
-right
-right
-right
-right
-right
-right
-right
-right
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-up
-down
-right
-up
-down
-right
-up
-down
-right
-up
-down
-right
-down
-right
-down
-right
-down
-right
-down
-left
-right
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-left
-left
-left
-left
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-right
-right
-down
-right
-down
-right
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-left
-left
-left
-left
-left
-left
-left
-left
-left
-left
-left
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-up
-up
-up
-up
-up
-up
-up
-up
-up
-up
-up
-up
-up
-up
-right
-up
-right
-right
-right
-right
-down
-right
-down
-right
-down
-right
-down
-down
-down
-down
-right
-up
-right
-up
-right
-up
-left
-right
-up
-left
-left
-left
-left
-left
-left
-left
-left
-left
-left
-left
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-down
-right
-up
-down
-right
-up
-down
-right
-up
-down
-right
-up
-down
-right
-down
-right
-down
-right
-down
-down
-down
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-left
-right
-left
-right
-left
-right
-left
-right
-left
-right
-left
-right
-left
-up
-up
-up
-up
-up
-up
-up
-up
-up
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-left
-left
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-right
-down
-left
-right
-down
-left
-right
-down
-left
-right
-down
-right
-down
-right
-down
-right
-right
-right
-right
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-down
-right
-up
-down
-right
-up
-left
-up
-left
-up
-left
-left
-left
-left
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-right
-down
-left
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-right
-right
-right
-right
-up
-right
-up
-right
-up
-right
-up
-down
-right
-up
-down
-right
-up
-down
-right
-up
-down
-right
-down
-right
-down
-left
-right
-down
-left
-right
-down
-right
-down
-left
-right
-down
-left
-right
-down
-left
-down
-down
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-left
-left
-right
-left
-right
-left
-right
-left
-right
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-right
-up
-right
-up
-right
-right
-right
-right
-right
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-up
-down
-right
-up
-down
-right
-up
-down
-right
-up
-down
-right
-up
-down
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-up
-up
-up
-right
-right
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-left
-right
-down
-left
-right
-down
-left
-right
-down
-left
-right
-down
-left
-right
-down
-left
-down
-left
-down
-left
-down
-left
-left
-left
-left
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-left
-left
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-right
-down
-right
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-left
-left
-right
-left
-right
-left
-right
-right
-up
-up
-up
-left
-left
-right
-left
-right
-left
-right
-up
-right
-up
-right
-up
-right
-up
-left
-left
-left
-left
-left
-left
-down
-left
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-right
-down
-right
-down
-right
-down
-down
-down
-down
-down
-down
-down
-down
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-left
-right
-left
-right
-left
-right
-left
-right
-left
-right
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-up
-left
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-down
-right
-up
-down
-right
-up
-down
-left
-right
-up
-down
-left
-right
-down
-left
-right
-down
-left
-right
-down
-left
-right
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-down
-left
-left
-right
-left
-right
-left
-right
-left
-right
+Key pressed: a
 left
-right
-left
-right
-left
-up
-up
-up
-up
-up
-right
-up
-right
-up
-right
-up
-right
-right
-down
-right
-down
-right
-down
-right
-down
-down
-down
-down
-up
-up
-left
-up
-left
-left
-left
-left
-left
-left
-up
-down
-up
-down
-up
-down
-up
-down
-up
-up
-up
-right
-right
-right
-right
-right
-right
-right
-right
-right
-up
-right
-up
-up
-up
-up
-down
-down
-down
-down
-left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
-left
-left
-left
-down
-down
-down
-down
-down
-down
-down
-down
-down
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
-up
-up
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-right
-right
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-down
-down
-down
-down
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
-up
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
-right
-right
-right
-right
-right
-right
-right
-right
-right
-right
-right
-right
-right
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-right
-right
-right
-right
-up
-up
-up
-up
-up
-up
-up
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-up
+Key pressed: a
 left
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
-up
-right
+Key pressed: w
 up
-right
+Key pressed: w
 up
-right
+Key pressed: w
 up
-down
+Key pressed: w
 up
-down
+Key pressed: w
 up
-down
+Key pressed: w
 up
-down
+Key pressed: w
 up
-down
+Key pressed: w
 up
-down
+Key pressed: w
 up
-down
-down
-down
-down
-down
-down
-down
-down
-left
-down
-left
-down
-left
-down
-left
-left
-left
-left
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
-right
+Key pressed: w
 up
-right
+Key pressed: w
 up
+Key pressed: w
 up
+Key pressed: w
 up
+Key pressed: w
 up
+Key pressed: w
 up
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
+Key pressed: w
 up
-left
-left
-left
-left
-left
-left
-left
-left
-left
-right
-left
-right
-left
+Key pressed: d
 right
-down
-left
-right
-down
-left
-right
-down
-left
-down
-left
-down
-down
-down
-right
-down
-right
-down
-right
-down
-right
-down
-right
-right
-right
+Key pressed: d
 right
+Key pressed: d
 right
+Key pressed: d
 right
+Key pressed: d
 right
+Key pressed: d
 right
+Key pressed: d
 right
-up
-right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
+Key pressed: w
 up
-right
+Key pressed: w
 up
-right
+Key pressed: w
 up
-right
+Key pressed: w
 up
+Key pressed: d
 right
+Key pressed: w
 up
+Key pressed: d
 right
+Key pressed: w
 up
+Key pressed: d
 right
-up
-up
-up
+Key pressed: w
 up
-up
-up
-up
+Key pressed: d
 right
+Key pressed: w
 up
+Key pressed: d
 right
+Key pressed: w
 up
+Key pressed: d
 right
-up
+Key pressed: s
 down
-right
-up
+Key pressed: s
 down
-right
-up
+Key pressed: s
 down
-right
-up
+Key pressed: s
 down
-right
-up
+Key pressed: s
 down
-right
+Key pressed: s
 down
-right
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
+Key pressed: s
 down
-right
-up
-right
-up
-right
-right
-right
+Key pressed: s
+down
+Key pressed: s
+down
+Key pressed: s
+down
+Key pressed: s
+down
+Key pressed: s
+down
+Key pressed: s
+down
+Key pressed: s
+down
+Key pressed: s
+down
+Key pressed: s
+down
+Key pressed: s
+down
+Key pressed: s
+down
+Key pressed: s
+down
+Key pressed: s
+down
+Key pressed: d
 right
+Key pressed: d
 right
+Key pressed: d
 right
+Key pressed: d
 right
+Key pressed: d
 right
+Key pressed: d
 right
+Key pressed: d
 right
+Key pressed: d
 right
+Key pressed: d
 right
+Key pressed: d
 right
+Key pressed: d
 right
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
-down
+Key pressed: d
 right
-up
-down
+Key pressed: d
 right
-up
-down
+Key pressed: d
 right
-down
+Key pressed: d
 right
-down
-down
-down
-down
-down
-down
-down
-up
-down
-up
-down
-up
-down
-down
-down
-down
-down
-down
-down
-up
-down
-up
-down
-up
-down
-up
-down
-up
-down
-up
-down
-up
-down
-down
-down
-down
+Key pressed: d
 right
-up
-down
+Key pressed: d
 right
-up
-down
+Key pressed: d
 right
-up
-down
+Key pressed: d
 right
-up
-down
+Key pressed: d
 right
-up
-down
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
-up
+Key pressed: d
 right
+Key pressed: w
 up
-right
+Key pressed: a
+left
 up
-right
 up
-right
 up
-right
 up
-right
-right
-right
-right
 up
-right
+down
 up
 right
 up
@@ -3319,21 +1353,16 @@ right
 up
 right
 up
+down
 right
 up
+down
 right
 up
-right
-right
 right
 right
-down
-right
-down
 right
-down
 right
-down
 right
 down
 right
@@ -3346,56 +1375,58 @@ right
 down
 right
 down
-right
 down
-right
+left
 down
-right
+left
 down
-right
+left
 down
-right
+left
 down
-right
+left
 left
+left
+left
 right
 left
 right
 left
+right
 left
+right
+right
 up
-left
+right
 up
-left
+right
 up
-left
+right
 up
+right
 up
+right
+right
+right
 up
+right
 up
-Game has started
 right
+up
 right
+up
 right
+up
 right
+up
 right
+up
 right
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
 up
-left
+right
 up
 left
+right
 up
 left
 up
@@ -3407,15 +1438,20 @@ down
 left
 down
 left
+right
 down
+left
+right
 down
+left
+right
 down
+left
+right
 down
+left
+right
 down
-up
-up
-up
-up
 up
 up
 up
@@ -3423,85 +1459,50 @@ up
 up
 up
 Game has started
-Game has started
 up
 up
 up
 up
+right
 up
+right
 up
-Game has started
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
-down
 right
-down
+up
 right
-down
+up
+right
+up
+right
+up
 right
+up
+right
+up
 right
 right
 right
 right
 right
+right
+Key pressed: c
 left
-[nil]
 left
-[nil]
 left
-[nil]
 left
-[nil]
-Game has started
-down
-down
-down
-down
-down
-down
-down
-down
-up
-down
-up
 left
-up
 left
-up
 left
-up
 left
-up
 left
-up
 left
-up
 left
-up
 left
-up
 left
-up
 left
-up
+left
 left
+left
 up
 left
 up
@@ -3513,42 +1514,26 @@ left
 up
 left
 up
+left
 up
+left
 up
-down
-down
-down
-down
-down
-down
-right
-right
-right
-right
-right
-right
-right
-right
-right
-right
 right
-right
-right
-right
-right
+up
 right
+up
 right
+up
 right
+up
 right
-left
-left
-left
-left
-Game has started
+up
 right
 right
 right
+down
 right
+down
 right
 down
 right
@@ -3562,11 +1547,27 @@ down
 down
 down
 down
+right
+down
+right
+down
+right
+down
+right
 down
+right
+down
+right
+down
+right
 down
+right
 down
+right
 down
+right
 down
+right
 down
 right
 down
@@ -3575,9 +1576,26 @@ down
 right
 down
 right
+up
 down
+right
+up
+right
+up
+right
+up
+right
+up
+right
+up
+right
+up
+right
+up
 right
+up
 right
+up
 right
 up
 right
@@ -3586,34 +1604,111 @@ right
 up
 right
 up
+right
 up
+right
 up
+right
 up
+right
 up
+right
 up
 right
 up
+left
 right
+up
+left
+up
+left
+up
+left
 up
+left
 up
+left
 up
+left
 up
+left
 up
+left
+left
+left
+down
+left
+down
+left
+down
+left
+down
+left
+down
+left
+right
+down
+left
+right
+down
 left
+right
+down
+left
+right
+down
+left
+right
+down
 left
+right
+down
 left
+right
+down
 left
+right
+down
 left
+right
+down
 left
+right
+down
 left
+right
 left
+right
+right
+right
+right
+right
+up
+right
+up
+right
+up
+right
+up
+right
+up
+right
+up
 left
+right
+up
 left
+up
 left
+up
 left
+up
 left
+up
 left
+up
 left
+up
 left
 up
 left
@@ -3664,16 +1759,38 @@ left
 up
 left
 up
-right
+left
 up
-right
-right
-right
-right
-right
-right
-right
+down
+left
+down
+left
+down
+left
+down
+left
+down
+left
+down
+left
+down
+left
+down
+down
 down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
+down
 right
 down
 right
@@ -3687,55 +1804,100 @@ down
 right
 down
 right
-up
 down
 right
-up
+down
 right
-up
+down
 left
 right
-up
+down
 left
+down
 left
+down
 left
+down
 left
+down
 left
 down
+left
 down
+left
 down
+left
 down
 left
 down
 left
 down
 left
-Game has started
-right
-right
-right
+down
+left
+down
+left
+down
+left
 right
+left
 right
+left
 right
+left
 right
-up
+left
 right
+left
 up
-right
+left
 up
-right
+left
 up
-right
+left
 up
-right
+left
 up
+left
 up
+left
 up
+left
 up
+right
 up
+right
 up
+right
 up
+right
 up
+right
+right
+right
+right
+right
+right
+down
+right
+down
+right
+down
+right
+down
+left
+right
+down
+left
+down
+left
+down
+left
+down
+left
+down
+left
+left
 left
 left
 left
@@ -3745,710 +1907,252 @@ left
 left
 left
 left
+right
+left
+right
 left
+right
 left
+right
 left
+right
 left
+right
 left
+right
 left
+right
+right
+right
+right
+right
+right
+right
+right
+right
+right
+right
 down
+right
 down
 down
 down
 down
 down
 down
-left
 down
-left
 down
-left
 down
-left
 down
-left
 down
-left
 down
-left
 down
-left
 down
-left
 down
-left
 down
-left
 down
-left
-left
-left
-left
-left
-left
-Game has started
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Game has started
-
-
-
-
+down
 right
-
+down
+right
+down
 right
-
+down
 right
-
+down
 right
-
+down
 right
-
+down
 right
-
+down
 right
-
+down
 right
-
+down
 right
-
-left
+down
 right
-
+down
+down
 left
-right
-
+down
 left
-
+down
 left
-
+down
 left
-
+down
 left
-
 left
-
 left
 up
-
 left
-up
-
-up
-
-up
-down
-
-up
-
-up
-
-up
-
-up
-
-up
-
-up
-
-up
-
 up
-
-up
-
-up
-
+left
 up
-
+left
 up
-
+left
 up
-
+left
 up
-
+left
 up
-
+left
 up
-
+left
 up
-
+left
 up
-
+left
+right
 up
-
+right
 up
-
+right
 up
-
+right
+right
+right
+right
+right
+right
+right
 up
-
+right
 up
-
+right
 up
-
+right
 up
-
-Game has started
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 down
-
+right
 down
-
+right
 down
-
+right
 down
-
 down
-
-
-
-right
-
-right
-
-right
 down
-
+down
+down
+down
+down
+down
+down
+down
+left
 right
 down
-
+left
 right
 down
-
+left
 right
 down
-
+left
+right
 down
-
-
-
+left
 down
-
+left
 down
-
+left
 down
-
+left
 down
-
+left
 down
-
+left
 down
-
+left
 down
-
-
-
-right
+left
+left
+left
+left
+left
 up
-
-right
+left
 up
-
-right
+left
 up
-
-right
+left
+up
+left
+up
+left
+up
+left
 up
-
 left
 up
-
 left
 up
-
 left
-
+up
 left
-
+up
 left
-
+up
 left
-
+up
+right
+up
+right
+up
 right
-
+up
+right
+up
 right
-
+up
 right
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+up
 right
-
+up
 right
 up
-
 right
 up
-
 right
 up
-
 right
 up
-
 right
 up
-
 right
 up
-
 right
 up
-
+left
 right
+up
+left
+up
+left
+up
+left
+left
+left
+left
+up
+left
+up
+left
+up
+left
+up
+left
 up
-
+left
 up
-
+left
 up
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Game has started
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-Game has started
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
+Key pressed: c
+left
+left
+left
+left
+left
