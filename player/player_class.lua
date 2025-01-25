@@ -16,6 +16,7 @@ showing_inventory = true
 -- constructor
 function player:new(x, y, width, height)
     local obj = setmetatable({}, self)
+    -- used to check who owns projectile
     obj.x = x
     obj.y = y
     obj.speed = 2
@@ -28,6 +29,8 @@ function player:new(x, y, width, height)
     self.reload_speed = 0
     self.reload_value = 0
 
+    obj.name = "player"
+
     obj.width = width or 8
     obj.height = height or 8
     
@@ -38,7 +41,6 @@ end
 
 -- method to move the player
 function player:move(dx, dy)
-
     self.x += dx * self.speed
     self.y += dy * self.speed
     self.collision_box:offset(dx * self.speed,  dy * self.speed)
@@ -111,7 +113,7 @@ end
 -- creates a projectile
 function player:shoot()
     if self.reload_value == 0 then
-        add(player_proj_list, projectile:new(p.x,p.y,p.dir,4,p.colour, 80))
+        add(player_proj_list, projectile:new(self, p.x,p.y,p.dir,4,p.colour, 80))
         self.reload_value = self.reload_speed
     end
 end

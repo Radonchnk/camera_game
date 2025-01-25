@@ -39,6 +39,17 @@ function _draw()
         enemy_proj_list[i]:draw()
     end
 
+    -- delete colided projectiles from all lists
+    for i = 1, #delete_queue do
+        del(player_proj_list, delete_queue[i])
+        del(enemy_proj_list, delete_queue[i])
+    end
+
+    -- clear deleating queue
+    for i = 1, #delete_queue do
+        del(delete_queue, delete_queue[1])
+    end
+
     for i = 1, #enemies do
         enemies[i]:update()
         enemies[i]:draw()
@@ -59,5 +70,14 @@ function _draw()
         for i = 1, #enemies do
             enemies[i]:draw_collision_box()
         end
+
+        for i = 1, #player_proj_list do
+            player_proj_list[i]:draw_collision_box()
+        end
+    
+        for i = 1, #enemy_proj_list do
+            enemy_proj_list[i]:draw_collision_box()
+        end
+
     end
 end 

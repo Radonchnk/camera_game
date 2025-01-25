@@ -4,8 +4,10 @@ enemy.__index = enemy
 
 enemy_proj_list = {}
 -- constructor
-function enemy:new(x, y, width, height)
+function enemy:new(x, y, width, height, name)
     local obj = setmetatable({}, self)
+    -- used to check who owns projectile
+    obj.name = name
     obj.x = x
     obj.y = y
     obj.speed = 1
@@ -88,7 +90,7 @@ end
 
 function enemy:shoot()
     if self.reload_value == 0 then
-        add(enemy_proj_list, projectile:new(self.x,self.y,self.dir, 6, 6, 50))
+        add(enemy_proj_list, projectile:new(self, self.x,self.y,self.dir, 6, 6, 50))
         self.reload_value = self.reload_speed
     end
 end

@@ -36,7 +36,7 @@ function _update()
     end
 
     if btn(5) then -- x
-        player:shoot()
+        p:shoot()
     end
 
     -- debug toggles and shit
