@@ -18,7 +18,7 @@ function _init()
     poke(0x5f2d, 1)
 
     -- innitialise player
-    p = player:new(tile_to_pixel(1), tile_to_pixel(1), 6, 6)
+    p = player:new(tile_to_pixel(1), tile_to_pixel(1), 10, 6)
 
     -- make level and shit
     setup_walls()
