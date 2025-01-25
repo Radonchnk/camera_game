@@ -88,6 +88,10 @@ function player:draw()
             player_inventory[i]:draw(x, y)
         end
     end
+
+    for i = 1, #player_inventory do
+        player_inventory[i]:tick()
+    end
 end
 
 -- transfers collision box draw signal
