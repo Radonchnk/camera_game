@@ -1,11 +1,11 @@
 -- define a "class" 
-colission_entity = {}
-colission_entity.__index = colission_entity
+collision_entity = {}
+collision_entity.__index = collision_entity
 
 -- constructor for the class
-function colission_entity:new(x, y, width, height)
+function collision_entity:new(x, y, width, height)
     local obj = setmetatable({}, self)
-    -- x and y are at top left of colission box
+    -- x and y are at top left of collision box
     obj.x = x
     obj.y = y
     obj.width = width
@@ -13,7 +13,7 @@ function colission_entity:new(x, y, width, height)
     return obj
 end
 
-function colission_entity:offset(dx, dy)
+function collision_entity:offset(dx, dy)
     self.x += dx
     self.y += dy
 end
@@ -32,7 +32,7 @@ function do_collide(obj1, obj2)
 end
 
 -- draw function to draw corners as red pixels
-function colission_entity:draw()
+function collision_entity:draw()
     -- Draw the four corners of the collision box
     pset(self.x, self.y, 8)               -- top-left corner
     pset(self.x + self.width - 1, self.y, 8)  -- top-right corner
@@ -41,7 +41,7 @@ function colission_entity:draw()
 end
 
 -- get center of collision entity
-function colission_entity:get_center()
+function collision_entity:get_center()
     x = self.x + self.width/2
     y = self.y + self.height/2
     return {x, y}
@@ -56,8 +56,8 @@ end
 function get_close_elements(obj1, obj_list, distance)
     close_elements = {}
     for i = 1, #obj_list do
-        center_obj1 = obj1.colission_box:get_center()
-        center_obj2 = obj_list[i].colission_box:get_center()
+        center_obj1 = obj1.collision_box:get_center()
+        center_obj2 = obj_list[i].collision_box:get_center()
         if vec_dist(center_obj1, center_obj2) < distance then
             add(close_elements, obj_list[i], #close_elements+1)
         end

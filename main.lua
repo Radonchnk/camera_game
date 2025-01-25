@@ -7,7 +7,7 @@
 
 
 debug_mode = 1
-colission_box_toggle = 1
+collision_box_toggle = 1
 
 
 -- executes on startap
@@ -43,11 +43,11 @@ function _draw()
     end
 
     -- debug shit
-    if colission_box_toggle == 1 then
-        p:draw_colission_box()
+    if collision_box_toggle == 1 then
+        p:draw_collision_box()
 
         for i = 1, #walls do
-            walls[i]:draw_colission_box()
+            walls[i]:draw_collision_box()
         end
     end
 end 
