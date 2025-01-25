@@ -68582,3 +68582,4569 @@ Key pressed: x
 Key pressed: x
 Key pressed: x
 Game has started
+Game has started
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Game has started
+Game has started
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Game has started
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: z
+Key pressed: x
+Key pressed: z
+Key pressed: x
+Key pressed: z
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: ❎
+Key pressed: ❎
+Key pressed: ❎
+Key pressed: ❎
+Key pressed: ❎
+Key pressed: ❎
+Key pressed: ❎
+Key pressed: ❎
+Key pressed: ❎
+Key pressed: ❎
+Key pressed: ❎
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: c
+Collision borders: OFF
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Game has started
+Game has started
+Game has started
+Key pressed: e
+Key pressed: e
+Key pressed: e
+Key pressed: r
+Key pressed: r
+Key pressed: r
+Key pressed: r
+Key pressed: r
+Key pressed: r
+Key pressed: r
+Key pressed: r
+Key pressed: r
+Key pressed: r
+Key pressed: r
+Key pressed: r
+Key pressed: r
+Key pressed: r
+Key pressed: r
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: w
+Key pressed: a
+Key pressed: s
+Key pressed: d
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Game has started
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: c
+Collision borders: OFF
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Game has started
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Game has started
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+[table]
+Game has started
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+[nil]
+Game has started
+:3
+:3
+:3
+:3
+:3
+:3
+:3
+:3
+:3
+:3
+:3
+:3
+:3
+:3
+:3
+:3
+:3
+:3
+:3
+:3
+Game has started
+Game has started
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+Game has started
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+Key pressed: る
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+Game has started
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+Key pressed: る
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+Game has started
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+down right
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+Game has started
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+up right
+up right
+up right
+up right
+up right
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+Game has started
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+Game has started
+Key pressed: 	
+Key pressed: c
+Collision borders: OFF
+Game has started
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+Game has started
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+Game has started
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+Game has started
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+Game has started
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+Game has started
+Game has started
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+Key pressed: 
+Key pressed: •
+Game has started
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+Key pressed: 
+Key pressed: •
+Game has started
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+Game has started
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+Game has started
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up right
+up right
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+down left
+down left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+Game has started
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+Key pressed: c
+Collision borders: OFF
+up right
+up right
+up right
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+Game has started
+Key pressed: c
+Collision borders: OFF
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+up left
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up right
+up right
+up right
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+Game has started
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+Key pressed: c
+Collision borders: OFF
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+up left
+up left
+up left
+up left
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up left
+up left
+up left
+up left
+up left
+up left
+Key pressed: c
+Collision borders: ON
+Key pressed: c
+Collision borders: OFF
+Game has started
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+up right
+up right
+up right
+up right
+up right
+Key pressed: x
+up right
+up right
+up left
+Key pressed: x
+up left
+up left
+up left
+up left
+Key pressed: x
+up left
+up left
+up left
+Key pressed: x
+Key pressed: x
+up left
+Key pressed: x
+up left
+Key pressed: x
+down left
+Key pressed: x
+down left
+down left
+Key pressed: x
+down left
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+up right
+up right
+up right
+up right
+Key pressed: x
+up right
+up right
+up right
+up right
+up right
+Key pressed: x
+up right
+Key pressed: x
+up left
+Key pressed: x
+up left
+up left
+Key pressed: x
+up left
+up left
+up left
+Key pressed: x
+up left
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Game has started
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+up right
+up right
+Key pressed: x
+up right
+up right
+up right
+up right
+Key pressed: x
+up left
+up left
+up left
+Key pressed: x
+up left
+up left
+up left
+up left
+Key pressed: x
+up left
+up left
+up left
+up left
+Key pressed: x
+up left
+up left
+up left
+Key pressed: x
+Key pressed: x
+up left
+up left
+Key pressed: x
+down left
+down left
+Key pressed: x
+down left
+down left
+down left
+down left
+Key pressed: x
+down left
+Key pressed: x
+Key pressed: x
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+down left
+Key pressed: x
+up left
+up left
+up left
+up left
+Key pressed: x
+Key pressed: x
+up right
+up right
+up right
+Key pressed: x
+Key pressed: x
+up right
+up right
+up right
+up right
+Key pressed: x
+up right
+up right
+up right
+up right
+Key pressed: x
+up right
+up right
+up right
+up left
+up left
+Key pressed: x
+up left
+up left
+up left
+Key pressed: x
+Key pressed: x
+down left
+down left
+down left
+down left
+down left
+Key pressed: x
+up left
+up right
+up right
+up right
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+up right
+up right
+up left
+up left
+Key pressed: •
+Game has started
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+down left
+Game has started
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+down left
+down left
+down left
+down left
+down left
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+up right
+up right
+Key pressed: x
+up right
+up right
+up right
+up right
+Key pressed: x
+up right
+up right
+up right
+up right
+up right
+Key pressed: x
+up right
+up left
+up left
+up left
+up left
+up left
+up left
+Key pressed: x
+Key pressed: x
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+Key pressed: x
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+up left
+Key pressed: x
+up left
+up left
+up left
+up left
+Key pressed: x
+up left
+up left
+up left
+up left
+up left
+Key pressed: x
+up left
+up left
+up left
+up left
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Game has started
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+down left
+down left
+Key pressed: x
+Key pressed: x
+Key pressed: x
+up right
+up right
+Key pressed: x
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+up right
+Key pressed: x
+up right
+Key pressed: x
+up right
+Key pressed: x
+up right
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+down left
+up left
+up left
+up left
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+down left
+down left
+down left
+up right
+up right
+up right
+up right
+up right

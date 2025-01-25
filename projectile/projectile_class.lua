@@ -33,14 +33,22 @@ function projectile:update()
         error = rnd({0.25,-0.25})
     end
 
-    if self.dir == 0 then
+    if self.dir == 0 then -- left
         self:move(-1,error)
-    elseif self.dir == 1 then
+    elseif self.dir == 1 then -- right
         self:move(1,error)
-    elseif self.dir == 2 then
+    elseif self.dir == 2 then -- up
         self:move(error,-1)
-    elseif self.dir == 3 then
+    elseif self.dir == 3 then -- down
         self:move(error,1)
+    elseif self.dir == 4 then -- up left
+        self:move(-1+error,-1+error)
+    elseif self.dir == 5 then -- up right
+        self:move(1+error,-1+error)
+    elseif self.dir == 6 then -- down left
+        self:move(-1+error,1+error)
+    else -- down right
+        self:move(1+error,1+error)
     end
 end
 

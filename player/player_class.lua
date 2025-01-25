@@ -24,7 +24,6 @@ end
 
 -- method to move the player
 function player:move(dx, dy)
-
     self.x += dx * self.speed
     self.y += dy * self.speed
     self.collision_box:offset(dx * self.speed,  dy * self.speed)
@@ -46,27 +45,47 @@ end
 -- method to draw the player
 function player:draw()
     -- drawing setting filter offset depending on rotation
-    if self.dir == 0 then 
+    if self.dir == 0 then -- left
         self.offset[0] = 1
         self.offset[1] = 2
-    elseif self.dir == 1 then
+    elseif self.dir == 1 then -- right
         self.offset[0] = 4
         self.offset[1] = 2
-    elseif self.dir == 2 then
+    elseif self.dir == 2 then -- up
         self.offset[0] = 2
         self.offset[1] = 1
-    else
-        self.offset[0] = 2
+    elseif self.dir == 3 then -- down
+        self.offset[0] = 4
+        self.offset[1] = 2
+    elseif self.dir == 4 then -- up left
+        self.offset[0] = 1
+        self.offset[1] = 2
+    elseif self.dir == 5 then -- up right
+        self.offset[0] = 6
+        self.offset[1] = 2
+    elseif self.dir == 6 then -- down left
+        self.offset[0] = 1
+        self.offset[1] = 4
+    else -- down right
+        self.offset[0] = 6
         self.offset[1] = 4
     end
 
     spr(self.base_spr, self.x, self.y, 1, 1)
     
     -- filter drawing
-    pset(self.x+self.offset[0],self.y+self.offset[1],self.colour)
-    pset(self.x+self.offset[0]+1,self.y+self.offset[1],self.colour+1)
-    pset(self.x+self.offset[0],self.y+self.offset[1]+1,self.colour+1)
-    pset(self.x+self.offset[0]+1,self.y+self.offset[1]+1,self.colour)
+    if self.dir < 4 then
+        pset(self.x+self.offset[0],self.y+self.offset[1],self.colour)
+        pset(self.x+self.offset[0]+1,self.y+self.offset[1],self.colour+1)
+        pset(self.x+self.offset[0],self.y+self.offset[1]+1,self.colour+1)
+        pset(self.x+self.offset[0]+1,self.y+self.offset[1]+1,self.colour)
+    else
+        pset(self.x+self.offset[0],self.y+self.offset[1],self.colour)
+        pset(self.x+self.offset[0]+1,self.y+self.offset[1],self.colour+1)
+        pset(self.x+self.offset[0]-1,self.y+self.offset[1],self.colour+1)
+        pset(self.x+self.offset[0],self.y+self.offset[1]+1,self.colour+1)
+        pset(self.x+self.offset[0],self.y+self.offset[1]-1,self.colour+1)
+    end
 end
 
 -- transfers collision box draw signal
