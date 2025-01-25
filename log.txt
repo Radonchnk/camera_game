@@ -60955,3 +60955,445 @@ Key pressed: x
 84
 34
 move up
+Game has started
+8
+8
+move right
+10
+8
+move right
+12
+8
+move right
+14
+8
+move right
+16
+8
+move right
+Key pressed: x
+18
+8
+move right
+20
+8
+move right
+22
+8
+move right
+24
+8
+move right
+Key pressed: x
+26
+8
+move right
+28
+8
+move right
+30
+8
+move right
+32
+8
+move right
+34
+8
+move right
+Key pressed: x
+36
+8
+move right
+38
+8
+move right
+40
+8
+move right
+42
+8
+move right
+Key pressed: x
+44
+8
+move right
+46
+8
+move right
+48
+8
+move right
+50
+8
+move right
+Key pressed: x
+52
+8
+move right
+54
+8
+move right
+56
+8
+move right
+58
+8
+move right
+60
+8
+move down
+Key pressed: x
+60
+10
+move right
+62
+10
+move down
+62
+12
+move down
+62
+14
+move down
+62
+16
+move down
+62
+18
+move down
+Key pressed: x
+62
+20
+move down
+62
+22
+move down
+62
+24
+move down
+62
+26
+move down
+Key pressed: x
+62
+28
+move down
+62
+30
+move down
+62
+32
+move down
+62
+34
+move down
+Key pressed: x
+62
+36
+move down
+62
+38
+move down
+62
+40
+move down
+62
+42
+move down
+Key pressed: x
+62
+44
+move down
+62
+46
+move down
+62
+48
+move down
+62
+50
+move down
+62
+52
+move down
+Key pressed: x
+62
+54
+move down
+62
+56
+move down
+62
+58
+move down
+62
+60
+move down
+Key pressed: x
+62
+62
+move down
+62
+64
+move down
+62
+66
+move down
+Key pressed: x
+Key pressed: x
+62
+68
+move right
+64
+68
+move right
+66
+68
+move right
+68
+68
+move right
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: c
+Collision borders: OFF
+70
+68
+move up
+70
+66
+move up
+70
+64
+move up
+70
+62
+move up
+70
+60
+move up
+70
+58
+move up
+70
+56
+move left
+68
+56
+move up
+68
+54
+move left
+66
+54
+move up
+66
+52
+move left
+64
+52
+move up
+64
+50
+move left
+62
+50
+move up
+62
+48
+move left
+60
+48
+move left
+Key pressed: x
+58
+48
+move left
+56
+48
+move left
+54
+48
+move left
+52
+48
+move left
+Key pressed: x
+Key pressed: x
+50
+48
+move right
+52
+48
+move right
+54
+48
+move right
+Key pressed: x
+56
+48
+move right
+58
+48
+move right
+60
+48
+move right
+Key pressed: x
+62
+48
+move up
+62
+46
+move up
+62
+44
+move up
+62
+42
+move up
+Key pressed: x
+62
+40
+move up
+Key pressed: x
+Key pressed: x
+62
+38
+move up
+62
+36
+move up
+62
+34
+move up
+Key pressed: x
+Key pressed: x
+62
+32
+move left
+Key pressed: x
+60
+32
+move left
+58
+32
+move left
+Key pressed: x
+56
+32
+move down
+Key pressed: x
+56
+34
+move down
+56
+36
+move down
+56
+38
+move down
+56
+40
+move down
+56
+42
+move down
+56
+44
+move down
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
