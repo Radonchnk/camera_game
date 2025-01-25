@@ -37,12 +37,18 @@ function _draw()
         player_proj_list[i]:draw()
     end
 
+    for i = 1, #enemie_proj_list do
+        enemie_proj_list[i]:update()
+        enemie_proj_list[i]:draw()
+    end
+
     for i = 1, #enemies do
         enemies[i]:update()
         enemies[i]:draw()
     end
 
-    camera_follow()
+    -- disable camera follow
+    -- camera_follow()
     for i = 1, #walls do
         walls[i]:draw()
     end

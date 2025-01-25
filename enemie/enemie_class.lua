@@ -8,9 +8,13 @@ function enemie:new(x, y, width, height)
     local obj = setmetatable({}, self)
     obj.x = x
     obj.y = y
-    obj.speed = 2
+    obj.speed = 1
     obj.base_spr = 1
     obj.dir = 1
+
+    -- can shoot every 10 sframes
+    self.reload_speed = 10
+    self.reload_value = 0
 
     obj.width = width or 8
     obj.height = height or 8
@@ -41,15 +45,31 @@ function enemie:move(dx, dy)
         self.x -= dx * self.speed
         self.y -= dy * self.speed
         self.collision_box:offset(-dx * self.speed, -dy * self.speed)
-        collision = 0
+        ision = 0
     end
 
 end
 
 
--- enemie ai and shit
+-- enemie ai and actions
 function enemie:update()
-    -- stupid baka
+    -- calculate distance to player
+    local dx = p.x - self.x
+    local dy = p.y - self.y
+    local distance = sqrt(dx^2 + dy^2)
+
+    -- move towards the player if the distance is greater than a threshold
+    if distance > 32 then
+        -- normalize the direction vector and move
+        local dir_x = dx / distance
+        local dir_y = dy / distance
+        self:move(dir_x, dir_y)
+    end
+
+    -- shoot at the player if close enough
+    if distance <= 64 then
+        self:shoot()
+    end
 end
 
 -- method to draw the enemie
@@ -63,5 +83,10 @@ function enemie:draw_collision_box()
 end
 
 function enemie:shoot()
-    add(enemie_proj_list, projectile:new(p.x,p.y,p.dir, 6))
+    if self.reload_value == 0 then
+        add(enemie_proj_list, projectile:new(self.x,self.y,self.dir, 6, 6))
+        self.reload_value = self.reload_speed
+    else
+        self.reload_value -= 1
+    end
 end

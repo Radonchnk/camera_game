@@ -14,6 +14,10 @@ function player:new(x, y, width, height)
     obj.offset = {0,0}
     obj.colour = 9
 
+    -- can shoot every 5 frames
+    self.reload_speed = 10
+    self.reload_value = 0
+
     obj.width = width or 8
     obj.height = height or 8
     
@@ -76,5 +80,10 @@ end
 
 -- creates a projectile
 function player:shoot()
-    add(player_proj_list, projectile:new(p.x,p.y,p.dir,6,p.colour))
+    if self.reload_value == 0:
+        add(player_proj_list, projectile:new(p.x,p.y,p.dir,6,p.colour))
+        self.reload_value = self.reload_speed
+    else
+        self.reload_value -= 1
+    end
 end
