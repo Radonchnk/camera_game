@@ -11,7 +11,7 @@ for i=1, 5 do
     add(player_inventory, item:new(1))
 end
 
-showing_inventory = true
+showing_inventory = false
 
 -- constructor
 function player:new(x, y, width, height)

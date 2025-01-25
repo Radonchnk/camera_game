@@ -39,7 +39,9 @@ function _draw()
     end
 
     for i = 1, #enemy_proj_list do
-        enemy_proj_list[i]:update()
+        if not paused then
+            enemy_proj_list[i]:update()
+        end
         enemy_proj_list[i]:draw()
     end
 
