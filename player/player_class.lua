@@ -2,7 +2,17 @@
 player = {}
 player.__index = player
 
+-- these are lists, i promise
 player_proj_list = {}
+player_inventory = {}
+
+-- TODO: remove
+for i=1, 5 do
+    add(player_inventory, item:new(1))
+end
+
+showing_inventory = true
+
 -- constructor
 function player:new(x, y, width, height)
     local obj = setmetatable({}, self)
@@ -67,6 +77,17 @@ function player:draw()
     pset(self.x+self.offset[0]+1,self.y+self.offset[1],self.colour+1)
     pset(self.x+self.offset[0],self.y+self.offset[1]+1,self.colour+1)
     pset(self.x+self.offset[0]+1,self.y+self.offset[1]+1,self.colour)
+
+    if showing_inventory then
+        rectfill(36, 98, 98, 110, 6)
+        -- draw items at (40, 20), (52, 20), (64, 20), (72, 20), (90, 20)
+        -- space for 5 items, as needed
+        for i = 1, #player_inventory do
+            x = 28 + (i * 12)
+            y = 100
+            player_inventory[i]:draw(x, y)
+        end
+    end
 end
 
 -- transfers collision box draw signal

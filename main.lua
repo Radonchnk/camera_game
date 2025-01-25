@@ -6,8 +6,8 @@
 -- debug toggles
 
 
-debug_mode = 1
-collision_box_toggle = 1
+debug_mode = true
+collision_box_toggle = true
 
 
 -- executes on startap
@@ -48,7 +48,7 @@ function _draw()
     end
 
     -- debug shit
-    if collision_box_toggle == 1 then
+    if collision_box_toggle then
         p:draw_collision_box()
 
         for i = 1, #walls do
