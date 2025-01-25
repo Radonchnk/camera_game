@@ -29,6 +29,7 @@ end
 
 -- draw every frame
 function _draw()
+    camera_follow()
     cls()
     p:draw()
 
@@ -42,7 +43,7 @@ function _draw()
         enemies[i]:draw()
     end
 
-    camera_follow()
+    
     for i = 1, #walls do
         walls[i]:draw()
     end
