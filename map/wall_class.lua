@@ -22,7 +22,7 @@ end
 
 -- method to draw the wall
 function wall:draw()
-    spr(0, self.x, self.y, 1, 1)
+    spr(16, self.x, self.y, 1, 1)
 end
 
 -- transfers colission box draw signal

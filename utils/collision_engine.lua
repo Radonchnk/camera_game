@@ -18,6 +18,19 @@ function colission_entity:offset(dx, dy)
     self.y += dy
 end
 
+-- draw function to draw corners as red pixels
+function colission_entity:draw()
+    -- Draw the four corners of the collision box
+    spr(0, self.x, self.y, 1, 1)
+end
+
+-- get center of collision entity
+function colission_entity:get_center()
+    x = self.x + self.width/2
+    y = self.y + self.height/2
+    return {x, y}
+end
+
 -- checks if two objects collide
 function do_collide(obj1, obj2)
     -- Check if the rectangles intersect (collision)
@@ -31,21 +44,6 @@ function do_collide(obj1, obj2)
     end
 end
 
--- draw function to draw corners as red pixels
-function colission_entity:draw()
-    -- Draw the four corners of the collision box
-    pset(self.x, self.y, 8)               -- top-left corner
-    pset(self.x + self.width - 1, self.y, 8)  -- top-right corner
-    pset(self.x, self.y + self.height - 1, 8)  -- bottom-left corner
-    pset(self.x + self.width - 1, self.y + self.height - 1, 8)  -- bottom-right corner
-end
-
--- get center of collision entity
-function colission_entity:get_center()
-    x = self.x + self.width/2
-    y = self.y + self.height/2
-    return {x, y}
-end
 
 -- disntance between 2 elements
 function vec_dist(vector1, vector2)
