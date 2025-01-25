@@ -9,6 +9,8 @@ function player:new(x, y)
     obj.x = x
     obj.y = y
     obj.speed = 2
+    obj.base_spr = 1
+    obj.dir = 0
 
     x = obj.x
     y = obj.y
@@ -29,7 +31,7 @@ end
 
 -- method to draw the player
 function player:draw()
-    spr(1, self.x, self.y, 1, 1)
+    spr(self.base_spr, self.x, self.y, 1, 1)
 end
 
 -- transfers collision box draw signal
