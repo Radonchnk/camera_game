@@ -1,10 +1,10 @@
 -- define a "class" (table)
-enemie = {}
-enemie.__index = enemie
+enemy = {}
+enemy.__index = enemy
 
-enemie_proj_list = {}
+enemy_proj_list = {}
 -- constructor
-function enemie:new(x, y, width, height)
+function enemy:new(x, y, width, height)
     local obj = setmetatable({}, self)
     obj.x = x
     obj.y = y
@@ -24,35 +24,34 @@ function enemie:new(x, y, width, height)
     return obj
 end
 
--- method to move the enemie
-function enemie:move(dx, dy)
+-- method to move the enemy
+function enemy:move(dx, dy)
 
     self.x += dx * self.speed
     self.y += dy * self.speed
     self.collision_box:offset(dx * self.speed,  dy * self.speed)
-    radius_walls = get_close_elements(self, walls, 16)
 
-    collision = 0
+    -- check player against walls & enemies 
+    collision_walls = collision_to_list(self, walls, 16)
+    collision_player = collision_to_list(self, {p}, 16)
 
-    for i = 1, #radius_walls do
-        if do_collide(self.collision_box, radius_walls[i].collision_box) then
-            collision = 1
-        end
-        collision = 0
-    end
-
-    if collision == 1 then
+    -- when object collides, size of fuction return is 2 because object is being passed too
+    if #collision_walls == 2 or #collision_player == 2 then
         self.x -= dx * self.speed
         self.y -= dy * self.speed
         self.collision_box:offset(-dx * self.speed, -dy * self.speed)
-        ision = 0
+    end
+
+    -- takes some amount of frames to reload
+    if self.reload_value > 0 then
+        self.reload_value -= 1
     end
 
 end
 
 
--- enemie ai and actions
-function enemie:update()
+-- enemy ai and actions
+function enemy:update()
     -- calculate distance to player
     local dx = p.x - self.x
     local dy = p.y - self.y
@@ -70,23 +69,26 @@ function enemie:update()
     if distance <= 64 then
         self:shoot()
     end
+
+    -- takes some amount of frames to reload
+    if self.reload_value ~= 0 then
+        self.reload_value -= 1
+    end
 end
 
--- method to draw the enemie
-function enemie:draw()
+-- method to draw the enemy
+function enemy:draw()
     spr(16, self.x, self.y, 1, 1)
 end
 
 -- transfers collision box draw signal
-function enemie:draw_collision_box()
+function enemy:draw_collision_box()
     self.collision_box:draw()
 end
 
-function enemie:shoot()
+function enemy:shoot()
     if self.reload_value == 0 then
-        add(enemie_proj_list, projectile:new(self.x,self.y,self.dir, 6, 6))
+        add(enemy_proj_list, projectile:new(self.x,self.y,self.dir, 6, 6, 50))
         self.reload_value = self.reload_speed
-    else
-        self.reload_value -= 1
     end
 end
