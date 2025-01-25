@@ -29,7 +29,7 @@ end
 
 -- method to draw the player
 function player:draw()
-    spr(1, self.x, self.y, 1, 1)x
+    spr(1, self.x, self.y, 1, 1)
 end
 
 -- transfers collision box draw signal
