@@ -35,7 +35,10 @@ function projectile:update()
     end
 end
 
--- draws projectile to screen every frame
+function projectile:move()
+
+end
+
 function projectile:draw()
     pset(self.x,self.y,self.colour+1)
 end

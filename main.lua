@@ -18,12 +18,12 @@ function _init()
     poke(0x5f2d, 1)
 
     -- innitialise player
-    p = player:new(tile_to_pixel(1), tile_to_pixel(1))
+    p = player:new(tile_to_pixel(1), tile_to_pixel(1), 10, 6)
 
     -- make level and shit
-    setup_level()
+    setup_walls()
 
-    --log(walls)
+    setup_enemies()
 
 end 
 
@@ -33,8 +33,13 @@ function _draw()
     p:draw()
 
     for i = 1, #player_proj_list do
-        player_proj_list[i]:draw()
         player_proj_list[i]:update()
+        player_proj_list[i]:draw()
+    end
+
+    for i = 1, #enemies do
+        enemies[i]:update()
+        enemies[i]:draw()
     end
 
     camera_follow()
@@ -48,6 +53,10 @@ function _draw()
 
         for i = 1, #walls do
             walls[i]:draw_collision_box()
+        end
+
+        for i = 1, #enemies do
+            enemies[i]:draw_collision_box()
         end
     end
 end 
