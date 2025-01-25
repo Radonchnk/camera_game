@@ -36,7 +36,7 @@ function _update()
     end
 
     if key == "x" then
-        proj = player:shoot()
+        player:shoot()
     end
 
     -- debug toggles and shit

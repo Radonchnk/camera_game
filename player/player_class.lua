@@ -2,6 +2,7 @@
 player = {}
 player.__index = player
 
+player_proj_list = {}
 -- constructor
 function player:new(x, y)
     local obj = setmetatable({}, self)
@@ -10,7 +11,7 @@ function player:new(x, y)
     obj.y = y
     obj.speed = 2
     obj.base_spr = 1
-    obj.dir = 0
+    obj.dir = 1
 
     x = obj.x
     y = obj.y
@@ -63,6 +64,5 @@ function player:draw_colission_box()
 end
 
 function player:shoot()
-    self.proj = projectile:new(self.x,self.y,self.dir,1)
-    self.proj_exists = True
+    add(player_proj_list, projectile:new(p.x,p.y,p.dir, 6))
 end

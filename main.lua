@@ -31,6 +31,12 @@ end
 function _draw()
     cls()
     p:draw()
+
+    for i = 1, #player_proj_list do
+        player_proj_list[i]:draw()
+        player_proj_list[i]:update()
+    end
+
     camera_follow()
     for i = 1, #walls do
         walls[i]:draw()

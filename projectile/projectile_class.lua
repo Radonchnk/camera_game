@@ -4,17 +4,26 @@ projectile.__index = projectile
 
 function projectile:new(x,y,dir,speed)
     local obj = setmetatable({}, self)
-    obj.x = x
-    obj.y = y
+    obj.x = x+4
+    obj.y = y+4
     obj.dir = dir  -- direction (0,1,2,3) <-> (left,right,up,down)
     obj.speed = speed
     
     return obj
 end
 
+function projectile:update()
+    if self.dir == 0 then
+        self.x -= self.speed
+    elseif self.dir == 1 then
+        self.x += self.speed
+    elseif self.dir == 2 then
+        self.y -= self.speed
+    elseif self.dir == 3 then
+        self.y += self.speed
+    end
+end
+
 function projectile:draw()
-    self.x += dx * self.speed
-    self.y += dy * self.speed
-    self.colission_box:offset(dx * self.speed,  dy * self.speed)
-    pset(self.x,self.y,1)
+    pset(self.x,self.y)
 end
