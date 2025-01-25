@@ -27,6 +27,9 @@ function _update()
         log("Key pressed: " .. key)
     end
 
+    if key == "x" then
+        proj = player:shoot()
+    end
 
     -- debug toggles and shit
     if key == "c" and debug_mode == 1 then

@@ -32,7 +32,12 @@ function player:draw()
     spr(1, self.x, self.y, 1, 1)
 end
 
--- transfers colission box draw signal
+-- transfers collision box draw signal
 function player:draw_colission_box()
     self.colission_box:draw()
+end
+
+function player:shoot()
+    self.proj = projectile:new(self.x,self.y,self.dir,1)
+    self.proj_exists = True
 end
