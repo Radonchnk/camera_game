@@ -76,5 +76,5 @@ end
 
 -- creates a projectile
 function player:shoot()
-    add(player_proj_list, projectile:new(p.x,p.y,p.dir,6,p.colour))
+    add(player_proj_list, projectile:new(p.x,p.y,p.dir,4,p.colour,80))
 end

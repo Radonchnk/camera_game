@@ -29,7 +29,6 @@ end
 
 -- draw every frame
 function _draw()
-    camera_follow()
     cls()
     p:draw()
 
