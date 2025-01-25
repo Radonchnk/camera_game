@@ -5,8 +5,10 @@ __lua__
 -- pico8 redactor
 --	buttons ⬅️➡️⬆️⬇️
 #include main.lua
-#include player/movement.lua
+#include player/inputs.lua
 #include utils/log.lua
+#include utils/collision_engine.lua
+#include player/player_class.lua
 
 __gfx__
 00000000000011000000110000001100000011000000110000010000000100000000100000001000000000000000000000000000000000000000000000000000
