@@ -19,13 +19,13 @@ function collision_entity:offset(dx, dy)
 end
 
 -- draw function to draw corners as red pixels
-function colission_entity:draw()
+function collision_entity:draw()
     -- Draw the four corners of the collision box
     spr(0, self.x, self.y, 1, 1)
 end
 
 -- get center of collision entity
-function colission_entity:get_center()
+function collision_entity:get_center()
     x = self.x + self.width/2
     y = self.y + self.height/2
     return {x, y}

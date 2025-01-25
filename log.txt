@@ -55570,7 +55570,7 @@ move down
 36
 move down
 Key pressed: c
-Colission boarders: OFF
+collision boarders: OFF
 36
 38
 move right
@@ -59165,7 +59165,7 @@ move right
 22
 move right
 Key pressed: c
-Colission boarders: OFF
+collision boarders: OFF
 Key pressed: c
 Colisiion boarders: ON
 30
@@ -59892,7 +59892,7 @@ move left
 88
 move left
 Key pressed: c
-Colission boarders: OFF
+collision boarders: OFF
 66
 88
 move up
@@ -60229,7 +60229,7 @@ Key pressed: x
 Key pressed: x
 Key pressed: x
 Key pressed: c
-Colission boarders: OFF
+collision boarders: OFF
 Key pressed: x
 Key pressed: x
 Key pressed: x
@@ -60460,3 +60460,498 @@ move left
 24
 28
 move left
+Game has started
+8
+8
+move right
+10
+8
+move right
+12
+8
+move right
+14
+8
+move right
+16
+8
+move right
+18
+8
+move right
+20
+8
+move right
+22
+8
+move right
+24
+8
+move right
+Key pressed: x
+Game has started
+8
+8
+move right
+10
+8
+move right
+12
+8
+move right
+Key pressed: x
+14
+8
+move right
+16
+8
+move right
+18
+8
+move right
+20
+8
+move right
+22
+8
+move right
+Key pressed: x
+24
+8
+move right
+26
+8
+move right
+28
+8
+move right
+30
+8
+move right
+Key pressed: x
+32
+8
+move right
+34
+8
+move right
+36
+8
+move right
+38
+8
+move right
+Key pressed: x
+40
+8
+move right
+42
+8
+move right
+44
+8
+move right
+46
+8
+move right
+Key pressed: x
+48
+8
+move right
+50
+8
+move down
+50
+10
+move right
+52
+10
+move down
+52
+12
+move right
+54
+12
+move down
+54
+14
+move right
+56
+14
+move down
+56
+16
+move down
+Key pressed: x
+56
+18
+move down
+56
+20
+move down
+56
+22
+move down
+56
+24
+move down
+56
+26
+move down
+56
+28
+move down
+56
+30
+move down
+Key pressed: x
+56
+32
+move down
+56
+34
+move down
+56
+36
+move down
+56
+38
+move down
+56
+40
+move down
+56
+42
+move down
+56
+44
+move down
+56
+46
+move down
+56
+48
+move down
+56
+50
+move down
+56
+52
+move down
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+Key pressed: x
+56
+54
+move right
+58
+54
+move right
+60
+54
+move right
+62
+54
+move right
+64
+54
+move right
+66
+54
+move right
+68
+54
+move right
+70
+54
+move right
+72
+54
+move right
+74
+54
+move up
+74
+52
+move up
+74
+50
+move up
+74
+48
+move left
+72
+48
+move left
+70
+48
+move left
+Game has started
+8
+8
+collision
+move left
+8
+8
+move right
+10
+8
+move left
+8
+8
+collision
+move left
+8
+8
+collision
+move left
+8
+8
+collision
+move left
+8
+8
+move right
+10
+8
+move right
+12
+8
+move right
+14
+8
+move right
+16
+8
+move right
+18
+8
+move right
+Key pressed: x
+20
+8
+move right
+22
+8
+move right
+24
+8
+move right
+26
+8
+move right
+28
+8
+move right
+Key pressed: x
+30
+8
+move right
+32
+8
+move right
+34
+8
+move right
+36
+8
+move right
+Key pressed: x
+38
+8
+move right
+40
+8
+move right
+42
+8
+move right
+44
+8
+move right
+46
+8
+move down
+Key pressed: x
+46
+10
+move right
+48
+10
+move down
+48
+12
+move right
+50
+12
+move down
+50
+14
+move right
+52
+14
+move down
+52
+16
+move down
+52
+18
+move down
+Key pressed: x
+52
+20
+move down
+52
+22
+move down
+52
+24
+move down
+52
+26
+move down
+Key pressed: x
+52
+28
+move down
+52
+30
+move down
+52
+32
+move down
+52
+34
+move down
+52
+36
+move down
+Key pressed: x
+52
+38
+move down
+52
+40
+move down
+52
+42
+move left
+50
+42
+move down
+50
+44
+move left
+Key pressed: x
+48
+44
+move left
+46
+44
+move left
+44
+44
+move right
+46
+44
+move left
+44
+44
+move right
+46
+44
+move left
+44
+44
+move right
+46
+44
+move right
+48
+44
+move right
+50
+44
+move right
+52
+44
+move right
+54
+44
+move right
+Key pressed: x
+56
+44
+move right
+58
+44
+move right
+60
+44
+move right
+62
+44
+move right
+64
+44
+move right
+Key pressed: x
+66
+44
+move right
+68
+44
+move right
+70
+44
+move right
+72
+44
+move right
+74
+44
+move right
+76
+44
+move right
+Key pressed: x
+78
+44
+move right
+80
+44
+move right
+82
+44
+move right
+84
+44
+move up
+84
+42
+move up
+84
+40
+move up
+84
+38
+move up
+84
+36
+move up
+Key pressed: x
+84
+34
+move up
