@@ -60,7 +60,7 @@ function collision_entity:get_center()
     return {x, y}
 end
 
--- disntance between 2 elements
+-- distance between 2 elements
 function vec_dist(vector1, vector2)
     return sqrt((vector2[1] - vector1[1])^2 + (vector2[2] - vector1[2])^2)
 end
