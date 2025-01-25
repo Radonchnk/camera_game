@@ -35,7 +35,7 @@ function _update()
         log("Key pressed: " .. key)
     end
 
-    if key == "x" then
+    if btn(5) then -- x
         player:shoot()
     end
 
