@@ -1,7 +1,11 @@
--- to check tokens: INFO
+-- to check tokens type: INFO
 
--- I love global variables
+-- May god help you
 --              (c) Artem
+
+-- debug toggles
+debug_mode = 1
+colission_box_toggle = 1
 
 function _init()
     log("Game has started")
@@ -12,6 +16,13 @@ function _init()
 
 end 
 
+-- draw every frame
 function _draw()
+    cls()
     p:draw()
+
+    -- debug shit
+    if colission_box_toggle == 1 then
+        p:draw_colission_box()
+    end
 end 

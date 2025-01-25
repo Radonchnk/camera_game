@@ -27,7 +27,13 @@ function _update()
         log("Key pressed: " .. key)
     end
     
-    if key == "c" then
-        cls()
+    if key == "c" and debug_mode == 1 then
+        if colission_box_toggle == 1 then
+            colission_box_toggle = 0
+            log("Colission boarders: OFF")
+        else
+            colission_box_toggle = 1
+            log("Colisiion boarders: ON")
+        end
     end
 end
