@@ -106,11 +106,11 @@ function player:draw()
 
 
     if showing_inventory then
-        rectfill(36, 98, 98, 110, 6)
+        rectfill(32, 98, 94, 110, 6)
         -- draw items at (40, 20), (52, 20), (64, 20), (72, 20), (90, 20)
         -- space for 5 items, as needed (with nice borders)
         for i = 1, #player_inventory do
-            x = 28 + (i * 12)
+            x = 24 + (i * 12)
             y = 100
             player_inventory[i]:draw(x, y)
         end
