@@ -13,7 +13,8 @@ __lua__
 #include utils/tiling.lua
 #include map/wall_class.lua
 #include map/level_setup.lua
-
+#include player/camera_follow.lua
+#include projectile/projectile_class.lua
 
 --#include main.lua
 __gfx__

@@ -31,7 +31,7 @@ end
 function _draw()
     cls()
     p:draw()
-
+    camera_follow()
     for i = 1, #walls do
         walls[i]:draw()
     end
