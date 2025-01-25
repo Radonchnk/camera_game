@@ -26,7 +26,9 @@ function _update()
     if key ~= "" then
         log("Key pressed: " .. key)
     end
-    
+
+
+    -- debug toggles and shit
     if key == "c" and debug_mode == 1 then
         if colission_box_toggle == 1 then
             colission_box_toggle = 0

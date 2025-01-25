@@ -4,15 +4,26 @@
 --              (c) Artem
 
 -- debug toggles
+
+
 debug_mode = 1
 colission_box_toggle = 1
 
+
+-- executes on startap
 function _init()
     log("Game has started")
+
+    -- enter devkit mode to accept keyboard inputs
     poke(0x5f2d, 1)
 
     -- innitialise player
-    p = player:new(64, 64)
+    p = player:new(tile_to_pixel(1), tile_to_pixel(1))
+
+    -- make level and shit
+    setup_level()
+
+    --log(walls)
 
 end 
 
