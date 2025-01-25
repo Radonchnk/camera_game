@@ -7,7 +7,7 @@
 
 
 debug_mode = 1
-colission_box_toggle = 1
+collision_box_toggle = 1
 
 
 -- executes on startap
@@ -18,7 +18,7 @@ function _init()
     poke(0x5f2d, 1)
 
     -- innitialise player
-    p = player:new(tile_to_pixel(1), tile_to_pixel(1))
+    p = player:new(tile_to_pixel(1), tile_to_pixel(1), 6, 6)
 
     -- make level and shit
     setup_walls()
@@ -48,15 +48,15 @@ function _draw()
     end
 
     -- debug shit
-    if colission_box_toggle == 1 then
-        p:draw_colission_box()
+    if collision_box_toggle == 1 then
+        p:draw_collision_box()
 
         for i = 1, #walls do
-            walls[i]:draw_colission_box()
+            walls[i]:draw_collision_box()
         end
 
         for i = 1, #enemies do
-            enemies[i]:draw_colission_box()
+            enemies[i]:draw_collision_box()
         end
     end
 end 

@@ -12,17 +12,17 @@ function wall:new(x, y, width, height)
     obj.width = width or 8
     obj.height = height or 8
     
-    obj.colission_box = colission_entity:new(x,y,obj.width,obj.height)
+    obj.collision_box = collision_entity:new(x,y,obj.width,obj.height)
 
     return obj
 end
 
 -- method to draw the wall
 function wall:draw()
-    spr(16, self.x, self.y, 1, 1)
+    spr(32, self.x, self.y, 1, 1)
 end
 
--- transfers colission box draw signal
-function wall:draw_colission_box()
-    self.colission_box:draw()
+-- transfers collision box draw signal
+function wall:draw_collision_box()
+    self.collision_box:draw()
 end

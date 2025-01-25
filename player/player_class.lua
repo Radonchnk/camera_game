@@ -9,13 +9,15 @@ function player:new(x, y, width, height)
     obj.x = x
     obj.y = y
     obj.speed = 2
-    obj.base_spr = 1
+    obj.base_spr = 0
     obj.dir = 1
+    obj.offset = {0,0}
+    obj.colour = 9
 
     obj.width = width or 8
     obj.height = height or 8
     
-    obj.colission_box = colission_entity:new(x,y,obj.width,obj.height)
+    obj.collision_box = collision_entity:new(x,y,obj.width,obj.height)
 
     return obj
 end
@@ -25,7 +27,8 @@ function player:move(dx, dy)
 
     self.x += dx * self.speed
     self.y += dy * self.speed
-    self.colission_box:offset(dx * self.speed,  dy * self.speed)
+    self.collision_box:offset(dx * self.speed,  dy * self.speed)
+
 
     -- check player against walls & enemies 
     collision_walls = collision_to_list(self, walls, 16)
@@ -35,21 +38,43 @@ function player:move(dx, dy)
     if #collision_walls == 2 or #collision_enemies == 2 then
         self.x -= dx * self.speed
         self.y -= dy * self.speed
-        self.colission_box:offset(-dx * self.speed, -dy * self.speed)
+        self.collision_box:offset(-dx * self.speed, -dy * self.speed)
     end
 
 end
 
 -- method to draw the player
 function player:draw()
+    -- drawing setting filter offset depending on rotation
+    if self.dir == 0 then 
+        self.offset[0] = 1
+        self.offset[1] = 2
+    elseif self.dir == 1 then
+        self.offset[0] = 4
+        self.offset[1] = 2
+    elseif self.dir == 2 then
+        self.offset[0] = 2
+        self.offset[1] = 1
+    else
+        self.offset[0] = 2
+        self.offset[1] = 4
+    end
+
     spr(self.base_spr, self.x, self.y, 1, 1)
+    
+    -- filter drawing
+    pset(self.x+self.offset[0],self.y+self.offset[1],self.colour)
+    pset(self.x+self.offset[0]+1,self.y+self.offset[1],self.colour+1)
+    pset(self.x+self.offset[0],self.y+self.offset[1]+1,self.colour+1)
+    pset(self.x+self.offset[0]+1,self.y+self.offset[1]+1,self.colour)
 end
 
 -- transfers collision box draw signal
-function player:draw_colission_box()
-    self.colission_box:draw()
+function player:draw_collision_box()
+    self.collision_box:draw()
 end
 
+-- creates a projectile
 function player:shoot()
-    add(player_proj_list, projectile:new(p.x,p.y,p.dir, 6))
+    add(player_proj_list, projectile:new(p.x,p.y,p.dir,6,p.colour))
 end

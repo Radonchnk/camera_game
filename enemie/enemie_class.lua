@@ -15,7 +15,7 @@ function enemie:new(x, y, width, height)
     obj.width = width or 8
     obj.height = height or 8
     
-    obj.colission_box = colission_entity:new(x,y,obj.width,obj.height)
+    obj.collision_box = collision_entity:new(x,y,obj.width,obj.height)
 
     return obj
 end
@@ -25,23 +25,23 @@ function enemie:move(dx, dy)
 
     self.x += dx * self.speed
     self.y += dy * self.speed
-    self.colission_box:offset(dx * self.speed,  dy * self.speed)
+    self.collision_box:offset(dx * self.speed,  dy * self.speed)
     radius_walls = get_close_elements(self, walls, 16)
 
     collision = 0
 
     for i = 1, #radius_walls do
-        if do_collide(self.colission_box, radius_walls[i].colission_box) then
-            colission = 1
+        if do_collide(self.collision_box, radius_walls[i].collision_box) then
+            collision = 1
         end
         collision = 0
     end
 
-    if colission == 1 then
+    if collision == 1 then
         self.x -= dx * self.speed
         self.y -= dy * self.speed
-        self.colission_box:offset(-dx * self.speed, -dy * self.speed)
-        colission = 0
+        self.collision_box:offset(-dx * self.speed, -dy * self.speed)
+        collision = 0
     end
 
 end
@@ -58,8 +58,8 @@ function enemie:draw()
 end
 
 -- transfers collision box draw signal
-function enemie:draw_colission_box()
-    self.colission_box:draw()
+function enemie:draw_collision_box()
+    self.collision_box:draw()
 end
 
 function enemie:shoot()
