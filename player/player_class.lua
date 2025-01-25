@@ -22,7 +22,7 @@ function player:new(x, y, width, height)
     obj.base_spr = 0
     obj.dir = 1
     obj.offset = {0,0}
-    obj.colour = 9
+    obj.colour = 1
 
     -- can shoot every frame
     obj.reload_speed = 0
@@ -63,48 +63,47 @@ end
 
 -- method to draw the player
 function player:draw()
-    -- drawing setting filter offset depending on rotation
-    if self.dir == 0 then -- left
-        self.offset[0] = 1
-        self.offset[1] = 2
-    elseif self.dir == 1 then -- right
-        self.offset[0] = 4
-        self.offset[1] = 2
-    elseif self.dir == 2 then -- up
-        self.offset[0] = 2
-        self.offset[1] = 1
-    elseif self.dir == 3 then -- down
-        self.offset[0] = 4
-        self.offset[1] = 2
-    elseif self.dir == 4 then -- up left
-        self.offset[0] = 1
-        self.offset[1] = 2
-    elseif self.dir == 5 then -- up right
-        self.offset[0] = 6
-        self.offset[1] = 2
-    elseif self.dir == 6 then -- down left
-        self.offset[0] = 1
-        self.offset[1] = 4
-    else -- down right
-        self.offset[0] = 6
-        self.offset[1] = 4
-    end
+    -- Define offsets for directions in a table for easier management
+    local offsets = {
+        {x = 1, y = 2},  -- left (dir 0)
+        {x = 4, y = 2},  -- right (dir 1)
+        {x = 2, y = 1},  -- up (dir 2)
+        {x = 4, y = 2},  -- down (dir 3)
+        {x = 1, y = 2},  -- up left (dir 4)
+        {x = 6, y = 2},  -- up right (dir 5)
+        {x = 1, y = 4},  -- down left (dir 6)
+        {x = 6, y = 4}   -- down right (dir 7)
+    }
 
+    -- Get offset based on direction, default to {x = 0, y = 0} if dir is invalid
+    local offset = offsets[self.dir + 1] or {x = 0, y = 0}
+
+    -- Draw the base sprite
     spr(self.base_spr, self.x, self.y, 1, 1)
     
-    -- filter drawing
-    if self.dir < 4 then
-        pset(self.x+self.offset[0],self.y+self.offset[1],self.colour)
-        pset(self.x+self.offset[0]+1,self.y+self.offset[1],self.colour+1)
-        pset(self.x+self.offset[0],self.y+self.offset[1]+1,self.colour+1)
-        pset(self.x+self.offset[0]+1,self.y+self.offset[1]+1,self.colour)
-    else
-        pset(self.x+self.offset[0],self.y+self.offset[1],self.colour)
-        pset(self.x+self.offset[0]+1,self.y+self.offset[1],self.colour+1)
-        pset(self.x+self.offset[0]-1,self.y+self.offset[1],self.colour+1)
-        pset(self.x+self.offset[0],self.y+self.offset[1]+1,self.colour+1)
-        pset(self.x+self.offset[0],self.y+self.offset[1]-1,self.colour+1)
+    -- Define a helper function to draw a pixel pattern
+    local function draw_square_filter(x, y, colour)
+        pset(x, y, colour)
+        pset(x + 1, y, colour + 1)
+        pset(x, y + 1, colour + 1)
+        pset(x + 1, y + 1, colour)
     end
+
+    local function draw_cross_filter(x, y, colour)
+        pset(x, y, colour)
+        pset(x + 1, y, colour + 1)
+        pset(x - 1, y, colour + 1)
+        pset(x, y + 1, colour + 1)
+        pset(x, y - 1, colour + 1)
+    end
+
+    -- Determine which filter to draw based on direction
+    if self.dir < 4 then
+        draw_square_filter(self.x + offset.x, self.y + offset.y, self.colour)
+    else
+        draw_cross_filter(self.x + offset.x, self.y + offset.y, self.colour)
+    end
+
 
     if showing_inventory then
         rectfill(36, 98, 98, 110, 6)
