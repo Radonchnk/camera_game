@@ -4,28 +4,28 @@ function _update()
         p:move(-1, 0)   -- left
         p.base_spr = 2
         p.dir = 0
-        log("move left")
+        --log("move left")
     end
 
     if btn(1) then 
         p:move(1, 0)    -- right
         p.base_spr = 0
         p.dir = 1
-        log("move right")
+        --log("move right")
     end
 
     if btn(2) then 
         p:move(0, -1)   -- up
         p.base_spr = 1
         p.dir = 2
-        log("move up")
+        --log("move up")
     end 
 
     if btn(3) then 
         p:move(0, 1)    -- down
         p.base_spr = 3
         p.dir = 3
-        log("move down")
+        --log("move down")
     end
     
 
