@@ -19,12 +19,13 @@ level = {
 
 walls = {}
 
-
 function setup_level()
-    for x = 0, 15 do
-        for y = 0, 15 do
-            a = wall:new(tile_to_pixel(x), tile_to_pixel(y))
-            a:draw()
+    for y = 1, 16 do
+        for x = 1, 16 do
+            if level[x][y] == 1 then
+                a = wall:new(tile_to_pixel(x - 1), tile_to_pixel(y - 1))
+                add(walls, a, #wall+1)
+            end
         end
     end
 end

@@ -11,7 +11,7 @@ __lua__
 #include utils/collision_engine.lua
 #include player/player_class.lua
 #include utils/tiling.lua
-#include map/shit.lua
+#include map/wall_class.lua
 #include map/level_setup.lua
 
 

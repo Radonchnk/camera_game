@@ -32,8 +32,16 @@ function _draw()
     cls()
     p:draw()
 
+    for i = 1, #walls do
+        walls[i]:draw()
+    end
+
     -- debug shit
     if colission_box_toggle == 1 then
         p:draw_colission_box()
+
+        for i = 1, #walls do
+            walls[i]:draw_colission_box()
+        end
     end
 end 
