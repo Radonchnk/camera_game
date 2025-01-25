@@ -1,9 +1,9 @@
 -- define a "class" (table)
-projectile = {}
-projectile.__index = projectile
+class_projectile = {}
+class_projectile.__index = class_projectile
 
 -- constructor
-function projectile:new(x,y,dir,speed,col,acc)
+function class_projectile:new(x,y,dir,speed,col,acc)
     local obj = setmetatable({}, self)
 
     obj.dir = dir  -- direction (0,1,2,3) <-> (left,right,up,down)
@@ -25,7 +25,7 @@ end
 
 -- update function called every frame, moves projectile
 
-function projectile:update()
+function class_projectile:update()
     local error = 0 -- vary movement
 
     -- accuracy rng
@@ -52,11 +52,11 @@ function projectile:update()
     end
 end
 
-function projectile:move(dx, dy)
+function class_projectile:move(dx, dy)
     self.x += dx * self.speed
     self.y += dy * self.speed
 end
 
-function projectile:draw()
+function class_projectile:draw()
     pset(self.x,self.y,self.colour+1)
 end

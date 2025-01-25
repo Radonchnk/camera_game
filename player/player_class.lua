@@ -1,6 +1,6 @@
 -- define a "class" (table)
-player = {}
-player.__index = player
+class_player = {}
+class_player.__index = class_player
 
 -- these are lists, i promise
 
@@ -8,7 +8,7 @@ player.__index = player
 showing_inventory = false
 
 -- constructor
-function player:new(x, y, width, height)
+function class_player:new(x, y, width, height)
     local obj = setmetatable({}, self)
 
     obj.proj_list = {}
@@ -16,7 +16,7 @@ function player:new(x, y, width, height)
 
     -- TODO: remove
     for i=1, 5 do
-        add(obj.inventory, item:new(1))
+        add(obj.inventory, class_item:new(1))
     end
 
     obj.x = x
@@ -34,13 +34,13 @@ function player:new(x, y, width, height)
     obj.width = width or 8
     obj.height = height or 8
     
-    obj.collision_box = collision_entity:new(x,y,obj.width,obj.height)
+    obj.collision_box = class_collision_entity:new(x,y,obj.width,obj.height)
 
     return obj
 end
 
 -- method to move the player
-function player:move(dx, dy)
+function class_player:move(dx, dy)
     self.x += dx * self.speed
     self.y += dy * self.speed
     self.collision_box:offset(dx * self.speed,  dy * self.speed)
@@ -65,7 +65,7 @@ function player:move(dx, dy)
 end
 
 -- method to draw the player
-function player:draw()
+function class_player:draw()
     -- Define offsets for directions in a table for easier management
     local offsets = {
         {x = 1, y = 2},  -- left (dir 0)
@@ -121,15 +121,15 @@ function player:draw()
 end
 
 -- transfers collision box draw signal
-function player:draw_collision_box()
+function class_player:draw_collision_box()
     self.collision_box:draw()
 end
 
 -- creates a projectile
-function player:shoot()
+function class_player:shoot()
     log(self.reload_value)
     if self.reload_value == 0 then
-        add(self.proj_list, projectile:new(p.x,p.y,p.dir,4,p.colour, 80))
+        add(self.proj_list, class_projectile:new(p.x,p.y,p.dir,4,p.colour, 80))
         self.reload_value = self.reload_speed
     end
 end

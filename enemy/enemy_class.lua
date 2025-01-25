@@ -1,11 +1,13 @@
 -- define a "class" (table)
-enemy = {}
-enemy.__index = enemy
+class_enemy = {}
+class_enemy.__index = class_enemy
 
-enemy_proj_list = {}
 -- constructor
-function enemy:new(x, y, width, height)
+function class_enemy:new(x, y, width, height)
     local obj = setmetatable({}, self)
+
+    obj.proj_list = {}
+
     obj.x = x
     obj.y = y
     obj.speed = 1
@@ -19,13 +21,13 @@ function enemy:new(x, y, width, height)
     obj.width = width or 8
     obj.height = height or 8
     
-    obj.collision_box = collision_entity:new(x,y,obj.width,obj.height)
+    obj.collision_box = class_collision_entity:new(x,y,obj.width,obj.height)
 
     return obj
 end
 
 -- method to move the enemy
-function enemy:move(dx, dy)
+function class_enemy:move(dx, dy)
 
     self.x += dx * self.speed
     self.y += dy * self.speed
@@ -51,7 +53,7 @@ end
 
 
 -- enemy ai and actions
-function enemy:update()
+function class_enemy:update()
     -- calculate distance to player
     local dx = p.x - self.x
     local dy = p.y - self.y
@@ -77,18 +79,18 @@ function enemy:update()
 end
 
 -- method to draw the enemy
-function enemy:draw()
+function class_enemy:draw()
     spr(16, self.x, self.y, 1, 1)
 end
 
 -- transfers collision box draw signal
-function enemy:draw_collision_box()
+function class_enemy:draw_collision_box()
     self.collision_box:draw()
 end
 
-function enemy:shoot()
+function class_enemy:shoot()
     if self.reload_value == 0 then
-        add(enemy_proj_list, projectile:new(self.x,self.y,self.dir, 6, 6, 50))
+        add(self.proj_list, class_projectile:new(self.x,self.y,self.dir, 6, 6, 50))
         self.reload_value = self.reload_speed
     end
 end
