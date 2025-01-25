@@ -1,12 +1,13 @@
 function _update()
     -- player movements
-    local movement_directions = {0,0,0,0}
-    if btn(0) then 
-        p:move(-1, 0)   -- left
-        p.base_spr = 2
-        p.dir = 0
-        --log("move left")
-
+    if not paused then
+        local movement_directions = {0,0,0,0}
+    if btn(0) then
+            p:move(-1, 0)   -- left
+            p.base_spr = 2
+            p.dir = 0
+            --log("move left")
+    
         movement_directions[0] = 1
 
     end
@@ -29,13 +30,13 @@ function _update()
         movement_directions[2] = 1
     end 
 
-    if btn(3) then 
-        p:move(0, 1)    -- down
-        p.base_spr = 3
-        p.dir = 3
-        --log("move down")
+        if btn(3) then
+            p:move(0, 1)    -- down
+            p.base_spr = 3
+            p.dir = 3
+            --log("move down")
 
-        movement_directions[3] = 1
+            movement_directions[3] = 1
     end
 
     if movement_directions[0] == 1 and movement_directions[2] == 1then
@@ -54,24 +55,26 @@ function _update()
         p.base_spr = 5
         p.dir = 7 -- down + right
     end
-
-    -- player keyboard inputs
-    local key = stat(31)
-    if key ~= "" then
-        log("Key pressed: " .. key)
+        if btn(5) then -- x
+            player:shoot()
+        end
     end
 
-    if key == "x" then
-        player:shoot()
+    if btn(4) and not already_toggled_inventory then -- o
+        already_toggled_inventory = true
+        showing_inventory = not showing_inventory
+    end
+    if not btn(4) then
+        already_toggled_inventory = false
     end
 
     -- debug toggles and shit
-    if key == "c" and debug_mode == 1 then
-        if collision_box_toggle == 1 then
-            collision_box_toggle = 0
+    if key == "c" and debug_mode then
+        if collision_box_toggle then
+            collision_box_toggle = false
             log("Collision borders: OFF")
         else
-            collision_box_toggle = 1
+            collision_box_toggle = true
             log("Collision borders: ON")
         end
     end

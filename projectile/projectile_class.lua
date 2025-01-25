@@ -9,7 +9,7 @@ function projectile:new(x,y,dir,speed,col,acc)
     obj.dir = dir  -- direction (0,1,2,3) <-> (left,right,up,down)
     obj.speed = speed
     obj.colour = col
-    obj.accuracy = acc  -- number 0 -> 100
+    obj.accuracy = acc -- number 0 -> 100
 
     -- random start point for projectile in lens range
     if obj.dir < 2 then

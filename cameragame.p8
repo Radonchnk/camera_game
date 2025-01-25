@@ -9,6 +9,7 @@ __lua__
 #include player/inputs.lua
 #include utils/log.lua
 #include utils/collision_engine.lua
+#include player/item.lua
 #include player/player_class.lua
 #include utils/tiling.lua
 #include map/wall_class.lua

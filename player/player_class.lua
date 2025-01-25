@@ -2,7 +2,17 @@
 player = {}
 player.__index = player
 
+-- these are lists, i promise
 player_proj_list = {}
+player_inventory = {}
+
+-- TODO: remove
+for i=1, 5 do
+    add(player_inventory, item:new(1))
+end
+
+showing_inventory = false
+
 -- constructor
 function player:new(x, y, width, height)
     local obj = setmetatable({}, self)
@@ -13,6 +23,10 @@ function player:new(x, y, width, height)
     obj.dir = 1
     obj.offset = {0,0}
     obj.colour = 9
+
+    -- can shoot every frame
+    self.reload_speed = 0
+    self.reload_value = 0
 
     obj.width = width or 8
     obj.height = height or 8
@@ -38,6 +52,11 @@ function player:move(dx, dy)
         self.x -= dx * self.speed
         self.y -= dy * self.speed
         self.collision_box:offset(-dx * self.speed, -dy * self.speed)
+    end
+
+    -- takes some amount of frames to reload
+    if self.reload_value > 0 then
+        self.reload_value -= 1
     end
 
 end
@@ -86,6 +105,17 @@ function player:draw()
         pset(self.x+self.offset[0],self.y+self.offset[1]+1,self.colour+1)
         pset(self.x+self.offset[0],self.y+self.offset[1]-1,self.colour+1)
     end
+
+    if showing_inventory then
+        rectfill(36, 98, 98, 110, 6)
+        -- draw items at (40, 20), (52, 20), (64, 20), (72, 20), (90, 20)
+        -- space for 5 items, as needed (with nice borders)
+        for i = 1, #player_inventory do
+            x = 28 + (i * 12)
+            y = 100
+            player_inventory[i]:draw(x, y)
+        end
+    end
 end
 
 -- transfers collision box draw signal
@@ -95,5 +125,8 @@ end
 
 -- creates a projectile
 function player:shoot()
-    add(player_proj_list, projectile:new(p.x,p.y,p.dir,4,p.colour,80))
+    if self.reload_value == 0 then
+        add(player_proj_list, projectile:new(p.x,p.y,p.dir,4,p.colour, 80))
+        self.reload_value = self.reload_speed
+    end
 end
