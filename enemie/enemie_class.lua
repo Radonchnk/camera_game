@@ -54,7 +54,7 @@ end
 
 -- method to draw the enemie
 function enemie:draw()
-    spr(17, self.x, self.y, 1, 1)
+    spr(16, self.x, self.y, 1, 1)
 end
 
 -- transfers collision box draw signal

@@ -34,5 +34,5 @@ enemies = {}
 
 -- just kind of makes emenies
 function setup_enemies() 
-    add(enemies, enemie:new(tile_to_pixel(7), tile_to_pixel(7)), #enemies+1)
+    add(enemies, enemie:new(tile_to_pixel(7), tile_to_pixel(7), 8, 6), #enemies+1)
 end
