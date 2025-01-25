@@ -3,19 +3,22 @@ player = {}
 player.__index = player
 
 -- these are lists, i promise
-player_proj_list = {}
-player_inventory = {}
 
--- TODO: remove
-for i=1, 5 do
-    add(player_inventory, item:new(1))
-end
 
 showing_inventory = false
 
 -- constructor
 function player:new(x, y, width, height)
     local obj = setmetatable({}, self)
+
+    obj.proj_list = {}
+    obj.inventory = {}
+
+    -- TODO: remove
+    for i=1, 5 do
+        add(obj.inventory, item:new(1))
+    end
+
     obj.x = x
     obj.y = y
     obj.speed = 2
@@ -109,10 +112,10 @@ function player:draw()
         rectfill(32, 98, 94, 110, 6)
         -- draw items at (40, 20), (52, 20), (64, 20), (72, 20), (90, 20)
         -- space for 5 items, as needed (with nice borders)
-        for i = 1, #player_inventory do
+        for i = 1, #self.inventory do
             x = 24 + (i * 12)
             y = 100
-            player_inventory[i]:draw(x, y)
+            self.inventory[i]:draw(x, y)
         end
     end
 end
@@ -126,7 +129,7 @@ end
 function player:shoot()
     log(self.reload_value)
     if self.reload_value == 0 then
-        add(player_proj_list, projectile:new(p.x,p.y,p.dir,4,p.colour, 80))
+        add(self.proj_list, projectile:new(p.x,p.y,p.dir,4,p.colour, 80))
         self.reload_value = self.reload_speed
     end
 end

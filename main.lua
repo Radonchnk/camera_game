@@ -37,11 +37,11 @@ function _draw()
 
     paused = showing_inventory -- add other things too later
 
-    for i = 1, #player_proj_list do
+    for i = 1, #p.proj_list do
         if not paused then
-            player_proj_list[i]:update()
+            p.proj_list[i]:update()
         end
-        player_proj_list[i]:draw()
+        p.proj_list[i]:draw()
     end
 
     for i = 1, #enemy_proj_list do
