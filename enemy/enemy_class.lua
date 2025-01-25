@@ -1,10 +1,10 @@
 -- define a "class" (table)
-enemie = {}
-enemie.__index = enemie
+enemy = {}
+enemy.__index = enemy
 
-enemie_proj_list = {}
+enemy_proj_list = {}
 -- constructor
-function enemie:new(x, y, width, height)
+function enemy:new(x, y, width, height)
     local obj = setmetatable({}, self)
     obj.x = x
     obj.y = y
@@ -20,8 +20,8 @@ function enemie:new(x, y, width, height)
     return obj
 end
 
--- method to move the enemie
-function enemie:move(dx, dy)
+-- method to move the enemy
+function enemy:move(dx, dy)
 
     self.x += dx * self.speed
     self.y += dy * self.speed
@@ -47,21 +47,21 @@ function enemie:move(dx, dy)
 end
 
 
--- enemie ai and shit
-function enemie:update()
+-- enemy ai and shit
+function enemy:update()
     -- stupid baka
 end
 
--- method to draw the enemie
-function enemie:draw()
+-- method to draw the enemy
+function enemy:draw()
     spr(16, self.x, self.y, 1, 1)
 end
 
 -- transfers collision box draw signal
-function enemie:draw_collision_box()
+function enemy:draw_collision_box()
     self.collision_box:draw()
 end
 
-function enemie:shoot()
-    add(enemie_proj_list, projectile:new(p.x,p.y,p.dir, 6))
+function enemy:shoot()
+    add(enemy_proj_list, projectile:new(p.x,p.y,p.dir, 6))
 end
