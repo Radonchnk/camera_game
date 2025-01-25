@@ -14,19 +14,42 @@ function player:new(x, y)
 
     x = obj.x
     y = obj.y
-    width = obj.size
-    height = obj.size
+    obj.width = obj.size
+    obj.height = obj.size
     
-    obj.colission_box = colission_entity:new(x,y,width,height)
+    obj.colission_box = colission_entity:new(x,y,obj.width,obj.height)
 
     return obj
 end
 
 -- method to move the player
 function player:move(dx, dy)
+
+    log(self.x)
+    log(self.y)
+    
+
     self.x += dx * self.speed
     self.y += dy * self.speed
     self.colission_box:offset(dx * self.speed,  dy * self.speed)
+    radius_walls = get_close_elements(self, walls, 16)
+
+    collision = 0
+
+    for i = 1, #radius_walls do
+        if do_collide(self.colission_box, radius_walls[i].colission_box) then
+            colission = 1
+            log("collision")
+        end
+    end
+
+    if colission == 1 then
+        self.x -= dx * self.speed
+        self.y -= dy * self.speed
+        self.colission_box:offset(-dx * self.speed, -dy * self.speed)
+        colission = 0
+    end
+
 end
 
 -- method to draw the player

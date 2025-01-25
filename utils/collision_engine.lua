@@ -39,3 +39,28 @@ function colission_entity:draw()
     pset(self.x, self.y + self.height - 1, 8)  -- bottom-left corner
     pset(self.x + self.width - 1, self.y + self.height - 1, 8)  -- bottom-right corner
 end
+
+-- get center of collision entity
+function colission_entity:get_center()
+    x = self.x + self.width/2
+    y = self.y + self.height/2
+    return {x, y}
+end
+
+-- disntance between 2 elements
+function vec_dist(vector1, vector2)
+    return sqrt((vector2[1] - vector1[1])^2 + (vector2[2] - vector1[2])^2)
+end
+
+-- discards elements that are not in radius
+function get_close_elements(obj1, obj_list, distance)
+    close_elements = {}
+    for i = 1, #obj_list do
+        center_obj1 = obj1.colission_box:get_center()
+        center_obj2 = obj_list[i].colission_box:get_center()
+        if vec_dist(center_obj1, center_obj2) < distance then
+            add(close_elements, obj_list[i], #close_elements+1)
+        end
+    end
+    return close_elements
+end

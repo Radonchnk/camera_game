@@ -12,10 +12,10 @@ function wall:new(x, y)
 
     x = obj.x
     y = obj.y
-    width = obj.size
-    height = obj.size
+    obj.width = obj.size
+    obj.height = obj.size
     
-    obj.colission_box = colission_entity:new(x,y,width,height)
+    obj.colission_box = colission_entity:new(x,y,obj.width,obj.height)
 
     return obj
 end
