@@ -14,6 +14,12 @@ collision_box_toggle = true
 function _init()
     log("Game has started")
 
+    if debug_mode then
+        -- allow full keyboard input
+        -- ONLY IN DEV MODE. BAD BAD BAD DO NOT USE THIS FOR ACTUAL INPUT
+        poke(0x5F2D, 1)
+    end
+
     -- innitialise player
     p = player:new(tile_to_pixel(1), tile_to_pixel(1), 10, 6)
 

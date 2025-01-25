@@ -30,7 +30,8 @@ function _update()
         end
     
         if btn(5) then -- x
-            player:shoot()
+            log("shoot")
+            p:shoot()
         end
     end
 
@@ -42,14 +43,20 @@ function _update()
         already_toggled_inventory = false
     end
 
-    -- debug toggles and shit
-    if key == "c" and debug_mode then
-        if collision_box_toggle then
-            collision_box_toggle = false
-            log("Collision borders: OFF")
-        else
-            collision_box_toggle = true
-            log("Collision borders: ON")
+    -- debug toggles and shit, DO NOT USE THIS FOR ACTUAL INPUT
+    -- do not use arrow keys / Z C N / X V M (these are inputs direction, O and X respectively)
+    -- for player 1, SFED / LSHIFT / TAB W Q A (same as above)
+    -- (these are reserved for actual input)
+    if debug_mode and stat(30) then
+        key = stat(31)
+        if key == "t" and debug_mode then
+            if collision_box_toggle then
+                collision_box_toggle = false
+                log("Collision borders: OFF")
+            else
+                collision_box_toggle = true
+                log("Collision borders: ON")
+            end
         end
     end
 end
