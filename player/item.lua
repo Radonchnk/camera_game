@@ -21,6 +21,6 @@ function item:select(x, y)
 
 end
 
-function item:tick()
+function item:update()
     -- called once per frame
 end

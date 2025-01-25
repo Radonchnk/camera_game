@@ -29,8 +29,12 @@ function _draw()
     cls()
     p:draw()
 
+    paused = showing_inventory -- add other things too later
+
     for i = 1, #player_proj_list do
-        player_proj_list[i]:update()
+        if not paused then
+            player_proj_list[i]:update()
+        end
         player_proj_list[i]:draw()
     end
 
@@ -40,7 +44,9 @@ function _draw()
     end
 
     for i = 1, #enemies do
-        enemies[i]:update()
+        if not paused then
+            enemies[i]:update()
+        end
         enemies[i]:draw()
     end
 
