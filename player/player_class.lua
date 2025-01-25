@@ -4,19 +4,16 @@ player.__index = player
 
 player_proj_list = {}
 -- constructor
-function player:new(x, y)
+function player:new(x, y, width, height)
     local obj = setmetatable({}, self)
-    obj.size = 8 -- in pixels for w and h
     obj.x = x
     obj.y = y
     obj.speed = 2
     obj.base_spr = 1
     obj.dir = 1
 
-    x = obj.x
-    y = obj.y
-    obj.width = obj.size
-    obj.height = obj.size
+    obj.width = width or 8
+    obj.height = height or 8
     
     obj.colission_box = colission_entity:new(x,y,obj.width,obj.height)
 
@@ -26,29 +23,19 @@ end
 -- method to move the player
 function player:move(dx, dy)
 
-    log(self.x)
-    log(self.y)
-    
-
     self.x += dx * self.speed
     self.y += dy * self.speed
     self.colission_box:offset(dx * self.speed,  dy * self.speed)
-    radius_walls = get_close_elements(self, walls, 16)
 
-    collision = 0
+    -- check player against walls & enemies 
+    collision_walls = collision_to_list(self, walls, 16)
+    collision_enemies = collision_to_list(self, enemies, 16)
 
-    for i = 1, #radius_walls do
-        if do_collide(self.colission_box, radius_walls[i].colission_box) then
-            colission = 1
-            log("collision")
-        end
-    end
-
-    if colission == 1 then
+    -- when object collides, size of fuction return is 2 because object is being passed too
+    if #collision_walls == 2 or #collision_enemies == 2 then
         self.x -= dx * self.speed
         self.y -= dy * self.speed
         self.colission_box:offset(-dx * self.speed, -dy * self.speed)
-        colission = 0
     end
 
 end

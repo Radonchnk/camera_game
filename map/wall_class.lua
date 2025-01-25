@@ -3,17 +3,14 @@ wall = {}
 wall.__index = wall
 
 -- constructor
-function wall:new(x, y)
+function wall:new(x, y, width, height)
     local obj = setmetatable({}, self)
-    obj.size = 8 -- in pixels for w and h
     obj.x = x
     obj.y = y
     obj.speed = 2
 
-    x = obj.x
-    y = obj.y
-    obj.width = obj.size
-    obj.height = obj.size
+    obj.width = width or 8
+    obj.height = height or 8
     
     obj.colission_box = colission_entity:new(x,y,obj.width,obj.height)
 

@@ -15,6 +15,7 @@ __lua__
 #include map/level_setup.lua
 #include player/camera_follow.lua
 #include projectile/projectile_class.lua
+#include enemie/enemie_class.lua
 
 --#include main.lua
 __gfx__

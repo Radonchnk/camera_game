@@ -62,3 +62,18 @@ function get_close_elements(obj1, obj_list, distance)
     end
     return close_elements
 end
+
+-- takes object and list of obects as inputs 
+-- after which return 1 if object collides with at least one leement in list
+-- and if collide -> return object with which collide
+function collision_to_list(obj, list_obj, distance)
+
+    close_list_obj = get_close_elements(obj, list_obj, distance)
+
+    for i = 1, #close_list_obj do
+        if do_collide(obj.colission_box, close_list_obj[i].colission_box) then
+            return {1, close_list_obj[i]}
+        end
+    end
+    return {0}
+end

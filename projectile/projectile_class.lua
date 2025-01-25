@@ -24,6 +24,10 @@ function projectile:update()
     end
 end
 
+function projectile:move()
+
+end
+
 function projectile:draw()
     pset(self.x,self.y)
 end

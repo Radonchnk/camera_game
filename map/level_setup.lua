@@ -19,13 +19,20 @@ level = {
 
 walls = {}
 
-function setup_level()
+-- placehoder that reads from level 2d table
+function setup_walls()
     for y = 1, 16 do
         for x = 1, 16 do
             if level[x][y] == 1 then
-                a = wall:new(tile_to_pixel(x - 1), tile_to_pixel(y - 1))
-                add(walls, a, #wall+1)
+                add(walls, wall:new(tile_to_pixel(x - 1), tile_to_pixel(y - 1)), #wall+1)
             end
         end
     end
+end
+
+enemies = {}
+
+-- just kind of makes emenies
+function setup_enemies() 
+    add(enemies, enemie:new(tile_to_pixel(7), tile_to_pixel(7)), #enemies+1)
 end
