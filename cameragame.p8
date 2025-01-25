@@ -14,7 +14,7 @@ __lua__
 #include map/wall_class.lua
 #include map/level_setup.lua
 #include projectile/projectile_class.lua
-#include enemie/enemy_class.lua
+#include enemy/enemy_class.lua
 
 
 --#include main.lua
