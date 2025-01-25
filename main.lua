@@ -14,9 +14,6 @@ collision_box_toggle = true
 function _init()
     log("Game has started")
 
-    -- enter devkit mode to accept keyboard inputs
-    poke(0x5f2d, 1)
-
     -- innitialise player
     p = player:new(tile_to_pixel(1), tile_to_pixel(1), 10, 6)
 
