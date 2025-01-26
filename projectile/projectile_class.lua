@@ -120,12 +120,3 @@ end
 function class_projectile:draw_collision_box()
     self.collision_box:draw()
 end
-
-
-function deal_with_delete_queue(obj)
-    -- dealt with it
-    for i = 1, #delete_queue do
-        del(delete_queue[1], obj.proj_list)
-        del(delete_queue[1], delete_queue)
-    end
-end

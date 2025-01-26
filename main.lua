@@ -61,12 +61,8 @@ function _draw()
 
     -- delete colided projectiles from all lists
     for i = 1, #delete_queue do
-        del(player_proj_list, delete_queue[i])
-        del(enemy_proj_list, delete_queue[i])
-    end
-
-    -- clear deleating queue
-    for i = 1, #delete_queue do
+        del(player_proj_list, delete_queue[1])
+        del(enemy_proj_list, delete_queue[1])
         del(delete_queue, delete_queue[1])
     end
 
