@@ -1,9 +1,9 @@
 -- define a "class" 
-collision_entity = {}
-collision_entity.__index = collision_entity
+class_collision_entity = {}
+class_collision_entity.__index = class_collision_entity
 
 -- constructor for the class
-function collision_entity:new(x, y, width, height)
+function class_collision_entity:new(x, y, width, height)
     local obj = setmetatable({}, self)
     -- x and y are at top left of collision box
     obj.x = x
@@ -13,19 +13,19 @@ function collision_entity:new(x, y, width, height)
     return obj
 end
 
-function collision_entity:offset(dx, dy)
+function class_collision_entity:offset(dx, dy)
     self.x += dx
     self.y += dy
 end
 
 -- draw function to draw corners as red pixels
-function collision_entity:draw()
+function class_collision_entity:draw()
     -- Draw the four corners of the collision box
     spr(0, self.x, self.y, 1, 1)
 end
 
 -- get center of collision entity
-function collision_entity:get_center()
+function class_collision_entity:get_center()
     x = self.x + self.width/2
     y = self.y + self.height/2
     return {x, y}
@@ -45,7 +45,7 @@ function do_collide(obj1, obj2)
 end
 
 -- draw function to draw corners as red pixels
-function collision_entity:draw()
+function class_collision_entity:draw()
     -- Draw the four corners of the collision box
     pset(self.x, self.y, 8)               -- top-left corner
     pset(self.x + self.width - 1, self.y, 8)  -- top-right corner
@@ -54,7 +54,7 @@ function collision_entity:draw()
 end
 
 -- get center of collision entity
-function collision_entity:get_center()
+function class_collision_entity:get_center()
     x = self.x + self.width/2
     y = self.y + self.height/2
     return {x, y}

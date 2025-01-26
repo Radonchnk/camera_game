@@ -1,12 +1,12 @@
 -- define a "class" (table)
-projectile = {}
-projectile.__index = projectile
+class_projectile = {}
+class_projectile.__index = class_projectile
 
 -- projectiles that collide with something are added here to be deleted later
 delete_queue = {}
 
 -- constructor
-function projectile:new(owner, x,y,dir,speed,col,acc)
+function class_projectile:new(owner, x, y, dir, speed, col, acc)
     local obj = setmetatable({}, self)
 
     obj.owner = owner
@@ -27,14 +27,14 @@ function projectile:new(owner, x,y,dir,speed,col,acc)
         obj.y = y+6
     end
     
-    obj.collision_box = collision_entity:new(obj.x,obj.y,obj.width,obj.height)
+    obj.collision_box = class_collision_entity:new(obj.x,obj.y,obj.width,obj.height)
 
     return obj
 end
 
 -- update function called every frame, moves projectile
 
-function projectile:update()
+function class_projectile:update()
     local error = 0 -- vary movement
 
     -- accuracy rng
@@ -42,20 +42,28 @@ function projectile:update()
         error = rnd({0.25,-0.25})
     end
 
-    if self.dir == 0 then
+    if self.dir == 0 then -- left
         self:move(-1,error)
-    elseif self.dir == 1 then
+    elseif self.dir == 1 then -- right
         self:move(1,error)
-    elseif self.dir == 2 then
+    elseif self.dir == 2 then -- up
         self:move(error,-1)
-    elseif self.dir == 3 then
+    elseif self.dir == 3 then -- down
         self:move(error,1)
+    elseif self.dir == 4 then -- up left
+        self:move(-1+error,-1+error)
+    elseif self.dir == 5 then -- up right
+        self:move(1+error,-1+error)
+    elseif self.dir == 6 then -- down left
+        self:move(-1+error,1+error)
+    else -- down right
+        self:move(1+error,1+error)
     end
 end
 
 
 -- moves projectiles and checks for colission
-function projectile:move(dx, dy)
+function class_projectile:move(dx, dy)
     self.x += dx * self.speed
     self.y += dy * self.speed
     self.collision_box:offset(dx * self.speed,  dy * self.speed)
@@ -104,11 +112,20 @@ function projectile:move(dx, dy)
 
 end
 
-function projectile:draw()
+function class_projectile:draw()
     pset(self.x,self.y,self.colour+1)
 end
 
 -- transfers collision box draw signal
-function projectile:draw_collision_box()
+function class_projectile:draw_collision_box()
     self.collision_box:draw()
+end
+
+
+function deal_with_delete_queue(obj)
+    -- dealt with it
+    for i = 1, #delete_queue do
+        del(delete_queue[1], obj.proj_list)
+        del(delete_queue[1], delete_queue)
+    end
 end
