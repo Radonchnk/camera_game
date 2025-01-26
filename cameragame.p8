@@ -3,7 +3,7 @@ version 42
 __lua__
 -- add includes onyly in
 -- pico8 redactor
---	buttons ⬅️➡️⬆️⬇️
+--buttons ⬅️➡️⬆️⬇️
 
 #include main.lua
 #include player/inputs.lua
