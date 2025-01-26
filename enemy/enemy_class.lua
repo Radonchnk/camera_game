@@ -9,7 +9,7 @@ function enemy:new(x, y, width, height)
     obj.x = x
     obj.y = y
     obj.speed = 1
-    obj.base_spr = 1
+    obj.base_spr = 8
     obj.dir = 1
 
     -- can shoot every 10 sframes
@@ -24,6 +24,21 @@ function enemy:new(x, y, width, height)
     return obj
 end
 
+function enemy:rotate(direction)
+    if direction == "left" then
+        self.dir = 0
+        self.base_spr = 10
+    elseif direction == "right" then
+        self.dir = 1
+        self.base_spr = 8
+    elseif direction == "up" then
+        self.dir = 2
+        self.base_spr = 9
+    elseif direction == "down" then
+        self.dir = 3
+        self.base_spr = 11
+    end
+end
 -- method to move the enemy
 function enemy:move(dx, dy)
 
@@ -64,6 +79,20 @@ function enemy:update()
         local dir_y = dy / distance
         self:move(dir_x, dir_y)
     end
+    -- rotate towards player
+    if abs(dx) > abs(dy) then
+        if dx > 8 then
+            self:rotate("right")
+        elseif dx < -8 then
+            self:rotate("left")
+        end
+    else
+        if dy > 8 then
+            self:rotate("down")
+        elseif dy < -8 then
+            self:rotate("up")
+        end
+    end
 
     -- shoot at the player if close enough
     if distance <= 64 then
@@ -78,7 +107,7 @@ end
 
 -- method to draw the enemy
 function enemy:draw()
-    spr(16, self.x, self.y, 1, 1)
+    spr(self.base_spr, self.x, self.y, 1, 1)
 end
 
 -- transfers collision box draw signal

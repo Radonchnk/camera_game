@@ -22,7 +22,7 @@ function player:new(x, y, width, height)
     obj.base_spr = 0
     obj.dir = 1
     obj.offset = {0,0}
-    obj.colour = 1
+    obj.colour = 9
 
     -- can shoot every frame
     obj.reload_speed = 0
@@ -126,7 +126,7 @@ end
 function player:shoot()
     log(self.reload_value)
     if self.reload_value == 0 then
-        add(player_proj_list, projectile:new(p.x,p.y,p.dir,4,p.colour, 80))
+        add(player_proj_list, projectile:new(p.x,p.y,p.dir,6,p.colour, 80))
         self.reload_value = self.reload_speed
     end
 end
