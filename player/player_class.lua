@@ -1,21 +1,24 @@
 -- define a "class" (table)
-player = {}
-player.__index = player
+class_player = {}
+class_player.__index = class_player
 
 -- these are lists, i promise
-player_proj_list = {}
-player_inventory = {}
 
--- TODO: remove
-for i=1, 5 do
-    add(player_inventory, item:new(1))
-end
 
 showing_inventory = false
 
+player_proj_list = {}
+
 -- constructor
-function player:new(x, y, width, height)
+function class_player:new(x, y, width, height)
     local obj = setmetatable({}, self)
+
+    obj.inventory = {}
+
+    -- TODO: remove
+    for i=1, 5 do
+        add(obj.inventory, class_item:new(1))
+    end
     obj.x = x
     obj.y = y
     obj.speed = 2
@@ -28,16 +31,18 @@ function player:new(x, y, width, height)
     obj.reload_speed = 0
     obj.reload_value = 0
 
+    obj.name = "player"
+
     obj.width = width or 8
     obj.height = height or 8
     
-    obj.collision_box = collision_entity:new(x,y,obj.width,obj.height)
+    obj.collision_box = class_collision_entity:new(x,y,obj.width,obj.height)
 
     return obj
 end
 
 -- method to move the player
-function player:move(dx, dy)
+function class_player:move(dx, dy)
     self.x += dx * self.speed
     self.y += dy * self.speed
     self.collision_box:offset(dx * self.speed,  dy * self.speed)
@@ -62,7 +67,7 @@ function player:move(dx, dy)
 end
 
 -- method to draw the player
-function player:draw()
+function class_player:draw()
     -- Define offsets for directions in a table for easier management
     local offsets = {
         {x = 1, y = 2},  -- left (dir 0)
@@ -109,24 +114,23 @@ function player:draw()
         rectfill(32, 98, 94, 110, 6)
         -- draw items at (40, 20), (52, 20), (64, 20), (72, 20), (90, 20)
         -- space for 5 items, as needed (with nice borders)
-        for i = 1, #player_inventory do
+        for i = 1, #self.inventory do
             x = 24 + (i * 12)
             y = 100
-            player_inventory[i]:draw(x, y)
+            self.inventory[i]:draw(x, y)
         end
     end
 end
 
 -- transfers collision box draw signal
-function player:draw_collision_box()
+function class_player:draw_collision_box()
     self.collision_box:draw()
 end
 
 -- creates a projectile
-function player:shoot()
-    log(self.reload_value)
+function class_player:shoot()
     if self.reload_value == 0 then
-        add(player_proj_list, projectile:new(p.x,p.y,p.dir,6,p.colour, 80))
+        add(player_proj_list, class_projectile:new(self, p.x,p.y,p.dir,6,p.colour, 80))
         self.reload_value = self.reload_speed
     end
 end

@@ -42,22 +42,21 @@ function _update()
         if movement_directions[0] == 1 and movement_directions[2] == 1then
             p.base_spr = 6 
             p.dir = 4 -- up + left
-            log("up left")
+            -- log("up left")
         elseif movement_directions[1] == 1 and movement_directions[2] == 1 then
             p.base_spr = 4
             p.dir = 5 -- up + right
-            log("up right")
+            -- log("up right")
         elseif movement_directions[0] == 1 and movement_directions[3] == 1then
             p.base_spr = 7
             p.dir = 6 -- down + left
-            log("down left")
+            -- log("down left")
         elseif movement_directions[1] == 1 and movement_directions[3] == 1 then
             p.base_spr = 5
             p.dir = 7 -- down + right
         end
         
         if btn(5) then -- x
-            log("shoot")
             p:shoot()
         end
     end

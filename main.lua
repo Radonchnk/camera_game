@@ -21,7 +21,7 @@ function _init()
     end
 
     -- innitialise player
-    p = player:new(tile_to_pixel(1), tile_to_pixel(1), 10, 6)
+    p = class_player:new(tile_to_pixel(1), tile_to_pixel(1), 10, 6)
 
     -- make level and shit
     setup_walls()
@@ -44,18 +44,26 @@ function _draw()
         player_proj_list[i]:draw()
     end
 
-    for i = 1, #enemy_proj_list do
-        if not paused then
-            enemy_proj_list[i]:update()
-        end
-        enemy_proj_list[i]:draw()
-    end
-
     for i = 1, #enemies do
         if not paused then
             enemies[i]:update()
+            for j = 1, #enemy_proj_list do
+                if not paused then
+                    enemy_proj_list[j]:update()
+                end
+            end
         end
         enemies[i]:draw()
+        for j = 1, #enemy_proj_list do
+            enemy_proj_list[j]:draw()
+        end
+    end
+
+    -- delete colided projectiles from all lists
+    for i = 1, #delete_queue do
+        del(player_proj_list, delete_queue[1])
+        del(enemy_proj_list, delete_queue[1])
+        del(delete_queue, delete_queue[1])
     end
 
     for i = 1, #walls do
@@ -73,5 +81,14 @@ function _draw()
         for i = 1, #enemies do
             enemies[i]:draw_collision_box()
         end
+
+        for i = 1, #player_proj_list do
+            player_proj_list[i]:draw_collision_box()
+        end
+    
+        for i = 1, #enemy_proj_list do
+            enemy_proj_list[i]:draw_collision_box()
+        end
+
     end
 end 
