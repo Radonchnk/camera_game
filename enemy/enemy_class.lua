@@ -112,7 +112,7 @@ end
 
 -- method to draw the enemy
 function class_enemy:draw()
-    spr(base_spr, self.x, self.y, 1, 1)
+    spr(self.base_spr, self.x, self.y, 1, 1)
 end
 
 -- transfers collision box draw signal
