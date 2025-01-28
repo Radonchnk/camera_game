@@ -110,6 +110,10 @@ function class_player:draw()
     end
 
 
+
+end
+
+function class_player:draw_inventory() 
     if showing_inventory then
         rectfill(32, 98, 94, 110, 6)
         -- draw items at (40, 20), (52, 20), (64, 20), (72, 20), (90, 20)

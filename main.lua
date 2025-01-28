@@ -3,6 +3,7 @@
 -- May god help you
 --              (c) Artem
 
+screen_size = 128 -- screen is cube 128 by 128, used to delete bullets that are outside screen
 -- debug toggles
 
 
@@ -21,10 +22,12 @@ function _init()
     end
 
     -- innitialise player
-    p = class_player:new(tile_to_pixel(1), tile_to_pixel(1), 10, 6)
+    p = class_player:new(tile_to_pixel(3), tile_to_pixel(3), 10, 6)
 
     -- make level and shit
-    setup_walls()
+    cube = create_level(10)
+
+    setup_walls(cube)
 
     setup_enemies()
 
@@ -35,14 +38,32 @@ function _draw()
     cls()
     p:draw()
 
+
+    for i = 1, #walls do
+        walls[i]:draw()
+    end
+
     paused = showing_inventory -- add other things too later
 
     for i = 1, #player_proj_list do
         if not paused then
             player_proj_list[i]:update()
         end
-        player_proj_list[i]:draw()
+    
     end
+
+    -- delete projectiles from player before drawing them
+    for i = 1, #delete_queue do 
+        log(i)
+        del(player_proj_list, delete_queue[1])
+        del(delete_queue, delete_queue[1]) 
+    end
+
+    for j = 1, #player_proj_list do
+        player_proj_list[j]:draw()
+    end
+
+
 
     for i = 1, #enemies do
         if not paused then
@@ -54,21 +75,19 @@ function _draw()
             end
         end
         enemies[i]:draw()
+        
+        -- delete projectiles from enemy before drawing them
+        for i = 1, #delete_queue do 
+            del(enemy_proj_list, delete_queue[1])
+            del(delete_queue, delete_queue[1]) 
+        end
+
         for j = 1, #enemy_proj_list do
             enemy_proj_list[j]:draw()
         end
     end
 
-    -- delete colided projectiles from all lists
-    for i = 1, #delete_queue do
-        del(player_proj_list, delete_queue[1])
-        del(enemy_proj_list, delete_queue[1])
-        del(delete_queue, delete_queue[1])
-    end
-
-    for i = 1, #walls do
-        walls[i]:draw()
-    end
+    p:draw_inventory()
 
     -- debug shit
     if collision_box_toggle then
