@@ -8,7 +8,7 @@ screen_size = 128 -- screen is cube 128 by 128, used to delete bullets that are 
 
 
 debug_mode = true
-collision_box_toggle = true
+collision_box_toggle = false
 
 
 -- executes on startap
@@ -22,12 +22,15 @@ function _init()
     end
 
     -- innitialise player
-    p = class_player:new(tile_to_pixel(3), tile_to_pixel(3), 10, 6)
+    p = class_player:new(tile_to_pixel(3), tile_to_pixel(3), 6, 6)
+
+    dungeon = generate_dungeon()
 
     -- make level and shit
-    cube = create_level(10)
+    local left_room = create_room(12, "e", 5)
+    local right_room = create_room(12, "w", 5)
 
-    setup_walls(cube)
+    setup_walls(left_room)
 
     setup_enemies()
 
