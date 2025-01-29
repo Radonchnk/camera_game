@@ -113,6 +113,7 @@ function class_projectile:move(dx, dy)
 end
 
 function class_projectile:draw()
+    log()
     pset(self.x,self.y,self.colour+1)
 end
 

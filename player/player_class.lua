@@ -24,7 +24,6 @@ function class_player:new(x, y, width, height)
     obj.speed = 2
     obj.base_spr = 0
     obj.dir = 1
-    obj.offset = {0,0}
     obj.colour = 9
 
     -- can shoot every frame
@@ -70,23 +69,23 @@ end
 function class_player:draw()
     -- Define offsets for directions in a table for easier management
     local offsets = {
-        {x = 1, y = 2},  -- left (dir 0)
-        {x = 4, y = 2},  -- right (dir 1)
-        {x = 2, y = 1},  -- up (dir 2)
-        {x = 4, y = 2},  -- down (dir 3)
-        {x = 1, y = 2},  -- up left (dir 4)
-        {x = 6, y = 2},  -- up right (dir 5)
-        {x = 1, y = 4},  -- down left (dir 6)
-        {x = 6, y = 4}   -- down right (dir 7)
+        {x = 1, y = 2},  -- left
+        {x = 4, y = 2},  -- right
+        {x = 2, y = 1},  -- up
+        {x = 2, y = 4},  -- down
+        {x = 1, y = 2},  -- up left
+        {x = 6, y = 2},  -- up right
+        {x = 1, y = 4},  -- down left
+        {x = 6, y = 4}   -- down right
     }
 
-    -- Get offset based on direction, default to {x = 0, y = 0} if dir is invalid
-    local offset = offsets[self.dir + 1] or {x = 0, y = 0}
+    -- Get offset based on direction
+    local offset = offsets[self.dir + 1]
 
     -- Draw the base sprite
     spr(self.base_spr, self.x, self.y, 1, 1)
     
-    -- Define a helper function to draw a pixel pattern
+    -- Define pixel patterns
     local function draw_square_filter(x, y, colour)
         pset(x, y, colour)
         pset(x + 1, y, colour + 1)
@@ -130,7 +129,20 @@ end
 -- creates a projectile
 function class_player:shoot()
     if self.reload_value == 0 then
-        add(player_proj_list, class_projectile:new(self, p.x,p.y,p.dir,6,p.colour, 80))
+        local offsets = {
+            {x = -4, y = 0}, -- left
+            {x = 12, y = 0}, -- right
+            {x = 4, y = -4}, -- up
+            {x = 4, y = 4}, -- down
+            {x = 0, y = -4},  -- up left
+            {x = 12, y = -4},  -- up right
+            {x = -4, y = 4},  -- down left
+            {x = 12, y = 4}   -- down right
+        }
+
+        local offset = offsets[self.dir + 1]
+        log(self.colour)
+        add(player_proj_list, class_projectile:new(self, self.x+offset.x,self.y+offset.y,self.dir,6,self.colour, 80))
         self.reload_value = self.reload_speed
     end
 end
