@@ -18,6 +18,10 @@ function class_player:new(x, y, width, height)
     for i=1, 5 do
         add(obj.inventory, class_item:new(1))
     end
+
+    obj.max_health_points = 10
+    obj.health_points = 10
+
     obj.x = x
     obj.y = y
     obj.speed = 2
@@ -141,6 +145,24 @@ function class_player:draw()
 
 
 
+end
+
+function class_player:draw_hp_bar()
+    rectfill(self.x-3, self.y-2, self.x+10-3, self.y-2, 5)
+    rectfill(self.x-3, self.y-2, self.x+flr(self.health_points/self.max_health_points*10)-3, self.y-2, 8)
+end
+
+function class_player:process_death()
+    log("player death")
+    self.health_points = self.max_health_points
+end
+
+function class_player:take_damage(damage)
+    self.health_points -= damage
+
+    if self.health_points < 1 then
+        self:process_death()
+    end
 end
 
 function class_player:draw_inventory() 

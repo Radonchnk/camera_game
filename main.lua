@@ -44,7 +44,6 @@ function _init()
                 row = row .. " 1 "
             end
         end
-        log(row)
     end
 
     generate_room_connections(dungeon)
@@ -107,6 +106,7 @@ function _draw()
             end
         end
         enemies[i]:draw()
+        enemies[i]:draw_hp_bar()
         
         -- delete projectiles from enemy before drawing them
         for i = 1, #delete_queue do 
@@ -117,9 +117,11 @@ function _draw()
         for j = 1, #enemy_proj_list do
             enemy_proj_list[j]:draw()
         end
+        
     end
 
     p:draw_inventory()
+    p:draw_hp_bar()
 
     -- debug shit
     if collision_box_toggle then

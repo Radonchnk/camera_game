@@ -18,10 +18,20 @@ function class_projectile:new(owner, x, y, dir, speed, col, acc)
     obj.width = 1
     obj.height = 1
 
-    -- random start point for projectile in lens range
-    if obj.dir < 2 then
-        obj.x = x+6
-        obj.y = y+2+rnd(2)  
+
+        -- Properly set x and y based on direction
+    if obj.dir == 0 then      -- Left
+        obj.x = x - 1
+        obj.y = y + 3 + rnd(2)  -- Adjust y slightly for variation
+    elseif obj.dir == 1 then  -- Right
+        obj.x = x + 8
+        obj.y = y + 3 + rnd(2)
+    elseif obj.dir == 2 then  -- Up
+        obj.x = x + 3 + rnd(2)
+        obj.y = y - 1
+    elseif obj.dir == 3 then  -- Down
+        obj.x = x + 3 + rnd(2)
+        obj.y = y + 8
     else
         obj.x = x+2+rnd(2)
         obj.y = y+6
@@ -89,33 +99,35 @@ function class_projectile:move(dx, dy)
         if #collision_wall == 2 then
             -- collision of a bullet to a wall processing
 
-            log("projectile collided wall from author:")
-            log(self.owner.name)
+            --log("projectile collided wall from author:")
+            --log(self.owner.name)
             add(delete_queue, self, #delete_queue+1)
         elseif #collision_enemy == 2 then
             -- collision of a bullet into enemy frendly fire or by player
 
             if self.owner.name == "player" then
-                log("projectile collided enemy from author: player")
-                log("projectile have impacted: ")
-                log(collision_enemy[2].name)
+                --log("projectile collided enemy from author: player")
+                --log("projectile have impacted: ")
+                --log(collision_enemy[2].name)
+                enemies[collision_enemy[2]]:take_damage(1)
             else
-                log("projectile collided enemy from author: an enemy")
-                log("projectile have impacted: ")
-                log(collision_enemy[2].name)
+                --log("projectile collided enemy from author: an enemy")
+                --log("projectile have impacted: ")
+                --log(collision_enemy[2].name)
             end
             add(delete_queue, self, #delete_queue+1)
         elseif #collision_player == 2 then
             -- enemy attack on player or player attacking themselves
 
             if self.owner.name == "player" then
-                log("projectile collided player from author: player")
-                log("projectile have impacted: ")
-                log(collision_player[2].name)
+                --log("projectile collided player from author: player")
+                --log("projectile have impacted: ")
+                --log(collision_player[2].name)
             else
-                log("projectile collided player from author: an enemy")
-                log("projectile have impacted: ")
-                log(collision_player[2].name)
+                --log("projectile collided player from author: an enemy")
+                --log("projectile have impacted: ")
+                --log(collision_player[2].name)
+                p:take_damage(1)
             end
             add(delete_queue, self, #delete_queue+1)
         end

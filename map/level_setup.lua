@@ -29,9 +29,6 @@ end
 function create_room(a, directions, thickness)
 
     local size = 16
-    if a < 1 or a > size - 2 then
-        log("ERROR: Size 'a' must be between 1 and " .. (size - 2) .. ".")
-    end
 
     local level = {}
     local offset = flr((size - a) / 2) -- Center the cube in the grid
@@ -45,15 +42,6 @@ function create_room(a, directions, thickness)
                 level[y][x] = 1 -- Outer cube
             end
         end
-    end
-
-
-    local size = #level -- Assuming the grid is square (NxN)
-
-    -- Check if the thickness is valid
-    if thickness < 1 or thickness > size then
-        printh("ERROR: Thickness must be between 1 and " .. size .. ".")
-        return level
     end
 
     -- Center point for corridors
@@ -175,8 +163,6 @@ function generate_room_connections(grid)
                         connections = connections .. symbol
                     end
                 end
-
-                log(connections)
 
                 -- Call create_room with detected connections
                 local room = create_room(12, connections, 6)
