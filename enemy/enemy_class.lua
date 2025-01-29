@@ -2,7 +2,6 @@
 class_enemy = {}
 class_enemy.__index = class_enemy
 
-enemy_proj_list = {}
 
 -- constructor
 function class_enemy:new(x, y, width, height, name)

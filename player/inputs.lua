@@ -3,7 +3,7 @@ function _update()
     if not paused then
         local movement_directions = {0,0,0,0}
         if btn(0) then
-                p:move(-1, 0)   -- left
+                p:update(-1, 0)   -- left
                 p.base_spr = 2
                 p.dir = 0
                 --log("move left")
@@ -13,7 +13,7 @@ function _update()
         end
 
         if btn(1) then 
-            p:move(1, 0)    -- right
+            p:update(1, 0)    -- right
             p.base_spr = 0
             p.dir = 1
             --log("move right")
@@ -22,7 +22,7 @@ function _update()
         end
 
         if btn(2) then 
-            p:move(0, -1)   -- up
+            p:update(0, -1)   -- up
             p.base_spr = 1
             p.dir = 2
             --log("move up")
@@ -31,7 +31,7 @@ function _update()
         end 
 
         if btn(3) then
-            p:move(0, 1)    -- down
+            p:update(0, 1)    -- down
             p.base_spr = 3
             p.dir = 3
             --log("move down")
