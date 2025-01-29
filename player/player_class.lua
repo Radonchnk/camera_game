@@ -7,7 +7,6 @@ class_player.__index = class_player
 
 showing_inventory = false
 
-player_proj_list = {}
 
 -- constructor
 function class_player:new(x, y, width, height)
@@ -19,12 +18,19 @@ function class_player:new(x, y, width, height)
     for i=1, 5 do
         add(obj.inventory, class_item:new(1))
     end
+
+    obj.max_health_points = 10
+    obj.health_points = 10
+
     obj.x = x
     obj.y = y
     obj.speed = 2
     obj.base_spr = 0
     obj.dir = 1
     obj.colour = 9
+
+    obj.current_room_x = 1
+    obj.current_room_y = 1
 
     -- can shoot every frame
     obj.reload_speed = 0
@@ -40,11 +46,16 @@ function class_player:new(x, y, width, height)
     return obj
 end
 
--- method to move the player
 function class_player:move(dx, dy)
-    self.x += dx * self.speed
-    self.y += dy * self.speed
-    self.collision_box:offset(dx * self.speed,  dy * self.speed)
+    self.x += dx 
+    self.y += dy 
+    self.collision_box:offset(dx,  dy)
+end
+
+-- method to move the player
+function class_player:update(dx, dy)
+    
+    self:move(dx * self.speed, dy * self.speed)
 
 
     -- check player against walls & enemies 
@@ -53,14 +64,37 @@ function class_player:move(dx, dy)
 
     -- when object collides, size of fuction return is 2 because object is being passed too
     if #collision_walls == 2 or #collision_enemies == 2 then
-        self.x -= dx * self.speed
-        self.y -= dy * self.speed
-        self.collision_box:offset(-dx * self.speed, -dy * self.speed)
+        self:move(-dx * self.speed, -dy * self.speed)
     end
 
     -- takes some amount of frames to reload
     if self.reload_value > 0 then
         self.reload_value -= 1
+    end
+
+    -- check for player moving to the edge of the map to trigger the teleport
+    local middle_x = self.x + self.width / 2
+    local middle_y = self.y + self.height / 2
+    if middle_x < 0 then
+        -- move to west room
+        log("move to west room")
+        self:move(127, 0)
+        self:room_transfer(-1, 0)
+    elseif middle_x > 128 then
+        -- move to east room
+        log("move to east room")
+        self:move(-127, 0)
+        self:room_transfer(1, 0)
+    elseif middle_y < 0 then
+        -- move to north room
+        log("move to morth room")
+        self:move(0, 127)
+        self:room_transfer(0, -1)
+    elseif middle_y > 128 then 
+        -- move to south
+        log("move to south room")
+        self:move(0, -127)
+        self:room_transfer(0, 1)
     end
 
 end
@@ -109,6 +143,28 @@ function class_player:draw()
     end
 
 
+
+end
+
+function class_player:draw_hp_bar()
+    rectfill(self.x-3, self.y-2, self.x+10-3, self.y-2, 5)
+    rectfill(self.x-3, self.y-2, self.x+flr(self.health_points/self.max_health_points*10)-3, self.y-2, 8)
+end
+
+function class_player:process_death()
+    log("player death")
+    self.health_points = self.max_health_points
+end
+
+function class_player:take_damage(damage)
+    self.health_points -= damage
+
+    if self.health_points < 1 then
+        self:process_death()
+    end
+end
+
+function class_player:draw_inventory() 
     if showing_inventory then
         rectfill(32, 98, 94, 110, 6)
         -- draw items at (40, 20), (52, 20), (64, 20), (72, 20), (90, 20)
@@ -145,4 +201,18 @@ function class_player:shoot()
         add(player_proj_list, class_projectile:new(self, self.x+offset.x,self.y+offset.y,self.dir,6,self.colour, 80))
         self.reload_value = self.reload_speed
     end
+end
+
+function class_player:room_transfer(dx, dy)
+    -- save all data for the previous room
+    dungeon[p.current_room_y][p.current_room_x][2] = walls
+    dungeon[p.current_room_y][p.current_room_x][3] = enemies
+
+    self.current_room_x += dx
+    self.current_room_y += dy
+
+    walls = dungeon[self.current_room_y][self.current_room_x][2]
+    enemies = dungeon[self.current_room_y][self.current_room_x][3]
+
+    -- put new shit
 end

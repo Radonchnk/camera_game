@@ -2,7 +2,6 @@
 class_enemy = {}
 class_enemy.__index = class_enemy
 
-enemy_proj_list = {}
 
 -- constructor
 function class_enemy:new(x, y, width, height, name)
@@ -13,6 +12,10 @@ function class_enemy:new(x, y, width, height, name)
 
     obj.x = x
     obj.y = y
+
+    obj.max_health_points = 10
+    obj.health_points = 10
+
     obj.speed = 1
     obj.base_spr = 8
     obj.dir = 1
@@ -66,7 +69,6 @@ function class_enemy:move(dx, dy)
     if self.reload_value > 0 then
         self.reload_value -= 1
     end
-
 end
 
 
@@ -108,6 +110,25 @@ function class_enemy:update()
     if self.reload_value ~= 0 then
         self.reload_value -= 1
     end
+end
+
+function class_enemy:draw_hp_bar()
+    rectfill(self.x-3, self.y-2, self.x+10-3, self.y-2, 5)
+    rectfill(self.x-3, self.y-2, self.x+flr(self.health_points/self.max_health_points*10)-3, self.y-2, 8)
+end
+
+function class_enemy:process_death()
+    log("enemy death")
+    self.health_points = self.max_health_points
+end
+
+function class_enemy:take_damage(damage)
+    self.health_points -= damage
+
+    if self.health_points < 1 then
+        self:process_death()
+    end
+
 end
 
 -- method to draw the enemy
