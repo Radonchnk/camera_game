@@ -12,11 +12,14 @@ screen_size = 128 -- screen is cube 128 by 128, used to delete bullets that are 
 player_proj_list = {}
 enemy_proj_list = {}
 
+-- first is player data second is dungeon data
+dungeon = {}
+snapshot = {{}, {}}
+
 -- debug toggles
 
-
 debug_mode = true
-collision_box_toggle = false
+collision_box_toggle = true
 
 
 -- executes on startap
@@ -35,6 +38,7 @@ function _init()
     dungeon = generate_dungeon(6, 4)
 
     -- Print dungeon grid
+    log("dungeon structure: ")
     for y = 1, #dungeon do
         local row = ""
         for x = 1, #dungeon[y] do
@@ -44,9 +48,10 @@ function _init()
                 row = row .. " 1 "
             end
         end
+        log(row)
     end
 
-    generate_room_connections(dungeon)
+    generate_room_from_index(dungeon, p.current_room_y, p.current_room_x)
 
     -- to get room data for dungeon[p.current_room_y][p.current_room_x][2] is going to return walls, [3] going to return enemies
     -- make level and shit

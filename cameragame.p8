@@ -7,7 +7,7 @@ __lua__
 
 #include main.lua
 #include player/inputs.lua
-#include utils/log.lua
+#include utils/utils.lua
 #include utils/collision_engine.lua
 #include player/item.lua
 #include player/player_class.lua

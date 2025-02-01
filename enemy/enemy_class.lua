@@ -118,8 +118,10 @@ function class_enemy:draw_hp_bar()
 end
 
 function class_enemy:process_death()
-    log("enemy death")
+    --log("enemy death")
     self.health_points = self.max_health_points
+    p.kill_count += 1
+    log("Kill count: " .. p.kill_count)
 end
 
 function class_enemy:take_damage(damage)

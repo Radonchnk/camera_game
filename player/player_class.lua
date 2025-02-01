@@ -37,6 +37,9 @@ function class_player:new(x, y, width, height)
     obj.reload_speed = 0
     obj.reload_value = 0
 
+    -- count kills\
+    obj.kill_count = 0 
+
     obj.name = "player"
 
     obj.width = width or 8
@@ -78,22 +81,22 @@ function class_player:update(dx, dy)
     local middle_y = self.y + self.height / 2
     if middle_x < 0 then
         -- move to west room
-        log("move to west room")
+        --log("move to west room")
         self:move(127, 0)
         self:room_transfer(-1, 0)
     elseif middle_x > 128 then
         -- move to east room
-        log("move to east room")
+        --log("move to east room")
         self:move(-127, 0)
         self:room_transfer(1, 0)
     elseif middle_y < 0 then
         -- move to north room
-        log("move to morth room")
+        --log("move to morth room")
         self:move(0, 127)
         self:room_transfer(0, -1)
     elseif middle_y > 128 then 
         -- move to south
-        log("move to south room")
+        --log("move to south room")
         self:move(0, -127)
         self:room_transfer(0, 1)
     end
@@ -153,7 +156,7 @@ function class_player:draw_hp_bar()
 end
 
 function class_player:process_death()
-    log("player death")
+    --log("player death")
     self.health_points = self.max_health_points
 end
 
@@ -199,8 +202,13 @@ function class_player:room_transfer(dx, dy)
     self.current_room_x += dx
     self.current_room_y += dy
 
+    -- if no walls in room (not generated then generate
+    if #dungeon[self.current_room_y][self.current_room_x][2] == 0 then
+        generate_room_from_index(dungeon, p.current_room_y, p.current_room_x)
+    end
+
+    -- put new shit
     walls = dungeon[self.current_room_y][self.current_room_x][2]
     enemies = dungeon[self.current_room_y][self.current_room_x][3]
 
-    -- put new shit
 end

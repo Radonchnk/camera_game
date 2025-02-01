@@ -109,6 +109,7 @@ function setup_enemies(current_level_enemies)
     add(current_level_enemies, class_enemy:new(tile_to_pixel(7), tile_to_pixel(7), 8, 6, "enemie1"), #current_level_enemies+1)
 end
 
+-- create skeleton of a dungeon
 function generate_dungeon(num_rooms, grid_size)
     local grid = {}
 
@@ -148,27 +149,36 @@ function generate_dungeon(num_rooms, grid_size)
     return grid
 end
 
-function generate_room_connections(grid)
+function generate_room_from_index(grid, y, x)
     local directions = { {0, 1, "e"}, {1, 0, "s"}, {0, -1, "w"}, {-1, 0, "n"} }
-    
-    for y = 1, #grid do
-        for x = 1, #grid[y] do
-            if grid[y][x] ~= 0 then
-                local connections = ""
+    local connections = ""
 
-                -- Check each direction
-                for _, dir in ipairs(directions) do
-                    local ny, nx, symbol = y + dir[1], x + dir[2], dir[3]
-                    if ny > 0 and ny <= #grid and nx > 0 and nx <= #grid[y] and grid[ny][nx] ~= 0 then
-                        connections = connections .. symbol
-                    end
-                end
-
-                -- Call create_room with detected connections
-                local room = create_room(12, connections, 6)
-                setup_walls(grid[y][x][2], room)
-                setup_enemies(grid[y][x][3])
-            end
+    -- Check each direction
+    for _, dir in ipairs(directions) do
+        local ny, nx, symbol = y + dir[1], x + dir[2], dir[3]
+        if ny > 0 and ny <= #grid and nx > 0 and nx <= #grid[y] and grid[ny][nx] ~= 0 then
+            connections = connections .. symbol
         end
     end
+
+    -- Call create_room with detected connections
+    local room = create_room(12, connections, 6)
+    setup_walls(grid[y][x][2], room)
+    setup_enemies(grid[y][x][3])
 end
+
+function take_snapshot()
+    snapshot[1] = {p.x, p.y, p.current_room_x, p.current_room_y, p.collision_box.x, p.collision_box.y}
+    snapshot[2] = dungeon
+end
+
+function load_snapshot()
+    p.x = snapshot[1][1]
+    p.y = snapshot[1][2]
+    p.current_room_x = snapshot[1][3]
+    p.current_room_y = snapshot[1][4]
+    p.collision_box.x = snapshot[1][5]
+    p.collision_box.y = snapshot[1][6]
+    dungeon = snapshot[2]
+end
+

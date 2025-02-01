@@ -47,7 +47,7 @@ function _update()
             p.base_spr = 4
             p.dir = 5 -- up + right
             -- log("up right")
-        elseif movement_directions[0] == 1 and movement_directions[3] == 1then
+        elseif movement_directions[0] == 1 and movement_directions[3] == 1 then
             p.base_spr = 7
             p.dir = 6 -- down + left
             -- log("down left")
@@ -59,6 +59,19 @@ function _update()
         if btn(5) then -- x
             p:shoot()
         end
+
+        -- TEMP USAGE OF KETBOARD INPUTS FOR SNAPSHOTS
+        key = stat(31)
+        if key == "y" then
+            log("snapshot taken")
+            take_snapshot()
+        end
+        if key == "u" then
+            log(" Snapshot loaded")
+            load_snapshot()
+        end
+        
+
     end
     
     if btn(4) and not already_toggled_inventory then -- o
