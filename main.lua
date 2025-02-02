@@ -97,10 +97,11 @@ function _draw()
 
     kill_dead_enemies()
     
-    -- delete projectiles from player before drawing them
-    for i = 1, #delete_queue do 
+    -- delete projectiles before updating them
+    for i = 1, #delete_queue do
         del(player_proj_list, delete_queue[1])
-        del(delete_queue, delete_queue[1]) 
+        del(enemy_proj_list, delete_queue[1])
+        del(delete_queue, delete_queue[1])
     end
 
     for j = 1, #player_proj_list do
@@ -108,30 +109,21 @@ function _draw()
     end
 
 
-
+    -- update enemies
     for i = 1, #enemies do
-        log("-----")
         if not paused then
             enemies[i]:update()
-            for j = 1, #enemy_proj_list do
-                if not paused then
-                    enemy_proj_list[j]:update()
-                end
-            end
         end
         enemies[i]:draw()
         enemies[i]:draw_hp_bar()
-        
-        -- delete projectiles from enemy before drawing them
-        for i = 1, #delete_queue do 
-            del(enemy_proj_list, delete_queue[1])
-            del(delete_queue, delete_queue[1]) 
-        end
+    end
 
-        for j = 1, #enemy_proj_list do
-            enemy_proj_list[j]:draw()
+    -- update enemy projectiles
+    for j = 1, #enemy_proj_list do
+        if not paused then
+            enemy_proj_list[j]:update()
         end
-        
+        enemy_proj_list[j]:draw()
     end
 
     p:draw_inventory()
