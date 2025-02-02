@@ -110,7 +110,6 @@ function _draw()
 
 
     for i = 1, #enemies do
-        log("-----")
         if not paused then
             enemies[i]:update()
             for j = 1, #enemy_proj_list do

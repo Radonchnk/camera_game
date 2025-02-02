@@ -64,9 +64,10 @@ function class_enemy:move(dx, dy)
     -- check player against walls & enemies 
     collision_walls = collision_to_list(self, walls, 16)
     collision_player = collision_to_list(self, {p}, 16)
+    collision_enemies = collision_to_list(self, enemies, 16)
 
     -- when object collides, size of fuction return is 2 because object is being passed too
-    if #collision_walls == 2 or #collision_player == 2 then
+    if #collision_walls == 2 or #collision_player == 2 or #collision_enemies == 2 then
         self.x -= dx * self.speed
         self.y -= dy * self.speed
         self.collision_box:offset(-dx * self.speed, -dy * self.speed)

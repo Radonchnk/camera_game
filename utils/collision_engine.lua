@@ -82,14 +82,16 @@ end
 -- after which return 1 if object collides with at least one leement in list
 -- and if collide -> index of object which colide
 function collision_to_list(obj, list_obj, distance)
-
-    --close_list_obj = get_close_elements(obj, list_obj, distance)
-    close_list_obj = list_obj--get_close_elements(obj, list_obj, distance)
+    -- Get nearby objects (or use full list if needed)
+    local close_list_obj = list_obj -- or use get_close_elements(obj, list_obj, distance)
 
     for i = 1, #close_list_obj do
-        if do_collide(obj.collision_box, close_list_obj[i].collision_box) then
-            return {1, i}
+        -- Skip collision check with itself
+        if close_list_obj[i] ~= obj then
+            if do_collide(obj.collision_box, close_list_obj[i].collision_box) then
+                return {1, i}  -- Collision detected
+            end
         end
     end
-    return {0}
+    return {0}  -- No collision
 end

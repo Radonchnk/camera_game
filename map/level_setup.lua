@@ -126,9 +126,6 @@ function setup_enemies(current_level_enemies, types, numbers)
                     end
                 end
             end
-            log(rand_coords[1])
-            log(rand_coords[2])
-            log("-----")
             add(current_level_enemies, spawn_enemy(types[i], tile_to_pixel(rand_coords[1]), tile_to_pixel(rand_coords[2])), #current_level_enemies+1)
         end
     end
@@ -189,6 +186,7 @@ function generate_room_from_index(grid, y, x)
     -- Call create_room with detected connections
     local room = create_room(12, connections, 6)
     setup_walls(grid[y][x][2], room)
+
     setup_enemies(grid[y][x][3], {"turret", "melee"}, {1+flr(rnd(3)), 2+flr(rnd(3))})
 end
 

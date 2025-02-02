@@ -171,7 +171,6 @@ function class_player:take_damage(damage)
             self.colour = 1
             self.battery = 0
         end
-    log(self.battery)
 
     if self.health_points < 1 then
         dead = true
@@ -198,7 +197,6 @@ end
 
 -- creates a projectile
 function class_player:shoot()
-    log(self.battery)
     if self.reload_value == 0 and self.battery > 20 then
         local offsets = {
             {x = 2, y = -1}, -- left
