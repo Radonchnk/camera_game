@@ -238,4 +238,6 @@ function class_player:room_transfer(dx, dy)
     walls = dungeon[self.current_room_y][self.current_room_x][2]
     enemies = dungeon[self.current_room_y][self.current_room_x][3]
 
+    entry_delay = 30
+
 end
