@@ -119,8 +119,11 @@ function _draw()
                 entry_delay -= 1
             end
         end
-        enemies[i]:draw()
-        enemies[i]:draw_hp_bar()
+        if enemies[i] is not nil:
+            -- enemies could be deleted during update()
+            enemies[i]:draw()
+            enemies[i]:draw_hp_bar()
+        end
     end
 
     -- update enemy projectiles
