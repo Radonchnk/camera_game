@@ -16,7 +16,7 @@ dungeon = {}
 snapshot = {{}, {}}
 
 dead = false
-
+entry_delay = 45 -- timer after entering room, before enemies can move.
 -- debug toggles
 
 debug_mode = true
@@ -25,6 +25,7 @@ collision_box_toggle = false
 
 -- executes on startap
 function _init()
+    entry_delay = 45
     dead = false
     log("Game has started")
 
@@ -112,7 +113,11 @@ function _draw()
     -- update enemies
     for i = 1, #enemies do
         if not paused then
-            enemies[i]:update()
+            if entry_delay == 0 then
+                enemies[i]:update()
+            else
+                entry_delay -= 1
+            end
         end
         enemies[i]:draw()
         enemies[i]:draw_hp_bar()

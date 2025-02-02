@@ -198,7 +198,6 @@ end
 
 -- creates a projectile
 function class_player:shoot()
-    log(self.battery)
     if self.reload_value == 0 and self.battery > 20 then
         local offsets = {
             {x = 2, y = -1}, -- left
@@ -239,5 +238,7 @@ function class_player:room_transfer(dx, dy)
     -- put new shit
     walls = dungeon[self.current_room_y][self.current_room_x][2]
     enemies = dungeon[self.current_room_y][self.current_room_x][3]
+
+    entry_delay = 30
 
 end
