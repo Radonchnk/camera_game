@@ -105,8 +105,33 @@ function setup_walls(current_level_wall, level_wall_data)
 end
 
 -- just kind of makes emenies
-function setup_enemies(current_level_enemies) 
-    add(current_level_enemies, class_enemy:new(tile_to_pixel(7), tile_to_pixel(7), 8, 6, "enemie1"), #current_level_enemies+1)
+function setup_enemies(current_level_enemies, types, numbers)
+    local coordinates = {{3,3},{2,3},{3,2},{2,2},{4,3},{3,4},{4,4}}
+    for i = 1, #types do
+        for j = 1, numbers[i] do
+            rand_coords = {13-flr(rnd(12)), 13-flr(rnd(12))}
+            local duplicate = false
+            for c = 1, #coordinates do
+                if coordinates[c][1] == rand_coords[1] and coordinates[c][2] == rand_coords[2] then
+                    duplicate = true
+                end
+            end
+
+            while duplicate do
+                rand_coords = {13-flr(rnd(12)), 13-flr(rnd(12))}
+                duplicate = false
+                for c = 1, #coordinates do
+                    if coordinates[c][1] == rand_coords[1] and coordinates[c][2] == rand_coords[2] then
+                        duplicate = true
+                    end
+                end
+            end
+            log(rand_coords[1])
+            log(rand_coords[2])
+            log("-----")
+            add(current_level_enemies, spawn_enemy(types[i], tile_to_pixel(rand_coords[1]), tile_to_pixel(rand_coords[2])), #current_level_enemies+1)
+        end
+    end
 end
 
 -- create skeleton of a dungeon
@@ -164,7 +189,7 @@ function generate_room_from_index(grid, y, x)
     -- Call create_room with detected connections
     local room = create_room(12, connections, 6)
     setup_walls(grid[y][x][2], room)
-    setup_enemies(grid[y][x][3])
+    setup_enemies(grid[y][x][3], {"turret", "melee"}, {1+flr(rnd(3)), 2+flr(rnd(3))})
 end
 
 function take_snapshot()

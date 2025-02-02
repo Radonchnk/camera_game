@@ -12,18 +12,20 @@ screen_size = 128 -- screen is cube 128 by 128, used to delete bullets that are 
 player_proj_list = {}
 enemy_proj_list = {}
 
--- first is player data second is dungeon data
 dungeon = {}
 snapshot = {{}, {}}
+
+dead = false
 
 -- debug toggles
 
 debug_mode = true
-collision_box_toggle = true
+collision_box_toggle = false
 
 
 -- executes on startap
 function _init()
+    dead = false
     log("Game has started")
 
     if debug_mode then
@@ -32,7 +34,7 @@ function _init()
         poke(0x5F2D, 1)
     end
 
-    -- innitialise player
+    -- initialise player
     p = class_player:new(tile_to_pixel(3), tile_to_pixel(3), 6, 6)
 
     dungeon = generate_dungeon(6, 4)
@@ -72,6 +74,10 @@ end
 
 -- draw every frame
 function _draw()
+    if dead then
+        _init()
+    end
+
     cls()
     p:draw()
 
@@ -89,6 +95,8 @@ function _draw()
     
     end
 
+    kill_dead_enemies()
+    
     -- delete projectiles from player before drawing them
     for i = 1, #delete_queue do 
         del(player_proj_list, delete_queue[1])
@@ -102,6 +110,7 @@ function _draw()
 
 
     for i = 1, #enemies do
+        log("-----")
         if not paused then
             enemies[i]:update()
             for j = 1, #enemy_proj_list do

@@ -4,6 +4,6 @@
 -- hear me out what if we restrict item, mob, object, and player spawn to tiles
 -- this file will translate tile index (x, y) to real pixel index
 
-function  tile_to_pixel(tile)
+function tile_to_pixel(tile)
     return tile * 8
 end

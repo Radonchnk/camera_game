@@ -19,8 +19,9 @@ function class_player:new(x, y, width, height)
         add(obj.inventory, class_item:new(1))
     end
 
-    obj.max_health_points = 10
-    obj.health_points = 10
+    obj.max_health_points = 100
+    obj.health_points = 100
+    obj.battery = 100  -- battery level, used up when shooting
 
     obj.x = x
     obj.y = y
@@ -57,7 +58,16 @@ end
 
 -- method to move the player
 function class_player:update(dx, dy)
-    
+    if self.battery < 99 then
+        self.battery += 2
+    end
+
+    if self.battery <= 20 then
+        self.colour = 1
+    else
+        self.colour = 9
+    end
+
     self:move(dx * self.speed, dy * self.speed)
 
 
@@ -154,16 +164,17 @@ function class_player:draw_hp_bar()
     rectfill(self.x-3, self.y-2, self.x+flr(self.health_points/self.max_health_points*10)-3, self.y-2, 8)
 end
 
-function class_player:process_death()
-    --log("player death")
-    self.health_points = self.max_health_points
-end
-
 function class_player:take_damage(damage)
     self.health_points -= damage
+    self.battery -= 5
+        if self.battery <= 20 then
+            self.colour = 1
+            self.battery = 0
+        end
+    log(self.battery)
 
     if self.health_points < 1 then
-        self:process_death()
+        dead = true
     end
 end
 
@@ -187,21 +198,27 @@ end
 
 -- creates a projectile
 function class_player:shoot()
-    if self.reload_value == 0 then
+    log(self.battery)
+    if self.reload_value == 0 and self.battery > 20 then
         local offsets = {
-            {x = -4, y = 0}, -- left
-            {x = 12, y = 0}, -- right
-            {x = 4, y = -4}, -- up
-            {x = 4, y = 4}, -- down
-            {x = 0, y = -4},  -- up left
-            {x = 12, y = -4},  -- up right
-            {x = -4, y = 4},  -- down left
-            {x = 12, y = 4}   -- down right
+            {x = 2, y = -1}, -- left
+            {x = -3, y = -1}, -- right
+            {x = -1, y = 2}, -- up
+            {x = -1, y = -4}, -- down
+            {x = 0, y = -3},  -- up left
+            {x = 4, y = -3},  -- up right
+            {x = 1, y = -4},  -- down left
+            {x = 3, y = -4}   -- down right
         }
 
         local offset = offsets[self.dir + 1]
-        log(self.colour)
         add(player_proj_list, class_projectile:new(self, self.x+offset.x,self.y+offset.y,self.dir,6,self.colour, 80))
+        
+        self.battery -= 1
+        if self.battery <= 20 then
+            self.colour = 1
+            self.battery = 0
+        end
         self.reload_value = self.reload_speed
     end
 end

@@ -1,28 +1,34 @@
 -- define a "class" (table)
 class_enemy = {}
 class_enemy.__index = class_enemy
+dead_enemies = {}
 
 
 -- constructor
-function class_enemy:new(x, y, width, height, name)
+function class_enemy:new(x, y, width, height, base_speed, base_spr, reload_speed, accuracy, max_hp, agility, type)
     local obj = setmetatable({}, self)
 
-    -- used to check who owns projectile
-    obj.name = name
+    -- what type of enemy is this (turret, melee)
+    obj.name = type
 
     obj.x = x
     obj.y = y
 
-    obj.max_health_points = 10
-    obj.health_points = 10
+    obj.max_health_points = max_hp
+    obj.health_points = max_hp
 
-    obj.speed = 1
-    obj.base_spr = 8
+    obj.accuracy = accuracy  -- 0 -> 100, how correctly enemy pathfinds
+    obj.agility = agility  -- 0 -> 100, how fast enemy rotates
+    obj.rotation_timer = 0
+
+    obj.speed = base_speed
+    obj.base_spr = base_spr
+    obj.spr = base_spr
     obj.dir = 1
-
-    -- can shoot every 10 sframes
-    self.reload_speed = 10
-    self.reload_value = 0
+    
+    -- can shoot every [reload_speed] frames
+    obj.reload_speed = reload_speed
+    obj.reload_value = reload_speed
 
     obj.width = width or 8
     obj.height = height or 8
@@ -35,21 +41,22 @@ end
 function class_enemy:rotate(direction)
     if direction == "left" then
         self.dir = 0
-        self.base_spr = 10
+        self.spr = self.base_spr + 2
     elseif direction == "right" then
         self.dir = 1
-        self.base_spr = 8
+        self.spr = self.base_spr
     elseif direction == "up" then
         self.dir = 2
-        self.base_spr = 9
+        self.spr = self.base_spr + 1
     elseif direction == "down" then
         self.dir = 3
-        self.base_spr = 11
+        self.spr = self.base_spr + 3
     end
+
+    self.rotation_timer = 100 - self.agility
 end
 -- method to move the enemy
 function class_enemy:move(dx, dy)
-
     self.x += dx * self.speed
     self.y += dy * self.speed
     self.collision_box:offset(dx * self.speed,  dy * self.speed)
@@ -63,6 +70,28 @@ function class_enemy:move(dx, dy)
         self.x -= dx * self.speed
         self.y -= dy * self.speed
         self.collision_box:offset(-dx * self.speed, -dy * self.speed)
+
+        -- knocks player back and deals damage
+        if self.name ~= "turret" and #collision_walls ~= 2 then
+            p:take_damage(5)
+            if self.dir == 0 then
+                p:update(-2, 0)
+                self.x += 2
+                self.collision_box:offset(2,  0)
+            elseif self.dir == 1 then
+                p:update(2, 0)
+                self.x -= 2
+                self.collision_box:offset(-2,  0)
+            elseif self.dir == 2 then
+                p:update(0, -2)
+                self.y += 2
+                self.collision_box:offset(0,  2)
+            elseif self.dir == 3 then
+                p:update(0, 2)
+                self.y -= 2
+                self.collision_box:offset(0,  -2)
+            end
+        end
     end
 
     -- takes some amount of frames to reload
@@ -74,40 +103,51 @@ end
 
 -- enemy ai and actions
 function class_enemy:update()
+    -- random movement
+    local error = {0, 0}
+
+    if rnd(101) > self.accuracy then
+        error = {16-flr(rnd(32)),16-flr(rnd(32))}
+    end
+
     -- calculate distance to player
-    local dx = p.x - self.x
-    local dy = p.y - self.y
+    local dx = p.x - self.x + error[1]
+    local dy = p.y - self.y + error[2]
     local distance = sqrt(dx^2 + dy^2)
 
     -- move towards the player if the distance is greater than a threshold
-    if distance > 32 then
+    if distance > 8 then
         -- normalize the direction vector and move
-        local dir_x = dx / distance
-        local dir_y = dy / distance
+        local dir_x = (dx / distance) + error[1]/12
+        local dir_y = (dy / distance) + error[2]/12
         self:move(dir_x, dir_y)
     end
     -- rotate towards player
-    if abs(dx) > abs(dy) then
-        if dx > 8 then
-            self:rotate("right")
-        elseif dx < -8 then
-            self:rotate("left")
+    if self.rotation_timer == 0 then
+        if abs(dx) > abs(dy) then
+            if dx > 8 then
+                self:rotate("right")
+            elseif dx < -8 then
+                self:rotate("left")
+            end
+        else
+            if dy > 8 then
+                self:rotate("down")
+            elseif dy < -8 then
+                self:rotate("up")
+            end
         end
     else
-        if dy > 8 then
-            self:rotate("down")
-        elseif dy < -8 then
-            self:rotate("up")
-        end
+        self.rotation_timer -= 1
     end
 
     -- shoot at the player if close enough
-    if distance <= 64 then
+    if distance <= 128 then
         self:shoot()
     end
 
     -- takes some amount of frames to reload
-    if self.reload_value ~= 0 then
+    if self.reload_value > 0 then
         self.reload_value -= 1
     end
 end
@@ -118,10 +158,10 @@ function class_enemy:draw_hp_bar()
 end
 
 function class_enemy:process_death()
-    --log("enemy death")
-    self.health_points = self.max_health_points
+    add(dead_enemies, self, #dead_enemies+1)
     p.kill_count += 1
-    log("Kill count: " .. p.kill_count)
+    p.battery = 100
+
 end
 
 function class_enemy:take_damage(damage)
@@ -135,7 +175,7 @@ end
 
 -- method to draw the enemy
 function class_enemy:draw()
-    spr(self.base_spr, self.x, self.y, 1, 1)
+    spr(self.spr, self.x, self.y, 1, 1)
 end
 
 -- transfers collision box draw signal

@@ -19,7 +19,7 @@ function class_projectile:new(owner, x, y, dir, speed, col, acc)
     obj.height = 1
 
 
-        -- Properly set x and y based on direction
+    -- Properly set x and y based on direction
     if obj.dir == 0 then      -- Left
         obj.x = x - 1
         obj.y = y + 3 + rnd(2)  -- Adjust y slightly for variation
@@ -136,7 +136,6 @@ function class_projectile:move(dx, dy)
 end
 
 function class_projectile:draw()
-    log()
     pset(self.x,self.y,self.colour+1)
 end
 
