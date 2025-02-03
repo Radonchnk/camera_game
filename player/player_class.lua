@@ -171,7 +171,6 @@ function class_player:take_damage(damage)
             self.colour = 1
             self.battery = 0
         end
-    log(self.battery)
 
     if self.health_points < 1 then
         dead = true

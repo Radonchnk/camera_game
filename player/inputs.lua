@@ -67,7 +67,7 @@ function _update()
             take_snapshot()
         end
         if key == "u" then
-            log(" Snapshot loaded")
+            log("Snapshot loaded")
             load_snapshot()
         end
         

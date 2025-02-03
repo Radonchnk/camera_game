@@ -126,9 +126,6 @@ function setup_enemies(current_level_enemies, types, numbers)
                     end
                 end
             end
-            log(rand_coords[1])
-            log(rand_coords[2])
-            log("-----")
             add(current_level_enemies, spawn_enemy(types[i], tile_to_pixel(rand_coords[1]), tile_to_pixel(rand_coords[2])), #current_level_enemies+1)
         end
     end
@@ -189,7 +186,8 @@ function generate_room_from_index(grid, y, x)
     -- Call create_room with detected connections
     local room = create_room(12, connections, 6)
     setup_walls(grid[y][x][2], room)
-    setup_enemies(grid[y][x][3], {"turret", "melee"}, {1+flr(rnd(3)), 2+flr(rnd(3))})
+    setup_enemies(grid[y][x][3], {"turret", "melee", "loot pot"}, {1+flr(rnd(3)), 2+flr(rnd(3)), flr(0.7*rnd(2))})
+    grid[y][x][4] = {}
 end
 
 function take_snapshot()
@@ -198,12 +196,14 @@ function take_snapshot()
 end
 
 function load_snapshot()
-    p.x = snapshot[1][1]
-    p.y = snapshot[1][2]
-    p.current_room_x = snapshot[1][3]
-    p.current_room_y = snapshot[1][4]
-    p.collision_box.x = snapshot[1][5]
-    p.collision_box.y = snapshot[1][6]
-    dungeon = snapshot[2]
+    if snapshot[1] ~= {} then
+        p.x = snapshot[1][1]
+        p.y = snapshot[1][2]
+        p.current_room_x = snapshot[1][3]
+        p.current_room_y = snapshot[1][4]
+        p.collision_box.x = snapshot[1][5]
+        p.collision_box.y = snapshot[1][6]
+        dungeon = snapshot[2]
+    end
 end
 
