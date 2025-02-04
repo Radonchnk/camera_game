@@ -4,6 +4,9 @@ text_timer = 0
 display_text = ""
 
 function _update()
+    if in_menu then
+        return
+    end
     -- player movements
     if not paused then
         local movement_directions = {0,0,0,0}
@@ -60,7 +63,7 @@ function _update()
             p.base_spr = 5
             p.dir = 7 -- down + right
         end
-        
+     
         if btn(5) then -- x
             p:shoot()
         end

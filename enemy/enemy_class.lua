@@ -172,6 +172,12 @@ function class_enemy:update()
 end
 
 function class_enemy:draw_hp_bar()
+    if self.name == "melee" then
+        log(self.name)
+        log(self.health_points)
+        log(self.max_health_points)
+        log("----")
+    end
     rectfill(self.x-3, self.y-2, self.x+10-3, self.y-2, 5)
     rectfill(self.x-3, self.y-2, self.x+flr(self.health_points/self.max_health_points*10)-3, self.y-2, 8)
 end

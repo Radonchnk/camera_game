@@ -240,3 +240,51 @@ function load_snapshot(snap)
     end
 end
 
+function new_run()
+    entry_delay = 45
+    dead = false
+    log("Game has started")
+
+    if debug_mode then
+        -- allow full keyboard input
+        -- ONLY IN DEV MODE. BAD BAD BAD DO NOT USE THIS FOR ACTUAL INPUT
+        poke(0x5F2D, 1)
+    end
+
+    -- initialise player
+    p = class_player:new(tile_to_pixel(3), tile_to_pixel(3), 6, 6)
+
+    dungeon = generate_dungeon(16, 6)
+
+    -- Print dungeon grid
+    log("dungeon structure: ")
+    for y = 1, #dungeon do
+        local row = ""
+        for x = 1, #dungeon[y] do
+            if dungeon[y][x] == 0 then
+                row = row .. " 0 "
+            else
+                row = row .. " 1 "
+            end
+        end
+        log(row)
+    end
+
+    generate_room_from_index(dungeon, p.current_room_y, p.current_room_x)
+
+    -- to get room data for dungeon[p.current_room_y][p.current_room_x][2] is going to return walls, [3] going to return enemies, [4] for items
+    -- make level and shit
+    --local left_room = create_room(12, "e", 6)
+    --local right_room = create_room(12, "w", 6)
+
+    --setup_walls(dungeon[p.current_room_y][p.current_room_x][2], left_room)
+    --setup_walls(dungeon[p.current_room_y][p.current_room_x+1][2], right_room)
+
+    
+    --setup_enemies(dungeon[p.current_room_y][p.current_room_x][3])
+    --setup_enemies(dungeon[p.current_room_y][p.current_room_x+1][3])
+
+    walls = dungeon[p.current_room_y][p.current_room_x][2]
+    enemies = dungeon[p.current_room_y][p.current_room_x][3]
+    items = dungeon[p.current_room_y][p.current_room_x][4]
+end
