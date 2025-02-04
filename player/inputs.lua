@@ -99,15 +99,6 @@ function _update()
         
 
     end
-    
-    if btn(4) and not already_toggled_inventory then -- o
-        already_toggled_inventory = true
-        showing_inventory = not showing_inventory
-    end
-    
-    if not btn(4) then
-        already_toggled_inventory = false
-    end
 
     -- debug toggles and shit, DO NOT USE THIS FOR ACTUAL INPUT
     -- do not use arrow keys / Z C N / X V M (these are inputs direction, O and X respectively)

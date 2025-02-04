@@ -18,3 +18,9 @@ function draw_ui()
         text_timer -= 1
     end
 end
+
+function draw_death_screen()
+    cls()
+    print("you died", 50, 50, 8)
+    print("z - new run", 45, 70, 7)
+end

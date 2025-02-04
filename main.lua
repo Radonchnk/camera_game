@@ -77,7 +77,12 @@ end
 -- draw every frame
 function _draw()
     if dead then
-        _init()
+        draw_death_screen()
+        if btn(4) then
+            dead = false
+            _init()
+        end
+        return
     end
 
     walls = dungeon[p.current_room_y][p.current_room_x][2]
@@ -118,7 +123,7 @@ function _draw()
     end
     pickup_queue = {}
     
-    paused = showing_inventory -- add other things too later
+    paused = false --change when in ui elements
 
     for i = 1, #player_proj_list do
         if not paused then
