@@ -221,7 +221,6 @@ function take_snapshot()
         end
         add(temp, temp_row)
     end
-    log(#temp[1][1][2])
     snapshot[2] = temp
 end
 
