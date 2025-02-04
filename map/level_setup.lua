@@ -187,6 +187,7 @@ function take_snapshot()
                         
                         local enemy_data = dungeon[y][x][3][k]
 
+                        -- enemy x, y, width, height, base_speed, base_spr, reload_speed, burst, accuracy, max_hp, agility, loot_choices, loot_chances, type)
                         local enemy = class_enemy:new(
                             enemy_data.x,
                             enemy_data.y,
@@ -201,7 +202,7 @@ function take_snapshot()
                             enemy_data.agility,
                             enemy_data.loot,
                             enemy_data.probabilities,
-                            enemy_data.type
+                            enemy_data.name
                         )
 
                         add(temp_enemies, enemy)
