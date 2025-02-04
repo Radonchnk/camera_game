@@ -160,7 +160,11 @@ function generate_room_from_index(grid, y, x)
     -- Call create_room with detected connections
     local room = create_room(12, connections, 6)
     setup_walls(grid[y][x][2], room)
-    setup_enemies(grid[y][x][3], {"turret", "melee", "loot pot"}, {1+flr(rnd(3)), 2+flr(rnd(3)), flr(0.7*rnd(2))})
+    if rnd() > 0.9 then
+        -- pedestal room (aiko reference??)
+    else
+        setup_enemies(grid[y][x][3], {"turret", "melee", "loot pot"}, {1+flr(rnd(3)), 2+flr(rnd(3)), flr(0.7*rnd(2))})
+    end
     grid[y][x][4] = {}
 
 end
