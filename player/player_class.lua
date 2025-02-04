@@ -63,16 +63,6 @@ function class_player:update(dx, dy)
         self.battery += 2
     end
 
-    if self.battery <= 20 then
-        self.colour = 1
-    else
-        if in_snapshot then
-            self.colour = 11
-        else
-            self.colour = 9
-        end
-    end
-
     self:move(dx * self.speed, dy * self.speed)
 
 
@@ -120,12 +110,15 @@ end
 -- method to draw the player
 function class_player:draw()
     -- set colour for projectiles
-    if in_snapshot then
-        self.colour = 11
+    if self.battery <= 20 then
+        self.colour = 1
     else
-        self.colour = 9
+        if in_snapshot then
+            self.colour = 11
+        else
+            self.colour = 9
+        end
     end
-
     -- Define offsets for directions in a table for easier management
     local offsets = {
         {x = 1, y = 2},  -- left
@@ -163,8 +156,7 @@ function class_player:draw()
     -- Determine which filter to draw based on direction
     local col1 = self.colour
     local col2 = self.colour + 1
-
-    if in_snapshot then
+    if in_snapshot and self.battery > 20 then
         col1 = 1
         col2 = 12
     end
