@@ -44,8 +44,17 @@ function _draw()
     end
 
     if dead then
+        player_proj_list = {}
+        enemy_proj_list = {}
+
+        dungeon = {}
         snapshot = {{}, {}}
+        p = {}
         main_branch = {}
+        in_snapshot = false
+
+        pickup_queue = {}
+        temp_objects_queue = {}
         draw_death_screen()
         if btn(4) then
             dead = false

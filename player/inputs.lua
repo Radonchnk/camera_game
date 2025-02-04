@@ -4,7 +4,7 @@ text_timer = 0
 display_text = ""
 
 function _update()
-    if in_menu then
+    if in_menu or dead then
         return
     end
     -- player movements
