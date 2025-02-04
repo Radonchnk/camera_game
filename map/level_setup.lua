@@ -234,6 +234,7 @@ function load_snapshot()
         p.collision_box.x = snapshot[1][5]
         p.collision_box.y = snapshot[1][6]
         dungeon = snapshot[2]
+        take_snapshot()
     end
 end
 
