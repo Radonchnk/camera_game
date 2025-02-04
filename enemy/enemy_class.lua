@@ -42,6 +42,9 @@ function class_enemy:new(x, y, width, height, base_speed, base_spr, reload_speed
     obj.loot = loot_choices
     obj.probabilities = loot_chances
 
+    -- melee attack cooldown
+    obj.cooldown = 1
+    obj.cooldown_timer = 0
     return obj
 end
 
@@ -80,26 +83,31 @@ function class_enemy:move(dx, dy)
         self.collision_box:offset(-dx * self.speed, -dy * self.speed)
 
         -- knocks player back and deals damage
-        if self.name ~= "turret" and #collision_walls ~= 2 then
-            log("collision")
+        if self.name ~= "turret" and #collision_player == 2 and self.cooldown_timer == 0 then
             p:take_damage(5)
             if self.dir == 0 then
-                p:move(-1, 0)
-                self.x += 1
-                self.collision_box:offset(1,  0)
+                p:update(-2, 0)
+                self.x += 2
+                self.collision_box:offset(2,  0)
             elseif self.dir == 1 then
-                p:move(1, 0)
-                self.x -= 1
-                self.collision_box:offset(-1,  0)
+                p:update(2, 0)
+                self.x -= 2
+                self.collision_box:offset(-2,  0)
             elseif self.dir == 2 then
-                p:move(0, -1)
-                self.y += 1
-                self.collision_box:offset(0,  1)
+                p:update(0, -2)
+                self.y += 2
+                self.collision_box:offset(0,  2)
             elseif self.dir == 3 then
-                p:move(0, 1)
-                self.y -= 1
-                self.collision_box:offset(0,  -1)
+                p:update(0, 2)
+                self.y -= 2
+                self.collision_box:offset(0,  -2)
             end
+        end
+
+        if self.cooldown_timer == self.cooldown then
+            self.cooldown_timer = 0
+        else
+            self.cooldown_timer += 1
         end
     end
 
