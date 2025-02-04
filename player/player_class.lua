@@ -19,8 +19,8 @@ function class_player:new(x, y, width, height)
         add(obj.inventory, class_item:new(1))
     end
 
-    obj.max_health_points = 10000
-    obj.health_points = 10000
+    obj.max_health_points = 100
+    obj.health_points = 100
     obj.battery = 100  -- battery level, used up when shooting
 
     obj.x = x
@@ -51,6 +51,10 @@ function class_player:new(x, y, width, height)
 end
 
 function class_player:move(dx, dy)
+    log("move player")
+    log(dx)
+    log(dy)
+    log("-----")
     self.x += dx 
     self.y += dy 
     self.collision_box:offset(dx,  dy)

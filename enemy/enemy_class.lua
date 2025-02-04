@@ -81,23 +81,24 @@ function class_enemy:move(dx, dy)
 
         -- knocks player back and deals damage
         if self.name ~= "turret" and #collision_walls ~= 2 then
+            log("collision")
             p:take_damage(5)
             if self.dir == 0 then
-                p:update(-2, 0)
-                self.x += 2
-                self.collision_box:offset(2,  0)
+                p:move(-1, 0)
+                self.x += 1
+                self.collision_box:offset(1,  0)
             elseif self.dir == 1 then
-                p:update(2, 0)
-                self.x -= 2
-                self.collision_box:offset(-2,  0)
+                p:move(1, 0)
+                self.x -= 1
+                self.collision_box:offset(-1,  0)
             elseif self.dir == 2 then
-                p:update(0, -2)
-                self.y += 2
-                self.collision_box:offset(0,  2)
+                p:move(0, -1)
+                self.y += 1
+                self.collision_box:offset(0,  1)
             elseif self.dir == 3 then
-                p:update(0, 2)
-                self.y -= 2
-                self.collision_box:offset(0,  -2)
+                p:move(0, 1)
+                self.y -= 1
+                self.collision_box:offset(0,  -1)
             end
         end
     end
@@ -131,7 +132,7 @@ function class_enemy:update()
         self:move(dir_x, dir_y)
     end
     -- rotate towards player
-    if self.rotate_now then
+    if self.rotate_now or self.name == "melee" then
         if abs(dx) > abs(dy) then
             if dx > 8 then
                 self:rotate("right")

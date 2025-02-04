@@ -18,7 +18,7 @@ entry_delay = 45 -- timer after entering room, before enemies can move.
 -- debug toggles
 
 debug_mode = true
-collision_box_toggle = false
+collision_box_toggle = true
 
 
 -- executes on startap
