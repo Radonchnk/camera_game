@@ -166,9 +166,10 @@ function generate_room_from_index(grid, y, x)
 end
 
 function take_snapshot()
-    snapshot[1] = {p.x, p.y, p.current_room_x, p.current_room_y, p.collision_box.x, p.collision_box.y}
-    snapshot[2] = dungeon
-    temp = {} 
+    local copy = {{}, {}}
+    copy[1] = {p.x, p.y, p.current_room_x, p.current_room_y, p.collision_box.x, p.collision_box.y}
+    copy[2] = dungeon
+    local temp = {} 
     for y = 1, #dungeon do
         local temp_row = {}
         for x = 1, #dungeon[1] do
@@ -221,19 +222,20 @@ function take_snapshot()
         end
         add(temp, temp_row)
     end
-    snapshot[2] = temp
+    copy[2] = temp
+
+    return copy
 end
 
-function load_snapshot()
-    if snapshot[1] ~= {} then
-        p.x = snapshot[1][1]
-        p.y = snapshot[1][2]
-        p.current_room_x = snapshot[1][3]
-        p.current_room_y = snapshot[1][4]
-        p.collision_box.x = snapshot[1][5]
-        p.collision_box.y = snapshot[1][6]
-        dungeon = snapshot[2]
-        take_snapshot()
+function load_snapshot(snap)
+    if snap[1] ~= {} then
+        p.x = snap[1][1]
+        p.y = snap[1][2]
+        p.current_room_x = snap[1][3]
+        p.current_room_y = snap[1][4]
+        p.collision_box.x = snap[1][5]
+        p.collision_box.y = snap[1][6]
+        dungeon = snap[2]
     end
 end
 

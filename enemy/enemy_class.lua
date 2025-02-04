@@ -42,6 +42,9 @@ function class_enemy:new(x, y, width, height, base_speed, base_spr, reload_speed
     obj.loot = loot_choices
     obj.probabilities = loot_chances
 
+    -- melee attack cooldown
+    obj.cooldown = 1
+    obj.cooldown_timer = 0
     return obj
 end
 
@@ -64,6 +67,9 @@ function class_enemy:rotate(direction)
 end
 -- method to move the enemy
 function class_enemy:move(dx, dy)
+    --log(self.health_points)
+    --log(self.max_health_points)
+    --log("---")
     self.x += dx * self.speed
     self.y += dy * self.speed
     self.collision_box:offset(dx * self.speed,  dy * self.speed)
@@ -80,7 +86,7 @@ function class_enemy:move(dx, dy)
         self.collision_box:offset(-dx * self.speed, -dy * self.speed)
 
         -- knocks player back and deals damage
-        if self.name ~= "turret" and #collision_walls ~= 2 then
+        if self.name ~= "turret" and #collision_player == 2 and self.cooldown_timer == 0 then
             p:take_damage(5)
             if self.dir == 0 then
                 p:update(-2, 0)
@@ -99,6 +105,12 @@ function class_enemy:move(dx, dy)
                 self.y -= 2
                 self.collision_box:offset(0,  -2)
             end
+        end
+
+        if self.cooldown_timer == self.cooldown then
+            self.cooldown_timer = 0
+        else
+            self.cooldown_timer += 1
         end
     end
 
@@ -131,7 +143,7 @@ function class_enemy:update()
         self:move(dir_x, dir_y)
     end
     -- rotate towards player
-    if self.rotate_now then
+    if self.rotate_now or self.name == "melee" then
         if abs(dx) > abs(dy) then
             if dx > 8 then
                 self:rotate("right")
@@ -170,8 +182,8 @@ function class_enemy:process_death()
     p.battery = 100
 
     -- loot generation
-    ranges = {}
-    temp = 0
+    local ranges = {}
+    local temp = 0
     for i = 1, #self.loot do
         add(ranges,{temp,self.probabilities[i]+temp},#ranges+1)
         temp += self.probabilities[i]

@@ -17,6 +17,9 @@ function class_effect_item:new(x, y, type)
     elseif type == "explosive" then
         obj.spr = 19
         obj.value = 5
+    elseif type == "film" then
+        obj.spr = 18
+        obj.value = 1
 
     end
 
@@ -29,6 +32,8 @@ function class_effect_item:pickup()
         if p.health_points > p.max_health_points then
             p.health_points = p.max_health_points
         end
+    elseif self.type == "film" then
+        p.film += 1
     end
 end
 

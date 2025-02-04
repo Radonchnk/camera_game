@@ -10,6 +10,8 @@ enemy_proj_list = {}
 
 dungeon = {}
 snapshot = {{}, {}}
+main_branch = {}
+in_snapshot = false
 
 pickup_queue = {}
 temp_objects_queue = {}
@@ -20,7 +22,7 @@ entry_delay = 45 -- timer after entering room, before enemies can move.
 debug_mode = true
 collision_box_toggle = false
 
-
+music(3)
 -- executes on startap
 function _init()
     entry_delay = 45
@@ -36,7 +38,7 @@ function _init()
     -- initialise player
     p = class_player:new(tile_to_pixel(3), tile_to_pixel(3), 6, 6)
 
-    dungeon = generate_dungeon(6, 4)
+    dungeon = generate_dungeon(16, 6)
 
     -- Print dungeon grid
     log("dungeon structure: ")
@@ -165,7 +167,7 @@ function _draw()
 
     p:draw_inventory()
     p:draw_hp_bar()
-
+    draw_ui()
     -- debug shit
     if collision_box_toggle then
         p:draw_collision_box()

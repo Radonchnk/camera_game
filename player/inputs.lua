@@ -1,3 +1,8 @@
+-- text displayed for short time to acknowledge snapshots being taken and loaded
+text_display_time = 15
+text_timer = 0
+display_text = ""
+
 function _update()
     -- player movements
     if not paused then
@@ -63,12 +68,33 @@ function _update()
         -- TEMP USAGE OF KETBOARD INPUTS FOR SNAPSHOTS
         key = stat(31)
         if key == "y" then
-            log("snapshot taken")
-            take_snapshot()
+            if in_snapshot == false then
+                text_timer = text_display_time
+                display_text = "snapshot taken"
+                snapshot = take_snapshot()
+            else
+                text_timer = text_display_time
+                display_text = "already in snapshot"
+            end
         end
-        if key == "u" then
-            log("Snapshot loaded")
-            load_snapshot()
+        if key == "u" and #snapshot[1] ~= 0 then
+            if in_snapshot == false then
+                -- load snapshot
+                text_timer = text_display_time
+                display_text = "entered snapshot"
+
+                main_branch = take_snapshot()
+                load_snapshot(snapshot)
+                in_snapshot = true
+            else
+                -- unload snapshot
+                text_timer = text_display_time
+                display_text = "exited snapshot"
+
+                snapshot = take_snapshot()
+                load_snapshot(main_branch)
+                in_snapshot = false
+            end
         end
         
 
