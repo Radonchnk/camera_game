@@ -4,6 +4,9 @@ text_timer = 0
 display_text = ""
 
 function _update()
+    if in_menu or dead then
+        return
+    end
     -- player movements
     if not paused then
         local movement_directions = {0,0,0,0}
@@ -60,7 +63,7 @@ function _update()
             p.base_spr = 5
             p.dir = 7 -- down + right
         end
-        
+     
         if btn(5) then -- x
             p:shoot()
         end
@@ -98,15 +101,6 @@ function _update()
         end
         
 
-    end
-    
-    if btn(4) and not already_toggled_inventory then -- o
-        already_toggled_inventory = true
-        showing_inventory = not showing_inventory
-    end
-    
-    if not btn(4) then
-        already_toggled_inventory = false
     end
 
     -- debug toggles and shit, DO NOT USE THIS FOR ACTUAL INPUT

@@ -225,7 +225,11 @@ function generate_room_from_index(grid, y, x)
     -- Call create_room with detected connections
     local room = create_room(12, connections, 6)
     setup_walls(grid[y][x][2], room)
-    setup_enemies(grid[y][x], {"turret", "melee", "loot pot"}, {1+flr(rnd(3)), 2+flr(rnd(3)), flr(0.7*rnd(2))})
+    if rnd() > 0.9 then
+        -- pedestal room (aiko reference??)
+    else
+        setup_enemies(grid[y][x], {"turret", "melee", "loot pot"}, {1+flr(rnd(3)), 2+flr(rnd(3)), flr(0.7*rnd(2))})
+    end
     grid[y][x][4] = {}
 
 end
@@ -252,6 +256,7 @@ function take_snapshot()
                         
                         local enemy_data = dungeon[y][x][3][k]
 
+                        -- enemy x, y, width, height, base_speed, base_spr, reload_speed, burst, accuracy, max_hp, agility, loot_choices, loot_chances, type)
                         local enemy = class_enemy:new(
                             enemy_data.x,
                             enemy_data.y,
@@ -266,7 +271,7 @@ function take_snapshot()
                             enemy_data.agility,
                             enemy_data.loot,
                             enemy_data.probabilities,
-                            enemy_data.type
+                            enemy_data.name
                         )
 
                         add(temp_enemies, enemy)
@@ -304,3 +309,51 @@ function load_snapshot(snap)
     end
 end
 
+function new_run()
+    entry_delay = 45
+    dead = false
+    log("Game has started")
+
+    if debug_mode then
+        -- allow full keyboard input
+        -- ONLY IN DEV MODE. BAD BAD BAD DO NOT USE THIS FOR ACTUAL INPUT
+        poke(0x5F2D, 1)
+    end
+
+    -- initialise player
+    p = class_player:new(tile_to_pixel(3), tile_to_pixel(3), 6, 6)
+
+    dungeon = generate_dungeon(16, 6)
+
+    -- Print dungeon grid
+    log("dungeon structure: ")
+    for y = 1, #dungeon do
+        local row = ""
+        for x = 1, #dungeon[y] do
+            if dungeon[y][x] == 0 then
+                row = row .. " 0 "
+            else
+                row = row .. " 1 "
+            end
+        end
+        log(row)
+    end
+
+    generate_room_from_index(dungeon, p.current_room_y, p.current_room_x)
+
+    -- to get room data for dungeon[p.current_room_y][p.current_room_x][2] is going to return walls, [3] going to return enemies, [4] for items
+    -- make level and shit
+    --local left_room = create_room(12, "e", 6)
+    --local right_room = create_room(12, "w", 6)
+
+    --setup_walls(dungeon[p.current_room_y][p.current_room_x][2], left_room)
+    --setup_walls(dungeon[p.current_room_y][p.current_room_x+1][2], right_room)
+
+    
+    --setup_enemies(dungeon[p.current_room_y][p.current_room_x][3])
+    --setup_enemies(dungeon[p.current_room_y][p.current_room_x+1][3])
+
+    walls = dungeon[p.current_room_y][p.current_room_x][2]
+    enemies = dungeon[p.current_room_y][p.current_room_x][3]
+    items = dungeon[p.current_room_y][p.current_room_x][4]
+end

@@ -184,6 +184,7 @@ function class_player:take_damage(damage)
         end
 
     if self.health_points < 1 then
+        self.health_points = 0
         if in_snapshot then
             load_snapshot(main_branch)
             snapshot = {{}, {}}

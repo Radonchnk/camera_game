@@ -86,7 +86,7 @@ function class_enemy:move(dx, dy)
         self.collision_box:offset(-dx * self.speed, -dy * self.speed)
 
         -- knocks player back and deals damage
-        if self.name ~= "turret" and #collision_player == 2 and self.cooldown_timer == 0 then
+        if self.name == "melee" and #collision_player == 2 and self.cooldown_timer == 0 then
             p:take_damage(5)
             if self.dir == 0 then
                 p:update(-2, 0)
@@ -172,6 +172,12 @@ function class_enemy:update()
 end
 
 function class_enemy:draw_hp_bar()
+    if self.name == "melee" then
+        log(self.name)
+        log(self.health_points)
+        log(self.max_health_points)
+        log("----")
+    end
     rectfill(self.x-3, self.y-2, self.x+10-3, self.y-2, 5)
     rectfill(self.x-3, self.y-2, self.x+flr(self.health_points/self.max_health_points*10)-3, self.y-2, 8)
 end
@@ -200,6 +206,7 @@ function class_enemy:take_damage(damage)
     self.health_points -= damage
 
     if self.health_points < 1 then
+        self.health_points = 0
         self:process_death()
     end
 
