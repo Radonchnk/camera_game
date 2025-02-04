@@ -67,6 +67,9 @@ function class_enemy:rotate(direction)
 end
 -- method to move the enemy
 function class_enemy:move(dx, dy)
+    --log(self.health_points)
+    --log(self.max_health_points)
+    --log("---")
     self.x += dx * self.speed
     self.y += dy * self.speed
     self.collision_box:offset(dx * self.speed,  dy * self.speed)
@@ -179,8 +182,8 @@ function class_enemy:process_death()
     p.battery = 100
 
     -- loot generation
-    ranges = {}
-    temp = 0
+    local ranges = {}
+    local temp = 0
     for i = 1, #self.loot do
         add(ranges,{temp,self.probabilities[i]+temp},#ranges+1)
         temp += self.probabilities[i]

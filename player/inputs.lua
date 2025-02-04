@@ -64,11 +64,24 @@ function _update()
         key = stat(31)
         if key == "y" then
             log("snapshot taken")
-            take_snapshot()
+            if in_snapshot == false then
+                snapshot = take_snapshot()
+            end
         end
-        if key == "u" then
-            log("Snapshot loaded")
-            load_snapshot()
+        if key == "u" and #snapshot[1] ~= 0 then
+            if in_snapshot == false then
+                -- load snapshot
+                log("Snapshot loaded")
+                main_branch = take_snapshot()
+                load_snapshot(snapshot)
+                in_snapshot = true
+            else
+                -- unload snapshot
+                log("Snapshot unloaded")
+                snapshot = take_snapshot()
+                load_snapshot(main_branch)
+                in_snapshot = false
+            end
         end
         
 

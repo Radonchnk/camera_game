@@ -19,8 +19,8 @@ function class_player:new(x, y, width, height)
         add(obj.inventory, class_item:new(1))
     end
 
-    obj.max_health_points = 100
-    obj.health_points = 100
+    obj.max_health_points = 50
+    obj.health_points = 50
     obj.battery = 100  -- battery level, used up when shooting
 
     obj.x = x
@@ -51,10 +51,6 @@ function class_player:new(x, y, width, height)
 end
 
 function class_player:move(dx, dy)
-    log("move player")
-    log(dx)
-    log(dy)
-    log("-----")
     self.x += dx 
     self.y += dy 
     self.collision_box:offset(dx,  dy)
@@ -69,7 +65,11 @@ function class_player:update(dx, dy)
     if self.battery <= 20 then
         self.colour = 1
     else
-        self.colour = 9
+        if in_snapshot then
+            self.colour = 11
+        else
+            self.colour = 9
+        end
     end
 
     self:move(dx * self.speed, dy * self.speed)
@@ -118,6 +118,13 @@ end
 
 -- method to draw the player
 function class_player:draw()
+    -- set colour for projectiles
+    if in_snapshot then
+        self.colour = 11
+    else
+        self.colour = 9
+    end
+
     -- Define offsets for directions in a table for easier management
     local offsets = {
         {x = 1, y = 2},  -- left
@@ -137,26 +144,33 @@ function class_player:draw()
     spr(self.base_spr, self.x, self.y, 1, 1)
     
     -- Define pixel patterns
-    local function draw_square_filter(x, y, colour)
-        pset(x, y, colour)
-        pset(x + 1, y, colour + 1)
-        pset(x, y + 1, colour + 1)
-        pset(x + 1, y + 1, colour)
+    local function draw_square_filter(x, y, colour1, colour2)
+        pset(x, y, colour1)
+        pset(x + 1, y, colour2)
+        pset(x, y + 1, colour2)
+        pset(x + 1, y + 1, colour1)
     end
 
-    local function draw_cross_filter(x, y, colour)
-        pset(x, y, colour)
-        pset(x + 1, y, colour + 1)
-        pset(x - 1, y, colour + 1)
-        pset(x, y + 1, colour + 1)
-        pset(x, y - 1, colour + 1)
+    local function draw_cross_filter(x, y, colour1, colour2)
+        pset(x, y, colour1)
+        pset(x + 1, y, colour2)
+        pset(x - 1, y, colour2)
+        pset(x, y + 1, colour2)
+        pset(x, y - 1, colour2)
     end
 
     -- Determine which filter to draw based on direction
+    local col1 = self.colour
+    local col2 = self.colour + 1
+
+    if in_snapshot then
+        col1 = 1
+        col2 = 12
+    end
     if self.dir < 4 then
-        draw_square_filter(self.x + offset.x, self.y + offset.y, self.colour)
+        draw_square_filter(self.x + offset.x, self.y + offset.y, col1, col2)
     else
-        draw_cross_filter(self.x + offset.x, self.y + offset.y, self.colour)
+        draw_cross_filter(self.x + offset.x, self.y + offset.y, col1, col2)
     end
 
 
