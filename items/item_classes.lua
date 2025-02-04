@@ -13,7 +13,7 @@ function class_effect_item:new(x, y, type)
     
     if type == "health" then
         obj.spr = 17
-        obj.value = 20
+        obj.value = 7
     elseif type == "explosive" then
         obj.spr = 19
         obj.value = 5
