@@ -38,7 +38,7 @@ function _init()
     -- initialise player
     p = class_player:new(tile_to_pixel(3), tile_to_pixel(3), 6, 6)
 
-    dungeon = generate_dungeon(16, 6)
+    dungeon = generate_dungeon(10, 6)
 
     -- Print dungeon grid
     log("dungeon structure: ")
@@ -48,7 +48,7 @@ function _init()
             if dungeon[y][x] == 0 then
                 row = row .. " 0 "
             else
-                row = row .. " 1 "
+                row = row .. " " .. dungeon[y][x][1] .. " " 
             end
         end
         log(row)
