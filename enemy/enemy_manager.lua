@@ -6,7 +6,7 @@ function spawn_enemy(type, spawn_x, spawn_y)
     elseif type == "melee" then
         return class_enemy:new(spawn_x, spawn_y, 8, 8, 1, 12, -1, -1, 50, 10, 100, {"health", "explosive"}, {40, 20}, type)
     elseif type == "loot pot" then
-        return class_enemy:new(spawn_x, spawn_y, 8, 8, 0, 16, -1, -1, -1, 5, -1, {"health"}, {100}, type)
+        return class_enemy:new(spawn_x, spawn_y, 8, 8, 0, 16, -1, -1, -1, 5, -1, {"health", "film"}, {20, 60}, type)
     end
 end
 

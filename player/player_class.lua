@@ -22,7 +22,8 @@ function class_player:new(x, y, width, height)
     obj.max_health_points = 50
     obj.health_points = 50
     obj.battery = 100  -- battery level, used up when shooting
-
+    obj.film = 0
+    
     obj.x = x
     obj.y = y
     obj.speed = 2

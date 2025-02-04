@@ -167,7 +167,7 @@ function _draw()
 
     p:draw_inventory()
     p:draw_hp_bar()
-
+    draw_ui()
     -- debug shit
     if collision_box_toggle then
         p:draw_collision_box()
