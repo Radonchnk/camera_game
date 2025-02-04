@@ -5,16 +5,14 @@
 
 screen_size = 128 -- screen is cube 128 by 128, used to delete bullets that are outside screen
 
-
---walls = {}
---enemies = {}
-
 player_proj_list = {}
 enemy_proj_list = {}
 
 dungeon = {}
 snapshot = {{}, {}}
 
+pickup_queue = {}
+temp_objects_queue = {}
 dead = false
 entry_delay = 45 -- timer after entering room, before enemies can move.
 -- debug toggles
@@ -56,7 +54,7 @@ function _init()
 
     generate_room_from_index(dungeon, p.current_room_y, p.current_room_x)
 
-    -- to get room data for dungeon[p.current_room_y][p.current_room_x][2] is going to return walls, [3] going to return enemies
+    -- to get room data for dungeon[p.current_room_y][p.current_room_x][2] is going to return walls, [3] going to return enemies, [4] for items
     -- make level and shit
     --local left_room = create_room(12, "e", 6)
     --local right_room = create_room(12, "w", 6)
@@ -70,6 +68,7 @@ function _init()
 
     walls = dungeon[p.current_room_y][p.current_room_x][2]
     enemies = dungeon[p.current_room_y][p.current_room_x][3]
+    items = dungeon[p.current_room_y][p.current_room_x][4]
 
 end 
 
@@ -79,6 +78,10 @@ function _draw()
         _init()
     end
 
+    walls = dungeon[p.current_room_y][p.current_room_x][2]
+    enemies = dungeon[p.current_room_y][p.current_room_x][3]
+    items = dungeon[p.current_room_y][p.current_room_x][4]
+
     cls()
     p:draw()
 
@@ -86,7 +89,33 @@ function _draw()
     for i = 1, #walls do
         walls[i]:draw()
     end
+    -- render items and add to queeu to get picked up if player is on the same tile
+    for i = 1, #items do
+        items[i]:draw()
+        items[i]:update()
+        if items[i].type == "explosive" then
+            add(temp_objects_queue, items[i])
+        else
+            if sqrt((p.x-items[i].x)^2 + (p.y-items[i].y)^2) < 6 then
+                add(pickup_queue, items[i])
+            end
+        end
+    end
+    -- pick up items
+    for i = 1, #pickup_queue do
+        -- pick up items and remove from screen
+        pickup_queue[i]:pickup()
+        del(items, pickup_queue[i])
+    end
 
+    for i = 1, #temp_objects_queue do
+        -- remove exploded bomb after sufficient rendering
+        if temp_objects_queue[i].spr == 24 and temp_objects_queue[i].value < -5 then
+            del(items, temp_objects_queue[i])
+        end
+    end
+    pickup_queue = {}
+    
     paused = showing_inventory -- add other things too later
 
     for i = 1, #player_proj_list do

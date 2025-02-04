@@ -5,7 +5,7 @@ dead_enemies = {}
 
 
 -- constructor
-function class_enemy:new(x, y, width, height, base_speed, base_spr, reload_speed, accuracy, max_hp, agility, type)
+function class_enemy:new(x, y, width, height, base_speed, base_spr, reload_speed, burst, accuracy, max_hp, agility, loot_choices, loot_chances, type)
     local obj = setmetatable({}, self)
 
     -- what type of enemy is this (turret, melee)
@@ -19,7 +19,7 @@ function class_enemy:new(x, y, width, height, base_speed, base_spr, reload_speed
 
     obj.accuracy = accuracy  -- 0 -> 100, how correctly enemy pathfinds
     obj.agility = agility  -- 0 -> 100, how fast enemy rotates
-    obj.rotation_timer = 0
+    obj.rotate_now = false  -- rotates on every reload
 
     obj.speed = base_speed
     obj.base_spr = base_spr
@@ -27,6 +27,9 @@ function class_enemy:new(x, y, width, height, base_speed, base_spr, reload_speed
     obj.dir = 1
     
     -- can shoot every [reload_speed] frames
+    -- can shoot multiple projectiles before reloading
+    obj.per_reload = burst
+    obj.proj_counter = 0
     obj.reload_speed = reload_speed
     obj.reload_value = reload_speed
 
@@ -34,6 +37,10 @@ function class_enemy:new(x, y, width, height, base_speed, base_spr, reload_speed
     obj.height = height or 8
     
     obj.collision_box = class_collision_entity:new(x,y,obj.width,obj.height)
+
+    -- loot table
+    obj.loot = loot_choices
+    obj.probabilities = loot_chances
 
     return obj
 end
@@ -124,7 +131,7 @@ function class_enemy:update()
         self:move(dir_x, dir_y)
     end
     -- rotate towards player
-    if self.rotation_timer == 0 then
+    if self.rotate_now then
         if abs(dx) > abs(dy) then
             if dx > 8 then
                 self:rotate("right")
@@ -138,8 +145,7 @@ function class_enemy:update()
                 self:rotate("up")
             end
         end
-    else
-        self.rotation_timer -= 1
+        self.rotate_now = false
     end
 
     -- shoot at the player if close enough
@@ -163,6 +169,19 @@ function class_enemy:process_death()
     p.kill_count += 1
     p.battery = 100
 
+    -- loot generation
+    ranges = {}
+    temp = 0
+    for i = 1, #self.loot do
+        add(ranges,{temp,self.probabilities[i]+temp},#ranges+1)
+        temp += self.probabilities[i]
+    end
+    local rng = rnd(100)
+    for i = 1, #ranges do
+        if ranges[i][1] < rng and rng < ranges[i][2] then
+            add(items,class_effect_item:new(self.x, self.y, self.loot[i]))
+        end
+    end 
 end
 
 function class_enemy:take_damage(damage)
@@ -186,7 +205,13 @@ end
 
 function class_enemy:shoot()
     if self.reload_value == 0 then
+        if self.proj_counter < self.per_reload then
+            self.proj_counter += 1
+        else
+            self.reload_value = self.reload_speed
+            self.proj_counter = 0
+            self.rotate_now = true
+        end
         add(enemy_proj_list, class_projectile:new(self, self.x, self.y, self.dir, 6, 6, 50))
-        self.reload_value = self.reload_speed
     end
 end

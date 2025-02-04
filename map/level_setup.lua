@@ -1,29 +1,3 @@
-level = {
-    {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-    {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-    {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
-}
-
--- creates list of rooms in the set 
-function generate_dungeon()
-    -- 2d array where 1 is a room and 0 is absence of a room
-    -- + 2 table one is walls and 2nd is enemies
-    return {{{1, {}, {}}, {1, {}, {}}}}
-end
-
 -- Function to create a fixed 16x16 level with a user-defined cube of 1s
 -- and adds corridor ways to it
 function create_room(a, directions, thickness)
@@ -147,7 +121,7 @@ function generate_dungeon(num_rooms, grid_size)
 
     -- Start dungeon at (1,1)
     local rooms = {{1, 1}}
-    grid[1][1] = {1, {}, {}} -- Room exists at (1,1)
+    grid[1][1] = {1, {}, {}, {}} -- Room exists at (1,1)
 
     while #rooms < num_rooms do
         -- Pick a random existing room
@@ -161,7 +135,7 @@ function generate_dungeon(num_rooms, grid_size)
             local new_r, new_c = r + dir[1], c + dir[2]
 
             if new_r > 0 and new_r <= grid_size and new_c > 0 and new_c <= grid_size and grid[new_r][new_c] == 0 then
-                grid[new_r][new_c] = {1, {}, {}} -- Place a room
+                grid[new_r][new_c] = {1, {}, {}, {}} -- Place a room
                 add(rooms, {new_r, new_c}, #rooms)
                 break
             end
@@ -186,22 +160,80 @@ function generate_room_from_index(grid, y, x)
     -- Call create_room with detected connections
     local room = create_room(12, connections, 6)
     setup_walls(grid[y][x][2], room)
+    setup_enemies(grid[y][x][3], {"turret", "melee", "loot pot"}, {1+flr(rnd(3)), 2+flr(rnd(3)), flr(0.7*rnd(2))})
+    grid[y][x][4] = {}
 
-    setup_enemies(grid[y][x][3], {"turret", "melee"}, {1+flr(rnd(3)), 2+flr(rnd(3))})
 end
 
 function take_snapshot()
     snapshot[1] = {p.x, p.y, p.current_room_x, p.current_room_y, p.collision_box.x, p.collision_box.y}
     snapshot[2] = dungeon
+    temp = {} 
+    for y = 1, #dungeon do
+        local temp_row = {}
+        for x = 1, #dungeon[1] do
+            if dungeon[y][x] ~= 0 then 
+                local temp_walls = {}
+                if #dungeon[y][x][2] > 0 then   
+                    for k = 1, #dungeon[y][x][2] do
+                        add(temp_walls, dungeon[y][x][2][k])
+                    end
+                end
+
+                local temp_enemies = {}
+                if #dungeon[y][x][3] > 0 then   
+                    for k = 1, #dungeon[y][x][3] do
+                        
+                        local enemy_data = dungeon[y][x][3][k]
+
+                        local enemy = class_enemy:new(
+                            enemy_data.x,
+                            enemy_data.y,
+                            enemy_data.width or 8,  -- Default width if not specified
+                            enemy_data.height or 8, -- Default height if not specified
+                            enemy_data.speed,
+                            enemy_data.base_spr,
+                            enemy_data.reload_speed,
+                            enemy_data.per_reload,
+                            enemy_data.accuracy,
+                            enemy_data.max_health_points,
+                            enemy_data.agility,
+                            enemy_data.loot,
+                            enemy_data.probabilities,
+                            enemy_data.type
+                        )
+
+                        add(temp_enemies, enemy)
+                    end
+                end
+
+                local temp_items = {}
+                if #dungeon[y][x][4] > 0 then   
+                    for k = 1, #dungeon[y][x][4] do
+                        add(temp_items, dungeon[y][x][4][k])
+                    end
+                end
+
+                add(temp_row, {1, temp_walls, temp_enemies, temp_items})
+            else
+                add(temp_row, 0)
+            end
+        end
+        add(temp, temp_row)
+    end
+    log(#temp[1][1][2])
+    snapshot[2] = temp
 end
 
 function load_snapshot()
-    p.x = snapshot[1][1]
-    p.y = snapshot[1][2]
-    p.current_room_x = snapshot[1][3]
-    p.current_room_y = snapshot[1][4]
-    p.collision_box.x = snapshot[1][5]
-    p.collision_box.y = snapshot[1][6]
-    dungeon = snapshot[2]
+    if snapshot[1] ~= {} then
+        p.x = snapshot[1][1]
+        p.y = snapshot[1][2]
+        p.current_room_x = snapshot[1][3]
+        p.current_room_y = snapshot[1][4]
+        p.collision_box.x = snapshot[1][5]
+        p.collision_box.y = snapshot[1][6]
+        dungeon = snapshot[2]
+    end
 end
 
