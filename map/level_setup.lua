@@ -109,6 +109,12 @@ function setup_enemies(current_level, types, numbers)
         -- shop
     elseif current_level[1] == 3 then
         -- bos
+    elseif current_level[1] == 4 then
+        -- first room
+        rand_coords = {13-flr(rnd(12)), 13-flr(rnd(12))}
+        add(current_level_enemies, spawn_enemy("turret", tile_to_pixel(rand_coords[1]), tile_to_pixel(rand_coords[2])), #current_level_enemies+1)
+        rand_coords = {13-flr(rnd(12)), 13-flr(rnd(12))}
+        add(current_level_enemies, spawn_enemy("melee", tile_to_pixel(rand_coords[1]), tile_to_pixel(rand_coords[2])), #current_level_enemies+1)
     end
 end
 
@@ -128,7 +134,7 @@ function generate_dungeon(num_rooms, grid_size)
 
     -- Start dungeon at (1,1)
     local rooms = {{1, 1}}
-    grid[1][1] = {1, {}, {}, {}} -- Room exists at (1,1)
+    grid[1][1] = {4, {}, {}, {}} -- Room exists at (1,1)
 
     while #rooms < num_rooms do
         -- Pick a random existing room
