@@ -231,6 +231,7 @@ function class_enemy:shoot()
             self.proj_counter = 0
             self.rotate_now = true
         end
+        sfx(59)
         add(enemy_proj_list, class_projectile:new(self, self.x, self.y, self.dir, 6, 6, 50))
     end
 end

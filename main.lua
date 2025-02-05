@@ -16,7 +16,7 @@ sacrifice = 0
 
 -- boss stuff
 boss_fight = false
-boss_access = 30
+boss_access = 5
 won_game = false
 
 dungeon = {}
@@ -38,6 +38,9 @@ music(3)
 
 -- executes on startup
 function _init()
+    poke(0x5f2e, 1)
+    poke(0x5f2e, 0)
+    poke(0x5f2e, 1) -- Enable the extended 32-color palette
     draw_title_screen()
 end 
 
@@ -172,14 +175,16 @@ function _draw()
 
     -- update enemies
     for i = 1, #enemies do
-        if not paused and not enemies[i].perk then
-            enemies[i]:update()
-        end
-        if not (enemies[i] == nil) then
-            -- enemies could be deleted during update()
-            enemies[i]:draw()
-            if not enemies[i].perk then
-                enemies[i]:draw_hp_bar()
+        if i < #enemies then
+            if not paused and not enemies[i].perk then
+                enemies[i]:update()
+            end
+            if not (enemies[i] == nil) then
+                -- enemies could be deleted during update()
+                enemies[i]:draw()
+                if not enemies[i].perk then
+                    enemies[i]:draw_hp_bar()
+                end
             end
         end
     end
