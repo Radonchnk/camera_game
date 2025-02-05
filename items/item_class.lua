@@ -27,6 +27,7 @@ function class_effect_item:new(x, y, type)
 end
 
 function class_effect_item:pickup()
+    sfx(60)
     if self.type == "health" then
         p.health_points += self.value
         if p.health_points > p.max_health_points then

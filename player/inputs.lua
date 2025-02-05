@@ -83,6 +83,7 @@ function _update()
                     text_timer = text_display_time
                     display_text = "snapshot taken"
                     snapshot = take_snapshot()
+                    sfx(56)
                 else
                     text_timer = text_display_time
                     display_text = "in boss fight"
@@ -100,6 +101,7 @@ function _update()
 
                 main_branch = take_snapshot()
                 load_snapshot(snapshot)
+                sfx(63)
                 in_snapshot = true
             else
                 -- unload snapshot

@@ -54,6 +54,7 @@ function class_perk_item:draw()
 end
 
 function class_perk_item:purchase()
+    sfx(61)
     if p.film >= self.cost and sqrt((p.x-self.x)^2 + (p.y-self.y)^2) < 4 then
         p.film -= self.cost
         add(perks_used, self.name, #perks_used+1)

@@ -221,6 +221,7 @@ end
 
 function class_player:take_damage(damage)
     -- takes damage from health
+    sfx(62)
     self.health_points -= damage
 
     -- lose battery
@@ -239,6 +240,7 @@ function class_player:take_damage(damage)
             self.health_points = 10
             in_snapshot = false
         else
+            sfx(57)
             dead = true
         end
     end
@@ -271,6 +273,7 @@ end
 -- creates a projectile
 function class_player:shoot()
     if self.reload_value == 0 and self.battery > 20 then
+        sfx(58)
         local offsets = {
             {x = 2, y = -1}, -- left
             {x = -3, y = -1}, -- right
