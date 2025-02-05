@@ -17,7 +17,6 @@ in_snapshot = false
 pickup_queue = {}
 temp_objects_queue = {}
 dead = false
-entry_delay = 45 -- timer after entering room, before enemies can move.
 -- debug toggles
 
 debug_mode = true
@@ -62,6 +61,12 @@ function _draw()
             new_run()
         end
         return
+    end
+
+    if p.current_room_x == boss_room_coords[1] and p.current_room_y == boss_room_coords[2] then
+        log("boss")
+    elseif p.current_room_x == shop_room_coords[1] and p.current_room_y == shop_room_coords[2] then
+        log("shop")
     end
 
     walls = dungeon[p.current_room_y][p.current_room_x][2]
@@ -128,11 +133,7 @@ function _draw()
     -- update enemies
     for i = 1, #enemies do
         if not paused then
-            if entry_delay == 0 then
-                enemies[i]:update()
-            else
-                entry_delay -= 1
-            end
+            enemies[i]:update()
         end
         if not (enemies[i] == nil) then
             -- enemies could be deleted during update()

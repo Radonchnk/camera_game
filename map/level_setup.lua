@@ -1,3 +1,7 @@
+-- global variables for boss and shop
+boss_room_coords = {}
+shop_room_coords = {}
+
 -- Function to create a fixed 16x16 level with a user-defined cube of 1s
 -- and adds corridor ways to it
 function create_room(a, directions, thickness)
@@ -211,6 +215,9 @@ function generate_dungeon(num_rooms, grid_size)
             grid[shop_room[1]][shop_room[2]] = {2, {}, {}, {}} 
         end
     end
+
+    boss_room_coords = boss_room
+    shop_room_coords = shop_room
 
     return grid
 end
