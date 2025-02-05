@@ -28,7 +28,9 @@ music(3)
 
 -- executes on startup
 function _init()
-
+    poke(0x5f2e, 1)
+    poke(0x5f2e, 0)
+    poke(0x5f2e, 1) -- Enable the extended 32-color palette
     draw_title_screen()
 end 
 

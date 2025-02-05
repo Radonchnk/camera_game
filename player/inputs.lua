@@ -88,6 +88,9 @@ function _update()
 
                 main_branch = take_snapshot()
                 load_snapshot(snapshot)
+                for i = 0, 3 do
+                    poke(0x5f09 + i, i + 1) -- Map colors 0–15 to 16–31
+                end
                 in_snapshot = true
             else
                 -- unload snapshot
@@ -96,6 +99,8 @@ function _update()
 
                 snapshot = take_snapshot()
                 load_snapshot(main_branch)
+                pal()
+                poke(0x5f2e, 0)
                 in_snapshot = false
             end
         end

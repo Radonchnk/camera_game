@@ -339,7 +339,7 @@ function new_run()
             if dungeon[y][x] == 0 then
                 row = row .. " 0 "
             else
-                row = row .. " 1 "
+                row = row .. " " .. dungeon[y][x][1] .. " "
             end
         end
         log(row)
