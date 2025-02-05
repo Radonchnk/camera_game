@@ -87,7 +87,7 @@ function collision_to_list(obj, list_obj, distance)
 
     for i = 1, #close_list_obj do
         -- Skip collision check with itself
-        if close_list_obj[i] ~= obj then
+        if close_list_obj[i] ~= obj and not close_list_obj[i].perk and not obj.perk then
             if do_collide(obj.collision_box, close_list_obj[i].collision_box) then
                 return {1, i}  -- Collision detected
             end

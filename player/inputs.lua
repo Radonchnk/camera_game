@@ -47,6 +47,13 @@ function _update()
             movement_directions[3] = 1
         end
 
+        if btn(4) then
+            for i=1,#enemies do
+                if enemies[i].perk then
+                    enemies[i]:purchase()
+                end
+            end
+        end
         if movement_directions[0] == 1 and movement_directions[2] == 1then
             p.base_spr = 6 
             p.dir = 4 -- up + left
@@ -72,9 +79,14 @@ function _update()
         key = stat(31)
         if key == "y" then
             if in_snapshot == false then
-                text_timer = text_display_time
-                display_text = "snapshot taken"
-                snapshot = take_snapshot()
+                if boss_fight == false then
+                    text_timer = text_display_time
+                    display_text = "snapshot taken"
+                    snapshot = take_snapshot()
+                else
+                    text_timer = text_display_time
+                    display_text = "in boss fight"
+                end
             else
                 text_timer = text_display_time
                 display_text = "already in snapshot"

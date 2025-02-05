@@ -14,7 +14,7 @@ function draw_ui()
 
     -- write snapshot acknowledgement
     if text_timer > 0 then
-        print(display_text, 9, 9, 12)
+        print(display_text, 9, 9, 7)
         text_timer -= 1
     end
 end
@@ -22,6 +22,12 @@ end
 function draw_death_screen()
     cls()
     print("you died", 50, 50, 8)
+    print("z - new run", 45, 70, 7)
+end
+
+function draw_win_screen()
+    cls()
+    print("you win!", 50, 50, 11)
     print("z - new run", 45, 70, 7)
 end
 

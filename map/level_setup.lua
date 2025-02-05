@@ -1,3 +1,5 @@
+-- global variables for boss and shop
+
 -- Function to create a fixed 16x16 level with a user-defined cube of 1s
 -- and adds corridor ways to it
 function create_room(a, directions, thickness)
@@ -67,7 +69,7 @@ function create_room(a, directions, thickness)
     return level
 end
 
--- placehoder that reads from level 2d table
+-- placeholder that reads from level 2d table
 function setup_walls(current_level_wall, level_wall_data)
     for y = 1, 16 do
         for x = 1, 16 do
@@ -78,11 +80,12 @@ function setup_walls(current_level_wall, level_wall_data)
     end
 end
 
--- just kind of makes emenies
+-- puts things in rooms (enemies, perks)
 function setup_enemies(current_level, types, numbers)
+    log(current_level[1])
     current_level_enemies = current_level[3]
     if current_level[1] == 1 then 
-        local coordinates = {{3,3},{2,3},{3,2},{2,2},{4,3},{3,4},{4,4}}
+        local coordinates = {}
         for i = 1, #types do
             for j = 1, numbers[i] do
                 rand_coords = {13-flr(rnd(12)), 13-flr(rnd(12))}
@@ -95,26 +98,80 @@ function setup_enemies(current_level, types, numbers)
 
                 while duplicate do
                     rand_coords = {13-flr(rnd(12)), 13-flr(rnd(12))}
-                    duplicate = false
                     for c = 1, #coordinates do
-                        if coordinates[c][1] == rand_coords[1] and coordinates[c][2] == rand_coords[2] then
-                            duplicate = true
+                        if not (coordinates[c][1] == rand_coords[1] and coordinates[c][2] == rand_coords[2]) then
+                            duplicate = false
                         end
                     end
                 end
                 add(current_level_enemies, spawn_enemy(types[i], tile_to_pixel(rand_coords[1]), tile_to_pixel(rand_coords[2])), #current_level_enemies+1)
+                add(coordinates, rand_coords, #coordinates+1)
             end
         end
     elseif current_level[1] == 2 then
-        -- shop
+        local all_perks = {"apple", "masochism", "reflection", "blood sacrifice"}
+
+        local p1 = 1+flr(rnd(4))
+        local p2 = 1+flr(rnd(4))
+
+        while p1 == p2 do
+            p2 = 1+flr(rnd(4))
+        end
+
+        shop_perks = {all_perks[p1], all_perks[p2]}
+        local coordinates = {}
+
+        for j = 1, 2 do
+            rand_coords = {13-flr(rnd(12)), 13-flr(rnd(12))}
+            local duplicate = false
+            for c = 1, #coordinates do
+                if coordinates[c][1] == rand_coords[1] and coordinates[c][2] == rand_coords[2] then
+                    duplicate = true
+                end
+            end
+
+            while duplicate do
+                rand_coords = {13-flr(rnd(12)), 13-flr(rnd(12))}
+                for c = 1, #coordinates do
+                    if not (coordinates[c][1] == rand_coords[1] and coordinates[c][2] == rand_coords[2]) then
+                        duplicate = false
+                    end
+                end
+            end
+            add(coordinates, rand_coords, #coordinates+1)
+        end
+        add(current_level_enemies, class_perk_item:new(tile_to_pixel(coordinates[1][1]), tile_to_pixel(coordinates[1][2]), all_perks[p1]), #current_level_enemies+1)
+        add(current_level_enemies, class_perk_item:new(tile_to_pixel(coordinates[2][1]), tile_to_pixel(coordinates[2][2]), all_perks[p2]), #current_level_enemies+1)
+
+
     elseif current_level[1] == 3 then
-        -- bos
+        add(current_level_enemies, class_boss:new(50,50))
     elseif current_level[1] == 4 then
         -- first room
-        rand_coords = {13-flr(rnd(12)), 13-flr(rnd(12))}
-        add(current_level_enemies, spawn_enemy("turret", tile_to_pixel(rand_coords[1]), tile_to_pixel(rand_coords[2])), #current_level_enemies+1)
-        rand_coords = {13-flr(rnd(12)), 13-flr(rnd(12))}
-        add(current_level_enemies, spawn_enemy("melee", tile_to_pixel(rand_coords[1]), tile_to_pixel(rand_coords[2])), #current_level_enemies+1)
+        local coordinates = {{3,3},{2,3},{3,2},{2,2},{4,3},{3,4},{4,4}}
+
+        for j = 1, 2 do
+            rand_coords = {13-flr(rnd(12)), 13-flr(rnd(12))}
+            local duplicate = false
+            for c = 1, #coordinates do
+                if coordinates[c][1] == rand_coords[1] and coordinates[c][2] == rand_coords[2] then
+                    duplicate = true
+                end
+            end
+
+            while duplicate do
+                rand_coords = {13-flr(rnd(12)), 13-flr(rnd(12))}
+                for c = 1, #coordinates do
+                    if not (coordinates[c][1] == rand_coords[1] and coordinates[c][2] == rand_coords[2]) then
+                        duplicate = false
+                    end
+                end
+            end
+            add(coordinates, rand_coords, #coordinates+1)
+        end
+
+        add(current_level_enemies, spawn_enemy("turret", tile_to_pixel(coordinates[8][1]), tile_to_pixel(coordinates[8][2])), #current_level_enemies+1)
+        add(current_level_enemies, spawn_enemy("melee", tile_to_pixel(coordinates[9][1]), tile_to_pixel(coordinates[9][2])), #current_level_enemies+1)
     end
 end
 
@@ -231,11 +288,8 @@ function generate_room_from_index(grid, y, x)
     -- Call create_room with detected connections
     local room = create_room(12, connections, 6)
     setup_walls(grid[y][x][2], room)
-    if rnd() > 0.9 then
-        -- pedestal room (aiko reference??)
-    else
-        setup_enemies(grid[y][x], {"turret", "melee", "loot pot"}, {1+flr(rnd(3)), 2+flr(rnd(3)), flr(0.7*rnd(2))})
-    end
+    setup_enemies(grid[y][x], {"turret", "melee", "loot pot"}, {1+flr(rnd(3)), 2+flr(rnd(3)), flr(0.7*rnd(2))})
+
     grid[y][x][4] = {}
 
 end
@@ -261,24 +315,31 @@ function take_snapshot()
                     for k = 1, #dungeon[y][x][3] do
                         
                         local enemy_data = dungeon[y][x][3][k]
-
-                        -- enemy x, y, width, height, base_speed, base_spr, reload_speed, burst, accuracy, max_hp, agility, loot_choices, loot_chances, type)
-                        local enemy = class_enemy:new(
-                            enemy_data.x,
-                            enemy_data.y,
-                            enemy_data.width or 8,  -- Default width if not specified
-                            enemy_data.height or 8, -- Default height if not specified
-                            enemy_data.speed,
-                            enemy_data.base_spr,
-                            enemy_data.reload_speed,
-                            enemy_data.per_reload,
-                            enemy_data.accuracy,
-                            enemy_data.max_health_points,
-                            enemy_data.agility,
-                            enemy_data.loot,
-                            enemy_data.probabilities,
-                            enemy_data.name
-                        )
+                        local enemy = {}
+                        if enemy_data.perk then
+                            enemy = class_perk_item:new(
+                                enemy_data.x,
+                                enemy_data.y,
+                                enemy_data.name
+                            )
+                        else
+                            enemy = class_enemy:new(
+                                enemy_data.x,
+                                enemy_data.y,
+                                enemy_data.width or 8,  -- Default width if not specified
+                                enemy_data.height or 8, -- Default height if not specified
+                                enemy_data.speed,
+                                enemy_data.base_spr,
+                                enemy_data.reload_speed,
+                                enemy_data.per_reload,
+                                enemy_data.accuracy,
+                                enemy_data.max_health_points,
+                                enemy_data.agility,
+                                enemy_data.loot,
+                                enemy_data.probabilities,
+                                enemy_data.name
+                            )
+                        end
 
                         add(temp_enemies, enemy)
                     end
@@ -329,7 +390,7 @@ function new_run()
     -- initialise player
     p = class_player:new(tile_to_pixel(3), tile_to_pixel(3), 6, 6)
 
-    dungeon = generate_dungeon(16, 6)
+    dungeon = generate_dungeon(8, 4)
 
     -- Print dungeon grid
     log("dungeon structure: ")
