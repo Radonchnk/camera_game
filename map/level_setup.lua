@@ -390,7 +390,7 @@ function new_run()
     -- initialise player
     p = class_player:new(tile_to_pixel(3), tile_to_pixel(3), 6, 6)
 
-    dungeon = generate_dungeon(16, 6)
+    dungeon = generate_dungeon(8, 4)
 
     -- Print dungeon grid
     log("dungeon structure: ")

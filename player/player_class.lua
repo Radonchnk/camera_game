@@ -238,6 +238,8 @@ function class_player:take_damage(damage)
             load_snapshot(main_branch)
             snapshot = {{}, {}}
             self.health_points = 10
+            pal()
+            poke(0x5f2e, 0)
             in_snapshot = false
         else
             sfx(57)

@@ -13,28 +13,28 @@ function class_perk_item:new(x, y, name)
     obj.perk = true
 
     if name == "apple" then
-        local value = 10 + flr(rnd(10))
+        local value = 3
         obj.spr = 35
         obj.description = "+50% max hp"
         obj.cost = value
         obj.base_cost = value
 
     elseif name == "masochism" then
-        local value = 20 + flr(rnd(15))
+        local value = 7
         obj.spr = 36
         obj.description = "getting hit has a 5% chance to generate camera film"
         obj.cost = value
         obj.base_cost = value
 
     elseif name == "reflection" then
-        local value = 20 + flr(rnd(15))
+        local value = 5
         obj.spr = 37
         obj.description = "light has a 25% chance to bounce off a surface"
         obj.cost = value
         obj.base_cost = value
 
     elseif name == "blood sacrifice" then
-        local value = 10 + flr(rnd(15))
+        local value = 2
         obj.spr = 38
         obj.description = "lose half of max hp, all film costs are halved"
         obj.cost = value
