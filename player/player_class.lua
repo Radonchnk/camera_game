@@ -84,25 +84,69 @@ function class_player:update(dx, dy)
     local middle_x = self.x + self.width / 2
     local middle_y = self.y + self.height / 2
     if middle_x < 0 then
+        if dungeon[self.current_room_y][self.current_room_x-1][1] == 3 and self.kill_count < boss_access then
+            text_timer = text_display_time
+            display_text = "cannot enter yet!"
+            self:move(-dx * self.speed, -dy * self.speed)
+            return
+        end
+
         -- move to west room
         --log("move to west room")
-        self:move(127, 0)
-        self:room_transfer(-1, 0)
+        if not boss_fight then
+            self:move(127, 0)
+            self:room_transfer(-1, 0)
+        else
+            self:move(-dx * self.speed, -dy * self.speed)
+        end
     elseif middle_x > 128 then
+        if dungeon[self.current_room_y][self.current_room_x+1][1] == 3 and self.kill_count < boss_access then
+            text_timer = text_display_time
+            display_text = "cannot enter yet!"
+            self:move(-dx * self.speed, -dy * self.speed)
+            return
+        end
+
         -- move to east room
         --log("move to east room")
-        self:move(-127, 0)
-        self:room_transfer(1, 0)
+        if not boss_fight then
+            self:move(-127, 0)
+            self:room_transfer(1, 0)
+        else
+            self:move(-dx * self.speed, -dy * self.speed)
+        end
     elseif middle_y < 0 then
+        if dungeon[self.current_room_y-1][self.current_room_x][1] == 3 and self.kill_count < boss_access then
+            text_timer = text_display_time
+            display_text = "cannot enter yet!"
+            self:move(-dx * self.speed, -dy * self.speed)
+            return
+        end
+
         -- move to north room
         --log("move to morth room")
-        self:move(0, 127)
-        self:room_transfer(0, -1)
+        if not boss_fight then
+            self:move(0, 127)
+            self:room_transfer(0, -1)
+        else
+            self:move(-dx * self.speed, -dy * self.speed)
+        end
     elseif middle_y > 128 then 
+        if dungeon[self.current_room_y+1][self.current_room_x][1] == 3 and self.kill_count < boss_access then
+            text_timer = text_display_time
+            display_text = "cannot enter yet!"
+            self:move(-dx * self.speed, -dy * self.speed)
+            return
+        end
+
         -- move to south
         --log("move to south room")
-        self:move(0, -127)
-        self:room_transfer(0, 1)
+        if not boss_fight then
+            self:move(0, -127)
+            self:room_transfer(0, 1)
+        else
+            self:move(-dx * self.speed, -dy * self.speed)
+        end
     end
 
 end
@@ -176,13 +220,17 @@ function class_player:draw_hp_bar()
 end
 
 function class_player:take_damage(damage)
+    -- takes damage from health
     self.health_points -= damage
+
+    -- lose battery
     self.battery -= 5
         if self.battery <= 20 then
             self.colour = 1
             self.battery = 0
         end
-
+    
+    -- process death
     if self.health_points < 1 then
         self.health_points = 0
         if in_snapshot then
@@ -193,6 +241,12 @@ function class_player:take_damage(damage)
         else
             dead = true
         end
+    end
+
+    -- masochism perk
+    local rng = flr(rnd(101))
+    if rng < 5*masochist then
+        self.film += 1
     end
 end
 
@@ -230,7 +284,6 @@ function class_player:shoot()
 
         local offset = offsets[self.dir + 1]
         add(player_proj_list, class_projectile:new(self, self.x+offset.x,self.y+offset.y,self.dir,6,self.colour, 80))
-        
         self.battery -= 1
         if self.battery <= 20 then
             self.colour = 1
@@ -242,12 +295,15 @@ end
 
 function class_player:room_transfer(dx, dy)
     -- save all data for the previous room
+    if dungeon[self.current_room_y+dy][self.current_room_x+dx][1] == 3 then
+        boss_fight = true
+    end
     dungeon[p.current_room_y][p.current_room_x][2] = walls
     dungeon[p.current_room_y][p.current_room_x][3] = enemies
 
     self.current_room_x += dx
     self.current_room_y += dy
-
+    
     -- if no walls in room (not generated then generate
     if #dungeon[self.current_room_y][self.current_room_x][2] == 0 then
         generate_room_from_index(dungeon, p.current_room_y, p.current_room_x)
@@ -257,6 +313,7 @@ function class_player:room_transfer(dx, dy)
     walls = dungeon[self.current_room_y][self.current_room_x][2]
     enemies = dungeon[self.current_room_y][self.current_room_x][3]
 
-    entry_delay = 30
+    player_proj_list = {}
+    enemy_proj_list = {}
 
 end

@@ -8,6 +8,17 @@ screen_size = 128 -- screen is cube 128 by 128, used to delete bullets that are 
 player_proj_list = {}
 enemy_proj_list = {}
 
+-- perk stuff
+perks_used = {}
+masochist = 0
+reflection = 0
+sacrifice = 0
+
+-- boss stuff
+boss_fight = false
+boss_access = 30
+won_game = false
+
 dungeon = {}
 snapshot = {{}, {}}
 p = {}
@@ -27,12 +38,12 @@ music(3)
 
 -- executes on startup
 function _init()
-
     draw_title_screen()
 end 
 
 -- draw every frame
 function _draw()
+    -- main menu
     if in_menu then
         draw_title_screen()
         if btn(4) then
@@ -43,6 +54,7 @@ function _draw()
         return
     end
 
+    -- death screen
     if dead then
         player_proj_list = {}
         enemy_proj_list = {}
@@ -53,22 +65,51 @@ function _draw()
         main_branch = {}
         in_snapshot = false
 
+        boss_fight = false
+        
         pickup_queue = {}
         temp_objects_queue = {}
         draw_death_screen()
         if btn(4) then
             dead = false
             new_run()
+            music(0)
         end
         return
     end
 
-    if p.current_room_x == boss_room_coords[1] and p.current_room_y == boss_room_coords[2] then
-        log("boss")
-    elseif p.current_room_x == shop_room_coords[1] and p.current_room_y == shop_room_coords[2] then
-        log("shop")
+    -- win screen
+    if won_game then
+        draw_win_screen()
+        if btn(4) then
+            new_run()
+            music(0)
+            won_game = false
+        end
+        return
     end
 
+    -- reset perk values for stacking purposes
+    p.max_health_points = 50
+    masochist = 0
+    reflection = 0
+    sacrifice = 0
+
+    -- apply perks
+    for i=1,#perks_used do
+        if perks_used[i] == "apple" then
+            p.max_health_points = 1.5*p.max_health_points
+        elseif perks_used[i] == "masochism" then
+            masochist += 1
+        elseif perks_used[i] == "reflection" then
+            reflection += 1
+        elseif perks_used[i] == "blood sacrifice" then
+            p.max_health_points = 0.5*p.max_health_points
+            sacrifice += 1
+        end
+    end
+
+    
     walls = dungeon[p.current_room_y][p.current_room_x][2]
     enemies = dungeon[p.current_room_y][p.current_room_x][3]
     items = dungeon[p.current_room_y][p.current_room_x][4]
@@ -76,11 +117,10 @@ function _draw()
     cls()
     p:draw()
 
-
     for i = 1, #walls do
         walls[i]:draw()
     end
-    -- render items and add to queeu to get picked up if player is on the same tile
+    -- render items and add to queue to get picked up if player is on the same tile
     for i = 1, #items do
         items[i]:draw()
         items[i]:update()
@@ -132,13 +172,15 @@ function _draw()
 
     -- update enemies
     for i = 1, #enemies do
-        if not paused then
+        if not paused and not enemies[i].perk then
             enemies[i]:update()
         end
         if not (enemies[i] == nil) then
             -- enemies could be deleted during update()
             enemies[i]:draw()
-            enemies[i]:draw_hp_bar()
+            if not enemies[i].perk then
+                enemies[i]:draw_hp_bar()
+            end
         end
     end
 

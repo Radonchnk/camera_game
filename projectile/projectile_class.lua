@@ -96,12 +96,38 @@ function class_projectile:move(dx, dy)
 
         -- when object collides, size of fuction return is 2 because object is being passed too
         -- used to process different attacks
+        local rng = flr(rnd(101))
+        local reflect = false
+        if rng < 25*reflection then
+            reflect = true
+        end
         if #collision_wall == 2 then
             -- collision of a bullet to a wall processing
 
             --log("projectile collided wall from author:")
             --log(self.owner.name)
-            add(delete_queue, self, #delete_queue+1)
+            -- reflection perk
+            if reflect and self.owner.name == "player" then
+                if self.dir == 0 then
+                    self.dir = 1
+                elseif self.dir == 1 then
+                    self.dir = 0
+                elseif self.dir == 2 then
+                    self.dir = 3
+                elseif self.dir == 3 then
+                    self.dir = 2
+                elseif self.dir == 4 then
+                    self.dir = 7
+                elseif self.dir == 5 then
+                    self.dir = 6
+                elseif self.dir == 6 then
+                    self.dir = 5
+                elseif self.dir == 7 then
+                    self.dir = 4
+                end
+            else
+                add(delete_queue, self, #delete_queue+1)
+            end
         elseif #collision_enemy == 2 then
             -- collision of a bullet into enemy frendly fire or by player
 
@@ -110,12 +136,26 @@ function class_projectile:move(dx, dy)
                 --log("projectile have impacted: ")
                 --log(collision_enemy[2].name)
                 enemies[collision_enemy[2]]:take_damage(1)
+                
+                if reflect then
+                    if self.dir == 0 then
+                        self.dir = 1
+                    elseif self.dir == 1 then
+                        self.dir = 0
+                    elseif self.dir == 2 then
+                        self.dir = 3
+                    elseif self.dir == 3 then
+                        self.dir = 2
+                    end
+                else
+                    add(delete_queue, self, #delete_queue+1)
+                end
             else
                 --log("projectile collided enemy from author: an enemy")
                 --log("projectile have impacted: ")
                 --log(collision_enemy[2].name)
             end
-            add(delete_queue, self, #delete_queue+1)
+
         elseif #collision_player == 2 then
             -- enemy attack on player or player attacking themselves
 
@@ -129,7 +169,6 @@ function class_projectile:move(dx, dy)
                 --log(collision_player[2].name)
                 p:take_damage(1)
             end
-            add(delete_queue, self, #delete_queue+1)
         end
     end
 

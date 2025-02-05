@@ -22,7 +22,7 @@ function class_effect_item:new(x, y, type)
         obj.value = 1
 
     end
-
+    
     return obj
 end
 
@@ -51,7 +51,9 @@ function class_effect_item:update()
 
                 for i = 1, #enemies do
                     if sqrt((enemies[i].x-self.x)^2 + (enemies[i].y-self.y)^2) < 24 then
-                        enemies[i]:take_damage(20)
+                        if not boss_fight then
+                            enemies[i]:take_damage(20)
+                        end
                     end
                 end
             else

@@ -13,7 +13,8 @@ function class_enemy:new(x, y, width, height, base_speed, base_spr, reload_speed
 
     obj.x = x
     obj.y = y
-
+    obj.perk = false
+    
     obj.max_health_points = max_hp
     obj.health_points = max_hp
 
@@ -172,12 +173,6 @@ function class_enemy:update()
 end
 
 function class_enemy:draw_hp_bar()
-    if self.name == "melee" then
-        log(self.name)
-        log(self.health_points)
-        log(self.max_health_points)
-        log("----")
-    end
     rectfill(self.x-3, self.y-2, self.x+10-3, self.y-2, 5)
     rectfill(self.x-3, self.y-2, self.x+flr(self.health_points/self.max_health_points*10)-3, self.y-2, 8)
 end
@@ -187,6 +182,11 @@ function class_enemy:process_death()
     p.kill_count += 1
     p.battery = 100
 
+    if p.kill_count == boss_access then
+        text_timer = text_display_time
+        display_text = "a new room is now accessible"
+    end
+    
     -- loot generation
     local ranges = {}
     local temp = 0
